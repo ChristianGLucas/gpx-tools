@@ -1,0 +1,216 @@
+name: christiangeorgelucas/gpx-tools
+version: 0.1.0
+language: typescript
+description: >-
+  Deterministic parsing and structural inspection of GPS track and geographic
+  markup files — GPX (GPS Exchange Format: tracks, routes, waypoints from
+  Garmin/Strava/fitness devices) and KML (Keyhole Markup Language: Google
+  Earth placemarks and geometries). Wraps fast-xml-parser (MIT, external
+  entities/DTDs rejected — no XXE) for XML tokenizing plus this package's own
+  GPX/KML-schema-aware extraction: detect whether a document is GPX or KML;
+  parse a full GPX document into its metadata, waypoints, routes, and tracks;
+  list every track's name/segment-count/point-count; extract one track's
+  points (lat/lon/elevation/time) flattened across segments; list every
+  waypoint and every route; extract just the GPX metadata block; compute a
+  min/max bounding box over a track or the whole document (no distance
+  math — that composes with christiangeorgelucas/geo-tools); extract a
+  track's elevation profile and its first/last timestamp; summarize point,
+  track, route, and waypoint counts; parse a KML document into its
+  placemarks; list placemark summaries; extract every placemark's geometry
+  (Point/LineString/Polygon rings, including MultiGeometry); convert a GPX
+  track or a KML document's geometries to GeoJSON (RFC 7946, [lon, lat]
+  axis order, axiom-tools/geo-tools-compatible); and extract every
+  coordinate from either format as a flat lat/lon list. No network, no
+  wall-clock (timestamps are read verbatim from the document, never
+  generated), no randomness. Input size and point/coordinate counts are
+  capped with headroom under the platform's ~4 MiB transport limit; a
+  malformed or oversized document returns a structured error, never a crash.
+license: MIT
+author: Christian George Lucas
+tags:
+  - gpx
+  - kml
+  - gps
+  - geojson
+  - tracks
+  - waypoints
+  - routes
+  - geospatial
+  - fitness
+  - mapping
+
+nodes:
+  - name: DetectFormat
+    input: DetectFormatInput
+    output: DetectFormatOutput
+    description: >-
+      Detect whether a document's root element identifies it as GPX or KML.
+      Returns format="unknown" (ok=true) rather than an error when the root
+      element is neither — callers that need a hard failure should check the
+      returned format themselves.
+
+  - name: ParseGpx
+    input: ParseGpxInput
+    output: ParseGpxOutput
+    description: >-
+      Parse a full GPX 1.0/1.1 document into its normalized structure in one
+      call: document-level metadata (name, description, author, time,
+      bounds), every waypoint, every route, and every track (with its
+      segments and points). The general-purpose parse the other GPX nodes
+      are specialized views of. A document whose root element is not <gpx>
+      returns a structured WRONG_ROOT_ELEMENT error.
+
+  - name: ListTracks
+    input: ListTracksInput
+    output: ListTracksOutput
+    description: >-
+      List every <trk> in a GPX document as a lightweight summary — name,
+      segment count, point count, and its 0-based index — without the full
+      point data ParseGpx/GetTrackPoints return. The index this returns is
+      the track_index every other track-scoped node (GetTrackPoints,
+      GetBoundingBox, GetElevationProfile, GetTimeRange,
+      GpxTrackToGeoJson) expects.
+
+  - name: GetTrackPoints
+    input: GetTrackPointsInput
+    output: GetTrackPointsOutput
+    description: >-
+      Extract one GPX track's points — lat, lon, elevation, and time — as a
+      flat array, segments concatenated in document order with each point's
+      segment_index recording which <trkseg> it came from. An out-of-range
+      track_index returns a structured TRACK_INDEX_OUT_OF_RANGE error.
+      Capped at 20,000 points (truncated=true past the cap) to stay well
+      under the platform's transport limit on a single response.
+
+  - name: ListWaypoints
+    input: ListWaypointsInput
+    output: ListWaypointsOutput
+    description: >-
+      List every <wpt> in a GPX document: lat, lon, elevation, name, symbol
+      (the GPX <sym> display-icon name), and time.
+
+  - name: ListRoutes
+    input: ListRoutesInput
+    output: ListRoutesOutput
+    description: >-
+      List every <rte> in a GPX document: its name and its ordered route
+      points (a planned path, distinct from a recorded <trk> track).
+
+  - name: GetGpxMetadata
+    input: GetGpxMetadataInput
+    output: GetGpxMetadataOutput
+    description: >-
+      Extract just the GPX <metadata> block — name, description, author,
+      time, and bounds — without waypoints/routes/tracks. has_bounds is
+      false when the document has no <bounds> element (bounds are optional
+      in GPX and not every producer emits them); use GetBoundingBox to
+      compute one from the actual points instead.
+
+  - name: GetBoundingBox
+    input: GetBoundingBoxInput
+    output: GetBoundingBoxOutput
+    description: >-
+      Compute the min/max latitude/longitude bounding box over a set of
+      points — pure min/max, no distance or area math. Pass has_track_index
+      =true with a track_index to scope to one track's points; otherwise
+      the box covers every waypoint, route point, and track point in the
+      whole document. Returns EMPTY_GEOMETRY when the scoped point set is
+      empty.
+
+  - name: GetElevationProfile
+    input: GetElevationProfileInput
+    output: GetElevationProfileOutput
+    description: >-
+      Extract a GPX track's elevation profile: the ordered elevation values
+      together with each point's index (position in the flattened point
+      sequence) and timestamp. Points with no <ele> element carry
+      has_elevation=false rather than a fabricated 0. Capped at 20,000
+      points (truncated=true past the cap).
+
+  - name: GetTimeRange
+    input: GetTimeRangeInput
+    output: GetTimeRangeOutput
+    description: >-
+      Extract a GPX track's time range: the first and last point timestamps
+      in document order, read verbatim from the file (never generated or
+      reformatted). has_range=false when the track has no timestamped
+      points at all.
+
+  - name: GetSummary
+    input: GetSummaryInput
+    output: GetSummaryOutput
+    description: >-
+      Summarize a GPX or KML document's counts in one call: format, track
+      count, route count, waypoint count, total track points, total route
+      points, and (KML only) placemark count. Auto-detects format the same
+      way DetectFormat does.
+
+  - name: ParseKml
+    input: ParseKmlInput
+    output: ParseKmlOutput
+    description: >-
+      Parse a KML document into its document name and every <Placemark>:
+      name, description, geometry type (Point/LineString/Polygon/
+      MultiGeometry), and flattened coordinates. For a Polygon this returns
+      only the outer-boundary ring's coordinates and for a MultiGeometry
+      only its first child geometry — use GetKmlGeometries for every ring
+      and every child geometry individually. A document whose root element
+      is not <kml> returns a structured WRONG_ROOT_ELEMENT error.
+
+  - name: ListPlacemarks
+    input: ListPlacemarksInput
+    output: ListPlacemarksOutput
+    description: >-
+      List every KML <Placemark> as a lightweight summary — name,
+      description, geometry type, coordinate count, and its 0-based index —
+      without the full coordinate arrays ParseKml/GetKmlGeometries return.
+
+  - name: GetKmlGeometries
+    input: GetKmlGeometriesInput
+    output: GetKmlGeometriesOutput
+    description: >-
+      Extract every geometry from every KML placemark individually,
+      including every ring of a Polygon (outerBoundaryIs and each
+      innerBoundaryIs separately) and every child geometry of a
+      MultiGeometry — where ParseKml/ListPlacemarks collapse a placemark to
+      one geometry_type, this returns one entry per actual geometry
+      element, each tagged with the placemark it belongs to. Capped at
+      20,000 coordinates total (truncated=true past the cap).
+
+  - name: GpxTrackToGeoJson
+    input: GpxTrackToGeoJsonInput
+    output: GeoJson
+    description: >-
+      Convert one GPX track's points to a GeoJSON (RFC 7946) LineString
+      Feature — coordinates in [longitude, latitude] axis order, elevation
+      included as the optional third coordinate when every point in the
+      track has one. Output is compatible with
+      christiangeorgelucas/geo-tools' Geometry.geojson field for direct
+      flow composition. A track with fewer than 2 points returns a
+      structured EMPTY_GEOMETRY error (a LineString requires at least 2
+      positions).
+
+  - name: KmlToGeoJson
+    input: KmlToGeoJsonInput
+    output: GeoJson
+    description: >-
+      Convert every geometry across every KML placemark to a single GeoJSON
+      (RFC 7946) GeometryCollection — one member geometry per Point/
+      LineString/Polygon (rings assembled into a single Polygon per
+      placemark's geometry), coordinates in [longitude, latitude] axis
+      order. Emitting a bare GeometryCollection rather than a
+      Feature/FeatureCollection keeps this directly compatible with
+      christiangeorgelucas/geo-tools' Geometry.geojson field, which carries
+      a bare RFC 7946 geometry object. A document with no placemarks
+      returns an empty GeometryCollection (ok=true), not an error.
+
+  - name: ExtractAllCoordinates
+    input: ExtractAllCoordinatesInput
+    output: ExtractAllCoordinatesOutput
+    description: >-
+      Extract every coordinate — from waypoints, route points, track
+      points, or KML placemark geometries — out of a GPX or KML document as
+      one flat lat/lon list, auto-detecting the format. The simplest node
+      for a caller that just wants "every point this file mentions" without
+      caring about GPX/KML structure. Capped at 20,000 coordinates
+      (truncated=true past the cap).

@@ -1,0 +1,11519 @@
+// source: messages.proto
+/**
+ * @fileoverview
+ * @enhanceable
+ * @suppress {missingRequire} reports error on implicit type usages.
+ * @suppress {messageConventions} JS Compiler reports an error if a variable or
+ *     field starts with 'MSG_' and isn't a translatable message.
+ * @public
+ */
+// GENERATED CODE -- DO NOT EDIT!
+/* eslint-disable */
+// @ts-nocheck
+
+var jspb = require('google-protobuf');
+var goog = jspb;
+var global =
+    (typeof globalThis !== 'undefined' && globalThis) ||
+    (typeof window !== 'undefined' && window) ||
+    (typeof global !== 'undefined' && global) ||
+    (typeof self !== 'undefined' && self) ||
+    (function () { return this; }).call(null) ||
+    Function('return this')();
+
+goog.exportSymbol('proto.christiangeorgelucas.gpx_tools.BoundingBox', null, global);
+goog.exportSymbol('proto.christiangeorgelucas.gpx_tools.DetectFormatInput', null, global);
+goog.exportSymbol('proto.christiangeorgelucas.gpx_tools.DetectFormatOutput', null, global);
+goog.exportSymbol('proto.christiangeorgelucas.gpx_tools.Doc', null, global);
+goog.exportSymbol('proto.christiangeorgelucas.gpx_tools.ElevationPoint', null, global);
+goog.exportSymbol('proto.christiangeorgelucas.gpx_tools.ExtractAllCoordinatesInput', null, global);
+goog.exportSymbol('proto.christiangeorgelucas.gpx_tools.ExtractAllCoordinatesOutput', null, global);
+goog.exportSymbol('proto.christiangeorgelucas.gpx_tools.GeoJson', null, global);
+goog.exportSymbol('proto.christiangeorgelucas.gpx_tools.GetBoundingBoxInput', null, global);
+goog.exportSymbol('proto.christiangeorgelucas.gpx_tools.GetBoundingBoxOutput', null, global);
+goog.exportSymbol('proto.christiangeorgelucas.gpx_tools.GetElevationProfileInput', null, global);
+goog.exportSymbol('proto.christiangeorgelucas.gpx_tools.GetElevationProfileOutput', null, global);
+goog.exportSymbol('proto.christiangeorgelucas.gpx_tools.GetGpxMetadataInput', null, global);
+goog.exportSymbol('proto.christiangeorgelucas.gpx_tools.GetGpxMetadataOutput', null, global);
+goog.exportSymbol('proto.christiangeorgelucas.gpx_tools.GetKmlGeometriesInput', null, global);
+goog.exportSymbol('proto.christiangeorgelucas.gpx_tools.GetKmlGeometriesOutput', null, global);
+goog.exportSymbol('proto.christiangeorgelucas.gpx_tools.GetSummaryInput', null, global);
+goog.exportSymbol('proto.christiangeorgelucas.gpx_tools.GetSummaryOutput', null, global);
+goog.exportSymbol('proto.christiangeorgelucas.gpx_tools.GetTimeRangeInput', null, global);
+goog.exportSymbol('proto.christiangeorgelucas.gpx_tools.GetTimeRangeOutput', null, global);
+goog.exportSymbol('proto.christiangeorgelucas.gpx_tools.GetTrackPointsInput', null, global);
+goog.exportSymbol('proto.christiangeorgelucas.gpx_tools.GetTrackPointsOutput', null, global);
+goog.exportSymbol('proto.christiangeorgelucas.gpx_tools.GpxError', null, global);
+goog.exportSymbol('proto.christiangeorgelucas.gpx_tools.GpxTrackToGeoJsonInput', null, global);
+goog.exportSymbol('proto.christiangeorgelucas.gpx_tools.KmlGeometry', null, global);
+goog.exportSymbol('proto.christiangeorgelucas.gpx_tools.KmlToGeoJsonInput', null, global);
+goog.exportSymbol('proto.christiangeorgelucas.gpx_tools.LatLon', null, global);
+goog.exportSymbol('proto.christiangeorgelucas.gpx_tools.ListPlacemarksInput', null, global);
+goog.exportSymbol('proto.christiangeorgelucas.gpx_tools.ListPlacemarksOutput', null, global);
+goog.exportSymbol('proto.christiangeorgelucas.gpx_tools.ListRoutesInput', null, global);
+goog.exportSymbol('proto.christiangeorgelucas.gpx_tools.ListRoutesOutput', null, global);
+goog.exportSymbol('proto.christiangeorgelucas.gpx_tools.ListTracksInput', null, global);
+goog.exportSymbol('proto.christiangeorgelucas.gpx_tools.ListTracksOutput', null, global);
+goog.exportSymbol('proto.christiangeorgelucas.gpx_tools.ListWaypointsInput', null, global);
+goog.exportSymbol('proto.christiangeorgelucas.gpx_tools.ListWaypointsOutput', null, global);
+goog.exportSymbol('proto.christiangeorgelucas.gpx_tools.ParseGpxInput', null, global);
+goog.exportSymbol('proto.christiangeorgelucas.gpx_tools.ParseGpxOutput', null, global);
+goog.exportSymbol('proto.christiangeorgelucas.gpx_tools.ParseKmlInput', null, global);
+goog.exportSymbol('proto.christiangeorgelucas.gpx_tools.ParseKmlOutput', null, global);
+goog.exportSymbol('proto.christiangeorgelucas.gpx_tools.Placemark', null, global);
+goog.exportSymbol('proto.christiangeorgelucas.gpx_tools.PlacemarkSummary', null, global);
+goog.exportSymbol('proto.christiangeorgelucas.gpx_tools.Point', null, global);
+goog.exportSymbol('proto.christiangeorgelucas.gpx_tools.Route', null, global);
+goog.exportSymbol('proto.christiangeorgelucas.gpx_tools.Track', null, global);
+goog.exportSymbol('proto.christiangeorgelucas.gpx_tools.TrackSegment', null, global);
+goog.exportSymbol('proto.christiangeorgelucas.gpx_tools.TrackSummary', null, global);
+goog.exportSymbol('proto.christiangeorgelucas.gpx_tools.Waypoint', null, global);
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.christiangeorgelucas.gpx_tools.Doc = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.christiangeorgelucas.gpx_tools.Doc, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.christiangeorgelucas.gpx_tools.Doc.displayName = 'proto.christiangeorgelucas.gpx_tools.Doc';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.christiangeorgelucas.gpx_tools.GpxError = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.christiangeorgelucas.gpx_tools.GpxError, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.christiangeorgelucas.gpx_tools.GpxError.displayName = 'proto.christiangeorgelucas.gpx_tools.GpxError';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.christiangeorgelucas.gpx_tools.Point = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.christiangeorgelucas.gpx_tools.Point, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.christiangeorgelucas.gpx_tools.Point.displayName = 'proto.christiangeorgelucas.gpx_tools.Point';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.christiangeorgelucas.gpx_tools.TrackSegment = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.christiangeorgelucas.gpx_tools.TrackSegment.repeatedFields_, null);
+};
+goog.inherits(proto.christiangeorgelucas.gpx_tools.TrackSegment, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.christiangeorgelucas.gpx_tools.TrackSegment.displayName = 'proto.christiangeorgelucas.gpx_tools.TrackSegment';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.christiangeorgelucas.gpx_tools.Track = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.christiangeorgelucas.gpx_tools.Track.repeatedFields_, null);
+};
+goog.inherits(proto.christiangeorgelucas.gpx_tools.Track, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.christiangeorgelucas.gpx_tools.Track.displayName = 'proto.christiangeorgelucas.gpx_tools.Track';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.christiangeorgelucas.gpx_tools.Route = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.christiangeorgelucas.gpx_tools.Route.repeatedFields_, null);
+};
+goog.inherits(proto.christiangeorgelucas.gpx_tools.Route, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.christiangeorgelucas.gpx_tools.Route.displayName = 'proto.christiangeorgelucas.gpx_tools.Route';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.christiangeorgelucas.gpx_tools.Waypoint = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.christiangeorgelucas.gpx_tools.Waypoint, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.christiangeorgelucas.gpx_tools.Waypoint.displayName = 'proto.christiangeorgelucas.gpx_tools.Waypoint';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.christiangeorgelucas.gpx_tools.BoundingBox = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.christiangeorgelucas.gpx_tools.BoundingBox, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.christiangeorgelucas.gpx_tools.BoundingBox.displayName = 'proto.christiangeorgelucas.gpx_tools.BoundingBox';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.christiangeorgelucas.gpx_tools.GeoJson = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.christiangeorgelucas.gpx_tools.GeoJson, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.christiangeorgelucas.gpx_tools.GeoJson.displayName = 'proto.christiangeorgelucas.gpx_tools.GeoJson';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.christiangeorgelucas.gpx_tools.DetectFormatInput = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.christiangeorgelucas.gpx_tools.DetectFormatInput, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.christiangeorgelucas.gpx_tools.DetectFormatInput.displayName = 'proto.christiangeorgelucas.gpx_tools.DetectFormatInput';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.christiangeorgelucas.gpx_tools.DetectFormatOutput = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.christiangeorgelucas.gpx_tools.DetectFormatOutput, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.christiangeorgelucas.gpx_tools.DetectFormatOutput.displayName = 'proto.christiangeorgelucas.gpx_tools.DetectFormatOutput';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.christiangeorgelucas.gpx_tools.ParseGpxInput = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.christiangeorgelucas.gpx_tools.ParseGpxInput, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.christiangeorgelucas.gpx_tools.ParseGpxInput.displayName = 'proto.christiangeorgelucas.gpx_tools.ParseGpxInput';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.christiangeorgelucas.gpx_tools.ParseGpxOutput = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.christiangeorgelucas.gpx_tools.ParseGpxOutput.repeatedFields_, null);
+};
+goog.inherits(proto.christiangeorgelucas.gpx_tools.ParseGpxOutput, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.christiangeorgelucas.gpx_tools.ParseGpxOutput.displayName = 'proto.christiangeorgelucas.gpx_tools.ParseGpxOutput';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.christiangeorgelucas.gpx_tools.ListTracksInput = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.christiangeorgelucas.gpx_tools.ListTracksInput, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.christiangeorgelucas.gpx_tools.ListTracksInput.displayName = 'proto.christiangeorgelucas.gpx_tools.ListTracksInput';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.christiangeorgelucas.gpx_tools.TrackSummary = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.christiangeorgelucas.gpx_tools.TrackSummary, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.christiangeorgelucas.gpx_tools.TrackSummary.displayName = 'proto.christiangeorgelucas.gpx_tools.TrackSummary';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.christiangeorgelucas.gpx_tools.ListTracksOutput = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.christiangeorgelucas.gpx_tools.ListTracksOutput.repeatedFields_, null);
+};
+goog.inherits(proto.christiangeorgelucas.gpx_tools.ListTracksOutput, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.christiangeorgelucas.gpx_tools.ListTracksOutput.displayName = 'proto.christiangeorgelucas.gpx_tools.ListTracksOutput';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.christiangeorgelucas.gpx_tools.GetTrackPointsInput = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.christiangeorgelucas.gpx_tools.GetTrackPointsInput, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.christiangeorgelucas.gpx_tools.GetTrackPointsInput.displayName = 'proto.christiangeorgelucas.gpx_tools.GetTrackPointsInput';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.christiangeorgelucas.gpx_tools.GetTrackPointsOutput = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.christiangeorgelucas.gpx_tools.GetTrackPointsOutput.repeatedFields_, null);
+};
+goog.inherits(proto.christiangeorgelucas.gpx_tools.GetTrackPointsOutput, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.christiangeorgelucas.gpx_tools.GetTrackPointsOutput.displayName = 'proto.christiangeorgelucas.gpx_tools.GetTrackPointsOutput';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.christiangeorgelucas.gpx_tools.ListWaypointsInput = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.christiangeorgelucas.gpx_tools.ListWaypointsInput, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.christiangeorgelucas.gpx_tools.ListWaypointsInput.displayName = 'proto.christiangeorgelucas.gpx_tools.ListWaypointsInput';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.christiangeorgelucas.gpx_tools.ListWaypointsOutput = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.christiangeorgelucas.gpx_tools.ListWaypointsOutput.repeatedFields_, null);
+};
+goog.inherits(proto.christiangeorgelucas.gpx_tools.ListWaypointsOutput, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.christiangeorgelucas.gpx_tools.ListWaypointsOutput.displayName = 'proto.christiangeorgelucas.gpx_tools.ListWaypointsOutput';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.christiangeorgelucas.gpx_tools.ListRoutesInput = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.christiangeorgelucas.gpx_tools.ListRoutesInput, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.christiangeorgelucas.gpx_tools.ListRoutesInput.displayName = 'proto.christiangeorgelucas.gpx_tools.ListRoutesInput';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.christiangeorgelucas.gpx_tools.ListRoutesOutput = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.christiangeorgelucas.gpx_tools.ListRoutesOutput.repeatedFields_, null);
+};
+goog.inherits(proto.christiangeorgelucas.gpx_tools.ListRoutesOutput, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.christiangeorgelucas.gpx_tools.ListRoutesOutput.displayName = 'proto.christiangeorgelucas.gpx_tools.ListRoutesOutput';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.christiangeorgelucas.gpx_tools.GetGpxMetadataInput = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.christiangeorgelucas.gpx_tools.GetGpxMetadataInput, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.christiangeorgelucas.gpx_tools.GetGpxMetadataInput.displayName = 'proto.christiangeorgelucas.gpx_tools.GetGpxMetadataInput';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.christiangeorgelucas.gpx_tools.GetGpxMetadataOutput = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.christiangeorgelucas.gpx_tools.GetGpxMetadataOutput, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.christiangeorgelucas.gpx_tools.GetGpxMetadataOutput.displayName = 'proto.christiangeorgelucas.gpx_tools.GetGpxMetadataOutput';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.christiangeorgelucas.gpx_tools.GetBoundingBoxInput = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.christiangeorgelucas.gpx_tools.GetBoundingBoxInput, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.christiangeorgelucas.gpx_tools.GetBoundingBoxInput.displayName = 'proto.christiangeorgelucas.gpx_tools.GetBoundingBoxInput';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.christiangeorgelucas.gpx_tools.GetBoundingBoxOutput = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.christiangeorgelucas.gpx_tools.GetBoundingBoxOutput, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.christiangeorgelucas.gpx_tools.GetBoundingBoxOutput.displayName = 'proto.christiangeorgelucas.gpx_tools.GetBoundingBoxOutput';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.christiangeorgelucas.gpx_tools.GetElevationProfileInput = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.christiangeorgelucas.gpx_tools.GetElevationProfileInput, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.christiangeorgelucas.gpx_tools.GetElevationProfileInput.displayName = 'proto.christiangeorgelucas.gpx_tools.GetElevationProfileInput';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.christiangeorgelucas.gpx_tools.ElevationPoint = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.christiangeorgelucas.gpx_tools.ElevationPoint, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.christiangeorgelucas.gpx_tools.ElevationPoint.displayName = 'proto.christiangeorgelucas.gpx_tools.ElevationPoint';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.christiangeorgelucas.gpx_tools.GetElevationProfileOutput = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.christiangeorgelucas.gpx_tools.GetElevationProfileOutput.repeatedFields_, null);
+};
+goog.inherits(proto.christiangeorgelucas.gpx_tools.GetElevationProfileOutput, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.christiangeorgelucas.gpx_tools.GetElevationProfileOutput.displayName = 'proto.christiangeorgelucas.gpx_tools.GetElevationProfileOutput';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.christiangeorgelucas.gpx_tools.GetTimeRangeInput = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.christiangeorgelucas.gpx_tools.GetTimeRangeInput, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.christiangeorgelucas.gpx_tools.GetTimeRangeInput.displayName = 'proto.christiangeorgelucas.gpx_tools.GetTimeRangeInput';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.christiangeorgelucas.gpx_tools.GetTimeRangeOutput = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.christiangeorgelucas.gpx_tools.GetTimeRangeOutput, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.christiangeorgelucas.gpx_tools.GetTimeRangeOutput.displayName = 'proto.christiangeorgelucas.gpx_tools.GetTimeRangeOutput';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.christiangeorgelucas.gpx_tools.GetSummaryInput = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.christiangeorgelucas.gpx_tools.GetSummaryInput, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.christiangeorgelucas.gpx_tools.GetSummaryInput.displayName = 'proto.christiangeorgelucas.gpx_tools.GetSummaryInput';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.christiangeorgelucas.gpx_tools.GetSummaryOutput = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.christiangeorgelucas.gpx_tools.GetSummaryOutput, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.christiangeorgelucas.gpx_tools.GetSummaryOutput.displayName = 'proto.christiangeorgelucas.gpx_tools.GetSummaryOutput';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.christiangeorgelucas.gpx_tools.Placemark = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.christiangeorgelucas.gpx_tools.Placemark.repeatedFields_, null);
+};
+goog.inherits(proto.christiangeorgelucas.gpx_tools.Placemark, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.christiangeorgelucas.gpx_tools.Placemark.displayName = 'proto.christiangeorgelucas.gpx_tools.Placemark';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.christiangeorgelucas.gpx_tools.ParseKmlInput = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.christiangeorgelucas.gpx_tools.ParseKmlInput, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.christiangeorgelucas.gpx_tools.ParseKmlInput.displayName = 'proto.christiangeorgelucas.gpx_tools.ParseKmlInput';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.christiangeorgelucas.gpx_tools.ParseKmlOutput = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.christiangeorgelucas.gpx_tools.ParseKmlOutput.repeatedFields_, null);
+};
+goog.inherits(proto.christiangeorgelucas.gpx_tools.ParseKmlOutput, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.christiangeorgelucas.gpx_tools.ParseKmlOutput.displayName = 'proto.christiangeorgelucas.gpx_tools.ParseKmlOutput';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.christiangeorgelucas.gpx_tools.ListPlacemarksInput = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.christiangeorgelucas.gpx_tools.ListPlacemarksInput, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.christiangeorgelucas.gpx_tools.ListPlacemarksInput.displayName = 'proto.christiangeorgelucas.gpx_tools.ListPlacemarksInput';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.christiangeorgelucas.gpx_tools.PlacemarkSummary = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.christiangeorgelucas.gpx_tools.PlacemarkSummary, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.christiangeorgelucas.gpx_tools.PlacemarkSummary.displayName = 'proto.christiangeorgelucas.gpx_tools.PlacemarkSummary';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.christiangeorgelucas.gpx_tools.ListPlacemarksOutput = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.christiangeorgelucas.gpx_tools.ListPlacemarksOutput.repeatedFields_, null);
+};
+goog.inherits(proto.christiangeorgelucas.gpx_tools.ListPlacemarksOutput, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.christiangeorgelucas.gpx_tools.ListPlacemarksOutput.displayName = 'proto.christiangeorgelucas.gpx_tools.ListPlacemarksOutput';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.christiangeorgelucas.gpx_tools.GetKmlGeometriesInput = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.christiangeorgelucas.gpx_tools.GetKmlGeometriesInput, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.christiangeorgelucas.gpx_tools.GetKmlGeometriesInput.displayName = 'proto.christiangeorgelucas.gpx_tools.GetKmlGeometriesInput';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.christiangeorgelucas.gpx_tools.KmlGeometry = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.christiangeorgelucas.gpx_tools.KmlGeometry.repeatedFields_, null);
+};
+goog.inherits(proto.christiangeorgelucas.gpx_tools.KmlGeometry, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.christiangeorgelucas.gpx_tools.KmlGeometry.displayName = 'proto.christiangeorgelucas.gpx_tools.KmlGeometry';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.christiangeorgelucas.gpx_tools.GetKmlGeometriesOutput = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.christiangeorgelucas.gpx_tools.GetKmlGeometriesOutput.repeatedFields_, null);
+};
+goog.inherits(proto.christiangeorgelucas.gpx_tools.GetKmlGeometriesOutput, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.christiangeorgelucas.gpx_tools.GetKmlGeometriesOutput.displayName = 'proto.christiangeorgelucas.gpx_tools.GetKmlGeometriesOutput';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.christiangeorgelucas.gpx_tools.GpxTrackToGeoJsonInput = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.christiangeorgelucas.gpx_tools.GpxTrackToGeoJsonInput, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.christiangeorgelucas.gpx_tools.GpxTrackToGeoJsonInput.displayName = 'proto.christiangeorgelucas.gpx_tools.GpxTrackToGeoJsonInput';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.christiangeorgelucas.gpx_tools.KmlToGeoJsonInput = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.christiangeorgelucas.gpx_tools.KmlToGeoJsonInput, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.christiangeorgelucas.gpx_tools.KmlToGeoJsonInput.displayName = 'proto.christiangeorgelucas.gpx_tools.KmlToGeoJsonInput';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.christiangeorgelucas.gpx_tools.ExtractAllCoordinatesInput = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.christiangeorgelucas.gpx_tools.ExtractAllCoordinatesInput, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.christiangeorgelucas.gpx_tools.ExtractAllCoordinatesInput.displayName = 'proto.christiangeorgelucas.gpx_tools.ExtractAllCoordinatesInput';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.christiangeorgelucas.gpx_tools.LatLon = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.christiangeorgelucas.gpx_tools.LatLon, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.christiangeorgelucas.gpx_tools.LatLon.displayName = 'proto.christiangeorgelucas.gpx_tools.LatLon';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.christiangeorgelucas.gpx_tools.ExtractAllCoordinatesOutput = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.christiangeorgelucas.gpx_tools.ExtractAllCoordinatesOutput.repeatedFields_, null);
+};
+goog.inherits(proto.christiangeorgelucas.gpx_tools.ExtractAllCoordinatesOutput, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.christiangeorgelucas.gpx_tools.ExtractAllCoordinatesOutput.displayName = 'proto.christiangeorgelucas.gpx_tools.ExtractAllCoordinatesOutput';
+}
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.christiangeorgelucas.gpx_tools.Doc.prototype.toObject = function(opt_includeInstance) {
+  return proto.christiangeorgelucas.gpx_tools.Doc.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.christiangeorgelucas.gpx_tools.Doc} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.Doc.toObject = function(includeInstance, msg) {
+  var f, obj = {
+xml: jspb.Message.getFieldWithDefault(msg, 1, "")
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.christiangeorgelucas.gpx_tools.Doc}
+ */
+proto.christiangeorgelucas.gpx_tools.Doc.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.christiangeorgelucas.gpx_tools.Doc;
+  return proto.christiangeorgelucas.gpx_tools.Doc.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.christiangeorgelucas.gpx_tools.Doc} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.christiangeorgelucas.gpx_tools.Doc}
+ */
+proto.christiangeorgelucas.gpx_tools.Doc.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setXml(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.christiangeorgelucas.gpx_tools.Doc.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.christiangeorgelucas.gpx_tools.Doc.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.christiangeorgelucas.gpx_tools.Doc} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.Doc.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getXml();
+  if (f.length > 0) {
+    writer.writeString(
+      1,
+      f
+    );
+  }
+};
+
+
+/**
+ * optional string xml = 1;
+ * @return {string}
+ */
+proto.christiangeorgelucas.gpx_tools.Doc.prototype.getXml = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.Doc} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.Doc.prototype.setXml = function(value) {
+  return jspb.Message.setProto3StringField(this, 1, value);
+};
+
+
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.christiangeorgelucas.gpx_tools.GpxError.prototype.toObject = function(opt_includeInstance) {
+  return proto.christiangeorgelucas.gpx_tools.GpxError.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.christiangeorgelucas.gpx_tools.GpxError} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.GpxError.toObject = function(includeInstance, msg) {
+  var f, obj = {
+code: jspb.Message.getFieldWithDefault(msg, 1, ""),
+message: jspb.Message.getFieldWithDefault(msg, 2, "")
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.christiangeorgelucas.gpx_tools.GpxError}
+ */
+proto.christiangeorgelucas.gpx_tools.GpxError.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.christiangeorgelucas.gpx_tools.GpxError;
+  return proto.christiangeorgelucas.gpx_tools.GpxError.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.christiangeorgelucas.gpx_tools.GpxError} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.christiangeorgelucas.gpx_tools.GpxError}
+ */
+proto.christiangeorgelucas.gpx_tools.GpxError.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setCode(value);
+      break;
+    case 2:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setMessage(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.christiangeorgelucas.gpx_tools.GpxError.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.christiangeorgelucas.gpx_tools.GpxError.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.christiangeorgelucas.gpx_tools.GpxError} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.GpxError.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getCode();
+  if (f.length > 0) {
+    writer.writeString(
+      1,
+      f
+    );
+  }
+  f = message.getMessage();
+  if (f.length > 0) {
+    writer.writeString(
+      2,
+      f
+    );
+  }
+};
+
+
+/**
+ * optional string code = 1;
+ * @return {string}
+ */
+proto.christiangeorgelucas.gpx_tools.GpxError.prototype.getCode = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.GpxError} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.GpxError.prototype.setCode = function(value) {
+  return jspb.Message.setProto3StringField(this, 1, value);
+};
+
+
+/**
+ * optional string message = 2;
+ * @return {string}
+ */
+proto.christiangeorgelucas.gpx_tools.GpxError.prototype.getMessage = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.GpxError} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.GpxError.prototype.setMessage = function(value) {
+  return jspb.Message.setProto3StringField(this, 2, value);
+};
+
+
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.christiangeorgelucas.gpx_tools.Point.prototype.toObject = function(opt_includeInstance) {
+  return proto.christiangeorgelucas.gpx_tools.Point.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.christiangeorgelucas.gpx_tools.Point} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.Point.toObject = function(includeInstance, msg) {
+  var f, obj = {
+lat: jspb.Message.getFloatingPointFieldWithDefault(msg, 1, 0.0),
+lon: jspb.Message.getFloatingPointFieldWithDefault(msg, 2, 0.0),
+elevation: jspb.Message.getFloatingPointFieldWithDefault(msg, 3, 0.0),
+hasElevation: jspb.Message.getBooleanFieldWithDefault(msg, 4, false),
+time: jspb.Message.getFieldWithDefault(msg, 5, ""),
+hasTime: jspb.Message.getBooleanFieldWithDefault(msg, 6, false),
+segmentIndex: jspb.Message.getFieldWithDefault(msg, 7, 0)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.christiangeorgelucas.gpx_tools.Point}
+ */
+proto.christiangeorgelucas.gpx_tools.Point.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.christiangeorgelucas.gpx_tools.Point;
+  return proto.christiangeorgelucas.gpx_tools.Point.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.christiangeorgelucas.gpx_tools.Point} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.christiangeorgelucas.gpx_tools.Point}
+ */
+proto.christiangeorgelucas.gpx_tools.Point.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {number} */ (reader.readDouble());
+      msg.setLat(value);
+      break;
+    case 2:
+      var value = /** @type {number} */ (reader.readDouble());
+      msg.setLon(value);
+      break;
+    case 3:
+      var value = /** @type {number} */ (reader.readDouble());
+      msg.setElevation(value);
+      break;
+    case 4:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setHasElevation(value);
+      break;
+    case 5:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setTime(value);
+      break;
+    case 6:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setHasTime(value);
+      break;
+    case 7:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setSegmentIndex(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.christiangeorgelucas.gpx_tools.Point.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.christiangeorgelucas.gpx_tools.Point.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.christiangeorgelucas.gpx_tools.Point} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.Point.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getLat();
+  if (f !== 0.0) {
+    writer.writeDouble(
+      1,
+      f
+    );
+  }
+  f = message.getLon();
+  if (f !== 0.0) {
+    writer.writeDouble(
+      2,
+      f
+    );
+  }
+  f = message.getElevation();
+  if (f !== 0.0) {
+    writer.writeDouble(
+      3,
+      f
+    );
+  }
+  f = message.getHasElevation();
+  if (f) {
+    writer.writeBool(
+      4,
+      f
+    );
+  }
+  f = message.getTime();
+  if (f.length > 0) {
+    writer.writeString(
+      5,
+      f
+    );
+  }
+  f = message.getHasTime();
+  if (f) {
+    writer.writeBool(
+      6,
+      f
+    );
+  }
+  f = message.getSegmentIndex();
+  if (f !== 0) {
+    writer.writeInt32(
+      7,
+      f
+    );
+  }
+};
+
+
+/**
+ * optional double lat = 1;
+ * @return {number}
+ */
+proto.christiangeorgelucas.gpx_tools.Point.prototype.getLat = function() {
+  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 1, 0.0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.Point} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.Point.prototype.setLat = function(value) {
+  return jspb.Message.setProto3FloatField(this, 1, value);
+};
+
+
+/**
+ * optional double lon = 2;
+ * @return {number}
+ */
+proto.christiangeorgelucas.gpx_tools.Point.prototype.getLon = function() {
+  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 2, 0.0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.Point} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.Point.prototype.setLon = function(value) {
+  return jspb.Message.setProto3FloatField(this, 2, value);
+};
+
+
+/**
+ * optional double elevation = 3;
+ * @return {number}
+ */
+proto.christiangeorgelucas.gpx_tools.Point.prototype.getElevation = function() {
+  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 3, 0.0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.Point} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.Point.prototype.setElevation = function(value) {
+  return jspb.Message.setProto3FloatField(this, 3, value);
+};
+
+
+/**
+ * optional bool has_elevation = 4;
+ * @return {boolean}
+ */
+proto.christiangeorgelucas.gpx_tools.Point.prototype.getHasElevation = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 4, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.Point} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.Point.prototype.setHasElevation = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 4, value);
+};
+
+
+/**
+ * optional string time = 5;
+ * @return {string}
+ */
+proto.christiangeorgelucas.gpx_tools.Point.prototype.getTime = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 5, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.Point} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.Point.prototype.setTime = function(value) {
+  return jspb.Message.setProto3StringField(this, 5, value);
+};
+
+
+/**
+ * optional bool has_time = 6;
+ * @return {boolean}
+ */
+proto.christiangeorgelucas.gpx_tools.Point.prototype.getHasTime = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 6, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.Point} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.Point.prototype.setHasTime = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 6, value);
+};
+
+
+/**
+ * optional int32 segment_index = 7;
+ * @return {number}
+ */
+proto.christiangeorgelucas.gpx_tools.Point.prototype.getSegmentIndex = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 7, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.Point} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.Point.prototype.setSegmentIndex = function(value) {
+  return jspb.Message.setProto3IntField(this, 7, value);
+};
+
+
+
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.christiangeorgelucas.gpx_tools.TrackSegment.repeatedFields_ = [1];
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.christiangeorgelucas.gpx_tools.TrackSegment.prototype.toObject = function(opt_includeInstance) {
+  return proto.christiangeorgelucas.gpx_tools.TrackSegment.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.christiangeorgelucas.gpx_tools.TrackSegment} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.TrackSegment.toObject = function(includeInstance, msg) {
+  var f, obj = {
+pointsList: jspb.Message.toObjectList(msg.getPointsList(),
+    proto.christiangeorgelucas.gpx_tools.Point.toObject, includeInstance)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.christiangeorgelucas.gpx_tools.TrackSegment}
+ */
+proto.christiangeorgelucas.gpx_tools.TrackSegment.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.christiangeorgelucas.gpx_tools.TrackSegment;
+  return proto.christiangeorgelucas.gpx_tools.TrackSegment.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.christiangeorgelucas.gpx_tools.TrackSegment} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.christiangeorgelucas.gpx_tools.TrackSegment}
+ */
+proto.christiangeorgelucas.gpx_tools.TrackSegment.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new proto.christiangeorgelucas.gpx_tools.Point;
+      reader.readMessage(value,proto.christiangeorgelucas.gpx_tools.Point.deserializeBinaryFromReader);
+      msg.addPoints(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.christiangeorgelucas.gpx_tools.TrackSegment.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.christiangeorgelucas.gpx_tools.TrackSegment.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.christiangeorgelucas.gpx_tools.TrackSegment} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.TrackSegment.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getPointsList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      1,
+      f,
+      proto.christiangeorgelucas.gpx_tools.Point.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * repeated Point points = 1;
+ * @return {!Array<!proto.christiangeorgelucas.gpx_tools.Point>}
+ */
+proto.christiangeorgelucas.gpx_tools.TrackSegment.prototype.getPointsList = function() {
+  return /** @type{!Array<!proto.christiangeorgelucas.gpx_tools.Point>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.christiangeorgelucas.gpx_tools.Point, 1));
+};
+
+
+/**
+ * @param {!Array<!proto.christiangeorgelucas.gpx_tools.Point>} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.TrackSegment} returns this
+*/
+proto.christiangeorgelucas.gpx_tools.TrackSegment.prototype.setPointsList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 1, value);
+};
+
+
+/**
+ * @param {!proto.christiangeorgelucas.gpx_tools.Point=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.christiangeorgelucas.gpx_tools.Point}
+ */
+proto.christiangeorgelucas.gpx_tools.TrackSegment.prototype.addPoints = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.christiangeorgelucas.gpx_tools.Point, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.christiangeorgelucas.gpx_tools.TrackSegment} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.TrackSegment.prototype.clearPointsList = function() {
+  return this.setPointsList([]);
+};
+
+
+
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.christiangeorgelucas.gpx_tools.Track.repeatedFields_ = [2];
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.christiangeorgelucas.gpx_tools.Track.prototype.toObject = function(opt_includeInstance) {
+  return proto.christiangeorgelucas.gpx_tools.Track.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.christiangeorgelucas.gpx_tools.Track} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.Track.toObject = function(includeInstance, msg) {
+  var f, obj = {
+name: jspb.Message.getFieldWithDefault(msg, 1, ""),
+segmentsList: jspb.Message.toObjectList(msg.getSegmentsList(),
+    proto.christiangeorgelucas.gpx_tools.TrackSegment.toObject, includeInstance)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.christiangeorgelucas.gpx_tools.Track}
+ */
+proto.christiangeorgelucas.gpx_tools.Track.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.christiangeorgelucas.gpx_tools.Track;
+  return proto.christiangeorgelucas.gpx_tools.Track.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.christiangeorgelucas.gpx_tools.Track} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.christiangeorgelucas.gpx_tools.Track}
+ */
+proto.christiangeorgelucas.gpx_tools.Track.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setName(value);
+      break;
+    case 2:
+      var value = new proto.christiangeorgelucas.gpx_tools.TrackSegment;
+      reader.readMessage(value,proto.christiangeorgelucas.gpx_tools.TrackSegment.deserializeBinaryFromReader);
+      msg.addSegments(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.christiangeorgelucas.gpx_tools.Track.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.christiangeorgelucas.gpx_tools.Track.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.christiangeorgelucas.gpx_tools.Track} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.Track.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getName();
+  if (f.length > 0) {
+    writer.writeString(
+      1,
+      f
+    );
+  }
+  f = message.getSegmentsList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      2,
+      f,
+      proto.christiangeorgelucas.gpx_tools.TrackSegment.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * optional string name = 1;
+ * @return {string}
+ */
+proto.christiangeorgelucas.gpx_tools.Track.prototype.getName = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.Track} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.Track.prototype.setName = function(value) {
+  return jspb.Message.setProto3StringField(this, 1, value);
+};
+
+
+/**
+ * repeated TrackSegment segments = 2;
+ * @return {!Array<!proto.christiangeorgelucas.gpx_tools.TrackSegment>}
+ */
+proto.christiangeorgelucas.gpx_tools.Track.prototype.getSegmentsList = function() {
+  return /** @type{!Array<!proto.christiangeorgelucas.gpx_tools.TrackSegment>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.christiangeorgelucas.gpx_tools.TrackSegment, 2));
+};
+
+
+/**
+ * @param {!Array<!proto.christiangeorgelucas.gpx_tools.TrackSegment>} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.Track} returns this
+*/
+proto.christiangeorgelucas.gpx_tools.Track.prototype.setSegmentsList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 2, value);
+};
+
+
+/**
+ * @param {!proto.christiangeorgelucas.gpx_tools.TrackSegment=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.christiangeorgelucas.gpx_tools.TrackSegment}
+ */
+proto.christiangeorgelucas.gpx_tools.Track.prototype.addSegments = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 2, opt_value, proto.christiangeorgelucas.gpx_tools.TrackSegment, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.christiangeorgelucas.gpx_tools.Track} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.Track.prototype.clearSegmentsList = function() {
+  return this.setSegmentsList([]);
+};
+
+
+
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.christiangeorgelucas.gpx_tools.Route.repeatedFields_ = [2];
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.christiangeorgelucas.gpx_tools.Route.prototype.toObject = function(opt_includeInstance) {
+  return proto.christiangeorgelucas.gpx_tools.Route.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.christiangeorgelucas.gpx_tools.Route} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.Route.toObject = function(includeInstance, msg) {
+  var f, obj = {
+name: jspb.Message.getFieldWithDefault(msg, 1, ""),
+pointsList: jspb.Message.toObjectList(msg.getPointsList(),
+    proto.christiangeorgelucas.gpx_tools.Point.toObject, includeInstance)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.christiangeorgelucas.gpx_tools.Route}
+ */
+proto.christiangeorgelucas.gpx_tools.Route.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.christiangeorgelucas.gpx_tools.Route;
+  return proto.christiangeorgelucas.gpx_tools.Route.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.christiangeorgelucas.gpx_tools.Route} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.christiangeorgelucas.gpx_tools.Route}
+ */
+proto.christiangeorgelucas.gpx_tools.Route.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setName(value);
+      break;
+    case 2:
+      var value = new proto.christiangeorgelucas.gpx_tools.Point;
+      reader.readMessage(value,proto.christiangeorgelucas.gpx_tools.Point.deserializeBinaryFromReader);
+      msg.addPoints(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.christiangeorgelucas.gpx_tools.Route.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.christiangeorgelucas.gpx_tools.Route.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.christiangeorgelucas.gpx_tools.Route} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.Route.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getName();
+  if (f.length > 0) {
+    writer.writeString(
+      1,
+      f
+    );
+  }
+  f = message.getPointsList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      2,
+      f,
+      proto.christiangeorgelucas.gpx_tools.Point.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * optional string name = 1;
+ * @return {string}
+ */
+proto.christiangeorgelucas.gpx_tools.Route.prototype.getName = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.Route} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.Route.prototype.setName = function(value) {
+  return jspb.Message.setProto3StringField(this, 1, value);
+};
+
+
+/**
+ * repeated Point points = 2;
+ * @return {!Array<!proto.christiangeorgelucas.gpx_tools.Point>}
+ */
+proto.christiangeorgelucas.gpx_tools.Route.prototype.getPointsList = function() {
+  return /** @type{!Array<!proto.christiangeorgelucas.gpx_tools.Point>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.christiangeorgelucas.gpx_tools.Point, 2));
+};
+
+
+/**
+ * @param {!Array<!proto.christiangeorgelucas.gpx_tools.Point>} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.Route} returns this
+*/
+proto.christiangeorgelucas.gpx_tools.Route.prototype.setPointsList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 2, value);
+};
+
+
+/**
+ * @param {!proto.christiangeorgelucas.gpx_tools.Point=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.christiangeorgelucas.gpx_tools.Point}
+ */
+proto.christiangeorgelucas.gpx_tools.Route.prototype.addPoints = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 2, opt_value, proto.christiangeorgelucas.gpx_tools.Point, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.christiangeorgelucas.gpx_tools.Route} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.Route.prototype.clearPointsList = function() {
+  return this.setPointsList([]);
+};
+
+
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.christiangeorgelucas.gpx_tools.Waypoint.prototype.toObject = function(opt_includeInstance) {
+  return proto.christiangeorgelucas.gpx_tools.Waypoint.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.christiangeorgelucas.gpx_tools.Waypoint} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.Waypoint.toObject = function(includeInstance, msg) {
+  var f, obj = {
+lat: jspb.Message.getFloatingPointFieldWithDefault(msg, 1, 0.0),
+lon: jspb.Message.getFloatingPointFieldWithDefault(msg, 2, 0.0),
+elevation: jspb.Message.getFloatingPointFieldWithDefault(msg, 3, 0.0),
+hasElevation: jspb.Message.getBooleanFieldWithDefault(msg, 4, false),
+name: jspb.Message.getFieldWithDefault(msg, 5, ""),
+symbol: jspb.Message.getFieldWithDefault(msg, 6, ""),
+time: jspb.Message.getFieldWithDefault(msg, 7, ""),
+hasTime: jspb.Message.getBooleanFieldWithDefault(msg, 8, false)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.christiangeorgelucas.gpx_tools.Waypoint}
+ */
+proto.christiangeorgelucas.gpx_tools.Waypoint.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.christiangeorgelucas.gpx_tools.Waypoint;
+  return proto.christiangeorgelucas.gpx_tools.Waypoint.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.christiangeorgelucas.gpx_tools.Waypoint} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.christiangeorgelucas.gpx_tools.Waypoint}
+ */
+proto.christiangeorgelucas.gpx_tools.Waypoint.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {number} */ (reader.readDouble());
+      msg.setLat(value);
+      break;
+    case 2:
+      var value = /** @type {number} */ (reader.readDouble());
+      msg.setLon(value);
+      break;
+    case 3:
+      var value = /** @type {number} */ (reader.readDouble());
+      msg.setElevation(value);
+      break;
+    case 4:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setHasElevation(value);
+      break;
+    case 5:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setName(value);
+      break;
+    case 6:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setSymbol(value);
+      break;
+    case 7:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setTime(value);
+      break;
+    case 8:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setHasTime(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.christiangeorgelucas.gpx_tools.Waypoint.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.christiangeorgelucas.gpx_tools.Waypoint.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.christiangeorgelucas.gpx_tools.Waypoint} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.Waypoint.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getLat();
+  if (f !== 0.0) {
+    writer.writeDouble(
+      1,
+      f
+    );
+  }
+  f = message.getLon();
+  if (f !== 0.0) {
+    writer.writeDouble(
+      2,
+      f
+    );
+  }
+  f = message.getElevation();
+  if (f !== 0.0) {
+    writer.writeDouble(
+      3,
+      f
+    );
+  }
+  f = message.getHasElevation();
+  if (f) {
+    writer.writeBool(
+      4,
+      f
+    );
+  }
+  f = message.getName();
+  if (f.length > 0) {
+    writer.writeString(
+      5,
+      f
+    );
+  }
+  f = message.getSymbol();
+  if (f.length > 0) {
+    writer.writeString(
+      6,
+      f
+    );
+  }
+  f = message.getTime();
+  if (f.length > 0) {
+    writer.writeString(
+      7,
+      f
+    );
+  }
+  f = message.getHasTime();
+  if (f) {
+    writer.writeBool(
+      8,
+      f
+    );
+  }
+};
+
+
+/**
+ * optional double lat = 1;
+ * @return {number}
+ */
+proto.christiangeorgelucas.gpx_tools.Waypoint.prototype.getLat = function() {
+  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 1, 0.0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.Waypoint} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.Waypoint.prototype.setLat = function(value) {
+  return jspb.Message.setProto3FloatField(this, 1, value);
+};
+
+
+/**
+ * optional double lon = 2;
+ * @return {number}
+ */
+proto.christiangeorgelucas.gpx_tools.Waypoint.prototype.getLon = function() {
+  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 2, 0.0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.Waypoint} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.Waypoint.prototype.setLon = function(value) {
+  return jspb.Message.setProto3FloatField(this, 2, value);
+};
+
+
+/**
+ * optional double elevation = 3;
+ * @return {number}
+ */
+proto.christiangeorgelucas.gpx_tools.Waypoint.prototype.getElevation = function() {
+  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 3, 0.0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.Waypoint} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.Waypoint.prototype.setElevation = function(value) {
+  return jspb.Message.setProto3FloatField(this, 3, value);
+};
+
+
+/**
+ * optional bool has_elevation = 4;
+ * @return {boolean}
+ */
+proto.christiangeorgelucas.gpx_tools.Waypoint.prototype.getHasElevation = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 4, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.Waypoint} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.Waypoint.prototype.setHasElevation = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 4, value);
+};
+
+
+/**
+ * optional string name = 5;
+ * @return {string}
+ */
+proto.christiangeorgelucas.gpx_tools.Waypoint.prototype.getName = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 5, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.Waypoint} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.Waypoint.prototype.setName = function(value) {
+  return jspb.Message.setProto3StringField(this, 5, value);
+};
+
+
+/**
+ * optional string symbol = 6;
+ * @return {string}
+ */
+proto.christiangeorgelucas.gpx_tools.Waypoint.prototype.getSymbol = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 6, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.Waypoint} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.Waypoint.prototype.setSymbol = function(value) {
+  return jspb.Message.setProto3StringField(this, 6, value);
+};
+
+
+/**
+ * optional string time = 7;
+ * @return {string}
+ */
+proto.christiangeorgelucas.gpx_tools.Waypoint.prototype.getTime = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 7, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.Waypoint} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.Waypoint.prototype.setTime = function(value) {
+  return jspb.Message.setProto3StringField(this, 7, value);
+};
+
+
+/**
+ * optional bool has_time = 8;
+ * @return {boolean}
+ */
+proto.christiangeorgelucas.gpx_tools.Waypoint.prototype.getHasTime = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 8, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.Waypoint} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.Waypoint.prototype.setHasTime = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 8, value);
+};
+
+
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.christiangeorgelucas.gpx_tools.BoundingBox.prototype.toObject = function(opt_includeInstance) {
+  return proto.christiangeorgelucas.gpx_tools.BoundingBox.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.christiangeorgelucas.gpx_tools.BoundingBox} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.BoundingBox.toObject = function(includeInstance, msg) {
+  var f, obj = {
+minLat: jspb.Message.getFloatingPointFieldWithDefault(msg, 1, 0.0),
+maxLat: jspb.Message.getFloatingPointFieldWithDefault(msg, 2, 0.0),
+minLon: jspb.Message.getFloatingPointFieldWithDefault(msg, 3, 0.0),
+maxLon: jspb.Message.getFloatingPointFieldWithDefault(msg, 4, 0.0)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.christiangeorgelucas.gpx_tools.BoundingBox}
+ */
+proto.christiangeorgelucas.gpx_tools.BoundingBox.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.christiangeorgelucas.gpx_tools.BoundingBox;
+  return proto.christiangeorgelucas.gpx_tools.BoundingBox.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.christiangeorgelucas.gpx_tools.BoundingBox} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.christiangeorgelucas.gpx_tools.BoundingBox}
+ */
+proto.christiangeorgelucas.gpx_tools.BoundingBox.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {number} */ (reader.readDouble());
+      msg.setMinLat(value);
+      break;
+    case 2:
+      var value = /** @type {number} */ (reader.readDouble());
+      msg.setMaxLat(value);
+      break;
+    case 3:
+      var value = /** @type {number} */ (reader.readDouble());
+      msg.setMinLon(value);
+      break;
+    case 4:
+      var value = /** @type {number} */ (reader.readDouble());
+      msg.setMaxLon(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.christiangeorgelucas.gpx_tools.BoundingBox.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.christiangeorgelucas.gpx_tools.BoundingBox.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.christiangeorgelucas.gpx_tools.BoundingBox} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.BoundingBox.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getMinLat();
+  if (f !== 0.0) {
+    writer.writeDouble(
+      1,
+      f
+    );
+  }
+  f = message.getMaxLat();
+  if (f !== 0.0) {
+    writer.writeDouble(
+      2,
+      f
+    );
+  }
+  f = message.getMinLon();
+  if (f !== 0.0) {
+    writer.writeDouble(
+      3,
+      f
+    );
+  }
+  f = message.getMaxLon();
+  if (f !== 0.0) {
+    writer.writeDouble(
+      4,
+      f
+    );
+  }
+};
+
+
+/**
+ * optional double min_lat = 1;
+ * @return {number}
+ */
+proto.christiangeorgelucas.gpx_tools.BoundingBox.prototype.getMinLat = function() {
+  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 1, 0.0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.BoundingBox} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.BoundingBox.prototype.setMinLat = function(value) {
+  return jspb.Message.setProto3FloatField(this, 1, value);
+};
+
+
+/**
+ * optional double max_lat = 2;
+ * @return {number}
+ */
+proto.christiangeorgelucas.gpx_tools.BoundingBox.prototype.getMaxLat = function() {
+  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 2, 0.0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.BoundingBox} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.BoundingBox.prototype.setMaxLat = function(value) {
+  return jspb.Message.setProto3FloatField(this, 2, value);
+};
+
+
+/**
+ * optional double min_lon = 3;
+ * @return {number}
+ */
+proto.christiangeorgelucas.gpx_tools.BoundingBox.prototype.getMinLon = function() {
+  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 3, 0.0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.BoundingBox} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.BoundingBox.prototype.setMinLon = function(value) {
+  return jspb.Message.setProto3FloatField(this, 3, value);
+};
+
+
+/**
+ * optional double max_lon = 4;
+ * @return {number}
+ */
+proto.christiangeorgelucas.gpx_tools.BoundingBox.prototype.getMaxLon = function() {
+  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 4, 0.0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.BoundingBox} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.BoundingBox.prototype.setMaxLon = function(value) {
+  return jspb.Message.setProto3FloatField(this, 4, value);
+};
+
+
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.christiangeorgelucas.gpx_tools.GeoJson.prototype.toObject = function(opt_includeInstance) {
+  return proto.christiangeorgelucas.gpx_tools.GeoJson.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.christiangeorgelucas.gpx_tools.GeoJson} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.GeoJson.toObject = function(includeInstance, msg) {
+  var f, obj = {
+geojson: jspb.Message.getFieldWithDefault(msg, 1, ""),
+error: jspb.Message.getFieldWithDefault(msg, 2, "")
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.christiangeorgelucas.gpx_tools.GeoJson}
+ */
+proto.christiangeorgelucas.gpx_tools.GeoJson.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.christiangeorgelucas.gpx_tools.GeoJson;
+  return proto.christiangeorgelucas.gpx_tools.GeoJson.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.christiangeorgelucas.gpx_tools.GeoJson} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.christiangeorgelucas.gpx_tools.GeoJson}
+ */
+proto.christiangeorgelucas.gpx_tools.GeoJson.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setGeojson(value);
+      break;
+    case 2:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setError(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.christiangeorgelucas.gpx_tools.GeoJson.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.christiangeorgelucas.gpx_tools.GeoJson.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.christiangeorgelucas.gpx_tools.GeoJson} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.GeoJson.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getGeojson();
+  if (f.length > 0) {
+    writer.writeString(
+      1,
+      f
+    );
+  }
+  f = message.getError();
+  if (f.length > 0) {
+    writer.writeString(
+      2,
+      f
+    );
+  }
+};
+
+
+/**
+ * optional string geojson = 1;
+ * @return {string}
+ */
+proto.christiangeorgelucas.gpx_tools.GeoJson.prototype.getGeojson = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.GeoJson} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.GeoJson.prototype.setGeojson = function(value) {
+  return jspb.Message.setProto3StringField(this, 1, value);
+};
+
+
+/**
+ * optional string error = 2;
+ * @return {string}
+ */
+proto.christiangeorgelucas.gpx_tools.GeoJson.prototype.getError = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.GeoJson} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.GeoJson.prototype.setError = function(value) {
+  return jspb.Message.setProto3StringField(this, 2, value);
+};
+
+
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.christiangeorgelucas.gpx_tools.DetectFormatInput.prototype.toObject = function(opt_includeInstance) {
+  return proto.christiangeorgelucas.gpx_tools.DetectFormatInput.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.christiangeorgelucas.gpx_tools.DetectFormatInput} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.DetectFormatInput.toObject = function(includeInstance, msg) {
+  var f, obj = {
+doc: (f = msg.getDoc()) && proto.christiangeorgelucas.gpx_tools.Doc.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.christiangeorgelucas.gpx_tools.DetectFormatInput}
+ */
+proto.christiangeorgelucas.gpx_tools.DetectFormatInput.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.christiangeorgelucas.gpx_tools.DetectFormatInput;
+  return proto.christiangeorgelucas.gpx_tools.DetectFormatInput.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.christiangeorgelucas.gpx_tools.DetectFormatInput} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.christiangeorgelucas.gpx_tools.DetectFormatInput}
+ */
+proto.christiangeorgelucas.gpx_tools.DetectFormatInput.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new proto.christiangeorgelucas.gpx_tools.Doc;
+      reader.readMessage(value,proto.christiangeorgelucas.gpx_tools.Doc.deserializeBinaryFromReader);
+      msg.setDoc(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.christiangeorgelucas.gpx_tools.DetectFormatInput.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.christiangeorgelucas.gpx_tools.DetectFormatInput.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.christiangeorgelucas.gpx_tools.DetectFormatInput} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.DetectFormatInput.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getDoc();
+  if (f != null) {
+    writer.writeMessage(
+      1,
+      f,
+      proto.christiangeorgelucas.gpx_tools.Doc.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * optional Doc doc = 1;
+ * @return {?proto.christiangeorgelucas.gpx_tools.Doc}
+ */
+proto.christiangeorgelucas.gpx_tools.DetectFormatInput.prototype.getDoc = function() {
+  return /** @type{?proto.christiangeorgelucas.gpx_tools.Doc} */ (
+    jspb.Message.getWrapperField(this, proto.christiangeorgelucas.gpx_tools.Doc, 1));
+};
+
+
+/**
+ * @param {?proto.christiangeorgelucas.gpx_tools.Doc|undefined} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.DetectFormatInput} returns this
+*/
+proto.christiangeorgelucas.gpx_tools.DetectFormatInput.prototype.setDoc = function(value) {
+  return jspb.Message.setWrapperField(this, 1, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.christiangeorgelucas.gpx_tools.DetectFormatInput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.DetectFormatInput.prototype.clearDoc = function() {
+  return this.setDoc(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.christiangeorgelucas.gpx_tools.DetectFormatInput.prototype.hasDoc = function() {
+  return jspb.Message.getField(this, 1) != null;
+};
+
+
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.christiangeorgelucas.gpx_tools.DetectFormatOutput.prototype.toObject = function(opt_includeInstance) {
+  return proto.christiangeorgelucas.gpx_tools.DetectFormatOutput.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.christiangeorgelucas.gpx_tools.DetectFormatOutput} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.DetectFormatOutput.toObject = function(includeInstance, msg) {
+  var f, obj = {
+format: jspb.Message.getFieldWithDefault(msg, 1, ""),
+ok: jspb.Message.getBooleanFieldWithDefault(msg, 2, false),
+error: (f = msg.getError()) && proto.christiangeorgelucas.gpx_tools.GpxError.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.christiangeorgelucas.gpx_tools.DetectFormatOutput}
+ */
+proto.christiangeorgelucas.gpx_tools.DetectFormatOutput.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.christiangeorgelucas.gpx_tools.DetectFormatOutput;
+  return proto.christiangeorgelucas.gpx_tools.DetectFormatOutput.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.christiangeorgelucas.gpx_tools.DetectFormatOutput} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.christiangeorgelucas.gpx_tools.DetectFormatOutput}
+ */
+proto.christiangeorgelucas.gpx_tools.DetectFormatOutput.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setFormat(value);
+      break;
+    case 2:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setOk(value);
+      break;
+    case 3:
+      var value = new proto.christiangeorgelucas.gpx_tools.GpxError;
+      reader.readMessage(value,proto.christiangeorgelucas.gpx_tools.GpxError.deserializeBinaryFromReader);
+      msg.setError(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.christiangeorgelucas.gpx_tools.DetectFormatOutput.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.christiangeorgelucas.gpx_tools.DetectFormatOutput.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.christiangeorgelucas.gpx_tools.DetectFormatOutput} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.DetectFormatOutput.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getFormat();
+  if (f.length > 0) {
+    writer.writeString(
+      1,
+      f
+    );
+  }
+  f = message.getOk();
+  if (f) {
+    writer.writeBool(
+      2,
+      f
+    );
+  }
+  f = message.getError();
+  if (f != null) {
+    writer.writeMessage(
+      3,
+      f,
+      proto.christiangeorgelucas.gpx_tools.GpxError.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * optional string format = 1;
+ * @return {string}
+ */
+proto.christiangeorgelucas.gpx_tools.DetectFormatOutput.prototype.getFormat = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.DetectFormatOutput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.DetectFormatOutput.prototype.setFormat = function(value) {
+  return jspb.Message.setProto3StringField(this, 1, value);
+};
+
+
+/**
+ * optional bool ok = 2;
+ * @return {boolean}
+ */
+proto.christiangeorgelucas.gpx_tools.DetectFormatOutput.prototype.getOk = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 2, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.DetectFormatOutput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.DetectFormatOutput.prototype.setOk = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 2, value);
+};
+
+
+/**
+ * optional GpxError error = 3;
+ * @return {?proto.christiangeorgelucas.gpx_tools.GpxError}
+ */
+proto.christiangeorgelucas.gpx_tools.DetectFormatOutput.prototype.getError = function() {
+  return /** @type{?proto.christiangeorgelucas.gpx_tools.GpxError} */ (
+    jspb.Message.getWrapperField(this, proto.christiangeorgelucas.gpx_tools.GpxError, 3));
+};
+
+
+/**
+ * @param {?proto.christiangeorgelucas.gpx_tools.GpxError|undefined} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.DetectFormatOutput} returns this
+*/
+proto.christiangeorgelucas.gpx_tools.DetectFormatOutput.prototype.setError = function(value) {
+  return jspb.Message.setWrapperField(this, 3, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.christiangeorgelucas.gpx_tools.DetectFormatOutput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.DetectFormatOutput.prototype.clearError = function() {
+  return this.setError(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.christiangeorgelucas.gpx_tools.DetectFormatOutput.prototype.hasError = function() {
+  return jspb.Message.getField(this, 3) != null;
+};
+
+
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.christiangeorgelucas.gpx_tools.ParseGpxInput.prototype.toObject = function(opt_includeInstance) {
+  return proto.christiangeorgelucas.gpx_tools.ParseGpxInput.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.christiangeorgelucas.gpx_tools.ParseGpxInput} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.ParseGpxInput.toObject = function(includeInstance, msg) {
+  var f, obj = {
+doc: (f = msg.getDoc()) && proto.christiangeorgelucas.gpx_tools.Doc.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.christiangeorgelucas.gpx_tools.ParseGpxInput}
+ */
+proto.christiangeorgelucas.gpx_tools.ParseGpxInput.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.christiangeorgelucas.gpx_tools.ParseGpxInput;
+  return proto.christiangeorgelucas.gpx_tools.ParseGpxInput.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.christiangeorgelucas.gpx_tools.ParseGpxInput} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.christiangeorgelucas.gpx_tools.ParseGpxInput}
+ */
+proto.christiangeorgelucas.gpx_tools.ParseGpxInput.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new proto.christiangeorgelucas.gpx_tools.Doc;
+      reader.readMessage(value,proto.christiangeorgelucas.gpx_tools.Doc.deserializeBinaryFromReader);
+      msg.setDoc(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.christiangeorgelucas.gpx_tools.ParseGpxInput.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.christiangeorgelucas.gpx_tools.ParseGpxInput.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.christiangeorgelucas.gpx_tools.ParseGpxInput} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.ParseGpxInput.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getDoc();
+  if (f != null) {
+    writer.writeMessage(
+      1,
+      f,
+      proto.christiangeorgelucas.gpx_tools.Doc.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * optional Doc doc = 1;
+ * @return {?proto.christiangeorgelucas.gpx_tools.Doc}
+ */
+proto.christiangeorgelucas.gpx_tools.ParseGpxInput.prototype.getDoc = function() {
+  return /** @type{?proto.christiangeorgelucas.gpx_tools.Doc} */ (
+    jspb.Message.getWrapperField(this, proto.christiangeorgelucas.gpx_tools.Doc, 1));
+};
+
+
+/**
+ * @param {?proto.christiangeorgelucas.gpx_tools.Doc|undefined} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.ParseGpxInput} returns this
+*/
+proto.christiangeorgelucas.gpx_tools.ParseGpxInput.prototype.setDoc = function(value) {
+  return jspb.Message.setWrapperField(this, 1, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.christiangeorgelucas.gpx_tools.ParseGpxInput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.ParseGpxInput.prototype.clearDoc = function() {
+  return this.setDoc(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.christiangeorgelucas.gpx_tools.ParseGpxInput.prototype.hasDoc = function() {
+  return jspb.Message.getField(this, 1) != null;
+};
+
+
+
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.christiangeorgelucas.gpx_tools.ParseGpxOutput.repeatedFields_ = [8,9,10];
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.christiangeorgelucas.gpx_tools.ParseGpxOutput.prototype.toObject = function(opt_includeInstance) {
+  return proto.christiangeorgelucas.gpx_tools.ParseGpxOutput.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.christiangeorgelucas.gpx_tools.ParseGpxOutput} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.ParseGpxOutput.toObject = function(includeInstance, msg) {
+  var f, obj = {
+name: jspb.Message.getFieldWithDefault(msg, 1, ""),
+description: jspb.Message.getFieldWithDefault(msg, 2, ""),
+author: jspb.Message.getFieldWithDefault(msg, 3, ""),
+time: jspb.Message.getFieldWithDefault(msg, 4, ""),
+hasTime: jspb.Message.getBooleanFieldWithDefault(msg, 5, false),
+bounds: (f = msg.getBounds()) && proto.christiangeorgelucas.gpx_tools.BoundingBox.toObject(includeInstance, f),
+hasBounds: jspb.Message.getBooleanFieldWithDefault(msg, 7, false),
+waypointsList: jspb.Message.toObjectList(msg.getWaypointsList(),
+    proto.christiangeorgelucas.gpx_tools.Waypoint.toObject, includeInstance),
+routesList: jspb.Message.toObjectList(msg.getRoutesList(),
+    proto.christiangeorgelucas.gpx_tools.Route.toObject, includeInstance),
+tracksList: jspb.Message.toObjectList(msg.getTracksList(),
+    proto.christiangeorgelucas.gpx_tools.Track.toObject, includeInstance),
+ok: jspb.Message.getBooleanFieldWithDefault(msg, 11, false),
+error: (f = msg.getError()) && proto.christiangeorgelucas.gpx_tools.GpxError.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.christiangeorgelucas.gpx_tools.ParseGpxOutput}
+ */
+proto.christiangeorgelucas.gpx_tools.ParseGpxOutput.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.christiangeorgelucas.gpx_tools.ParseGpxOutput;
+  return proto.christiangeorgelucas.gpx_tools.ParseGpxOutput.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.christiangeorgelucas.gpx_tools.ParseGpxOutput} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.christiangeorgelucas.gpx_tools.ParseGpxOutput}
+ */
+proto.christiangeorgelucas.gpx_tools.ParseGpxOutput.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setName(value);
+      break;
+    case 2:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setDescription(value);
+      break;
+    case 3:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setAuthor(value);
+      break;
+    case 4:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setTime(value);
+      break;
+    case 5:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setHasTime(value);
+      break;
+    case 6:
+      var value = new proto.christiangeorgelucas.gpx_tools.BoundingBox;
+      reader.readMessage(value,proto.christiangeorgelucas.gpx_tools.BoundingBox.deserializeBinaryFromReader);
+      msg.setBounds(value);
+      break;
+    case 7:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setHasBounds(value);
+      break;
+    case 8:
+      var value = new proto.christiangeorgelucas.gpx_tools.Waypoint;
+      reader.readMessage(value,proto.christiangeorgelucas.gpx_tools.Waypoint.deserializeBinaryFromReader);
+      msg.addWaypoints(value);
+      break;
+    case 9:
+      var value = new proto.christiangeorgelucas.gpx_tools.Route;
+      reader.readMessage(value,proto.christiangeorgelucas.gpx_tools.Route.deserializeBinaryFromReader);
+      msg.addRoutes(value);
+      break;
+    case 10:
+      var value = new proto.christiangeorgelucas.gpx_tools.Track;
+      reader.readMessage(value,proto.christiangeorgelucas.gpx_tools.Track.deserializeBinaryFromReader);
+      msg.addTracks(value);
+      break;
+    case 11:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setOk(value);
+      break;
+    case 12:
+      var value = new proto.christiangeorgelucas.gpx_tools.GpxError;
+      reader.readMessage(value,proto.christiangeorgelucas.gpx_tools.GpxError.deserializeBinaryFromReader);
+      msg.setError(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.christiangeorgelucas.gpx_tools.ParseGpxOutput.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.christiangeorgelucas.gpx_tools.ParseGpxOutput.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.christiangeorgelucas.gpx_tools.ParseGpxOutput} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.ParseGpxOutput.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getName();
+  if (f.length > 0) {
+    writer.writeString(
+      1,
+      f
+    );
+  }
+  f = message.getDescription();
+  if (f.length > 0) {
+    writer.writeString(
+      2,
+      f
+    );
+  }
+  f = message.getAuthor();
+  if (f.length > 0) {
+    writer.writeString(
+      3,
+      f
+    );
+  }
+  f = message.getTime();
+  if (f.length > 0) {
+    writer.writeString(
+      4,
+      f
+    );
+  }
+  f = message.getHasTime();
+  if (f) {
+    writer.writeBool(
+      5,
+      f
+    );
+  }
+  f = message.getBounds();
+  if (f != null) {
+    writer.writeMessage(
+      6,
+      f,
+      proto.christiangeorgelucas.gpx_tools.BoundingBox.serializeBinaryToWriter
+    );
+  }
+  f = message.getHasBounds();
+  if (f) {
+    writer.writeBool(
+      7,
+      f
+    );
+  }
+  f = message.getWaypointsList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      8,
+      f,
+      proto.christiangeorgelucas.gpx_tools.Waypoint.serializeBinaryToWriter
+    );
+  }
+  f = message.getRoutesList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      9,
+      f,
+      proto.christiangeorgelucas.gpx_tools.Route.serializeBinaryToWriter
+    );
+  }
+  f = message.getTracksList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      10,
+      f,
+      proto.christiangeorgelucas.gpx_tools.Track.serializeBinaryToWriter
+    );
+  }
+  f = message.getOk();
+  if (f) {
+    writer.writeBool(
+      11,
+      f
+    );
+  }
+  f = message.getError();
+  if (f != null) {
+    writer.writeMessage(
+      12,
+      f,
+      proto.christiangeorgelucas.gpx_tools.GpxError.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * optional string name = 1;
+ * @return {string}
+ */
+proto.christiangeorgelucas.gpx_tools.ParseGpxOutput.prototype.getName = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.ParseGpxOutput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.ParseGpxOutput.prototype.setName = function(value) {
+  return jspb.Message.setProto3StringField(this, 1, value);
+};
+
+
+/**
+ * optional string description = 2;
+ * @return {string}
+ */
+proto.christiangeorgelucas.gpx_tools.ParseGpxOutput.prototype.getDescription = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.ParseGpxOutput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.ParseGpxOutput.prototype.setDescription = function(value) {
+  return jspb.Message.setProto3StringField(this, 2, value);
+};
+
+
+/**
+ * optional string author = 3;
+ * @return {string}
+ */
+proto.christiangeorgelucas.gpx_tools.ParseGpxOutput.prototype.getAuthor = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.ParseGpxOutput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.ParseGpxOutput.prototype.setAuthor = function(value) {
+  return jspb.Message.setProto3StringField(this, 3, value);
+};
+
+
+/**
+ * optional string time = 4;
+ * @return {string}
+ */
+proto.christiangeorgelucas.gpx_tools.ParseGpxOutput.prototype.getTime = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.ParseGpxOutput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.ParseGpxOutput.prototype.setTime = function(value) {
+  return jspb.Message.setProto3StringField(this, 4, value);
+};
+
+
+/**
+ * optional bool has_time = 5;
+ * @return {boolean}
+ */
+proto.christiangeorgelucas.gpx_tools.ParseGpxOutput.prototype.getHasTime = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 5, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.ParseGpxOutput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.ParseGpxOutput.prototype.setHasTime = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 5, value);
+};
+
+
+/**
+ * optional BoundingBox bounds = 6;
+ * @return {?proto.christiangeorgelucas.gpx_tools.BoundingBox}
+ */
+proto.christiangeorgelucas.gpx_tools.ParseGpxOutput.prototype.getBounds = function() {
+  return /** @type{?proto.christiangeorgelucas.gpx_tools.BoundingBox} */ (
+    jspb.Message.getWrapperField(this, proto.christiangeorgelucas.gpx_tools.BoundingBox, 6));
+};
+
+
+/**
+ * @param {?proto.christiangeorgelucas.gpx_tools.BoundingBox|undefined} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.ParseGpxOutput} returns this
+*/
+proto.christiangeorgelucas.gpx_tools.ParseGpxOutput.prototype.setBounds = function(value) {
+  return jspb.Message.setWrapperField(this, 6, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.christiangeorgelucas.gpx_tools.ParseGpxOutput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.ParseGpxOutput.prototype.clearBounds = function() {
+  return this.setBounds(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.christiangeorgelucas.gpx_tools.ParseGpxOutput.prototype.hasBounds = function() {
+  return jspb.Message.getField(this, 6) != null;
+};
+
+
+/**
+ * optional bool has_bounds = 7;
+ * @return {boolean}
+ */
+proto.christiangeorgelucas.gpx_tools.ParseGpxOutput.prototype.getHasBounds = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 7, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.ParseGpxOutput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.ParseGpxOutput.prototype.setHasBounds = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 7, value);
+};
+
+
+/**
+ * repeated Waypoint waypoints = 8;
+ * @return {!Array<!proto.christiangeorgelucas.gpx_tools.Waypoint>}
+ */
+proto.christiangeorgelucas.gpx_tools.ParseGpxOutput.prototype.getWaypointsList = function() {
+  return /** @type{!Array<!proto.christiangeorgelucas.gpx_tools.Waypoint>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.christiangeorgelucas.gpx_tools.Waypoint, 8));
+};
+
+
+/**
+ * @param {!Array<!proto.christiangeorgelucas.gpx_tools.Waypoint>} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.ParseGpxOutput} returns this
+*/
+proto.christiangeorgelucas.gpx_tools.ParseGpxOutput.prototype.setWaypointsList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 8, value);
+};
+
+
+/**
+ * @param {!proto.christiangeorgelucas.gpx_tools.Waypoint=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.christiangeorgelucas.gpx_tools.Waypoint}
+ */
+proto.christiangeorgelucas.gpx_tools.ParseGpxOutput.prototype.addWaypoints = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 8, opt_value, proto.christiangeorgelucas.gpx_tools.Waypoint, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.christiangeorgelucas.gpx_tools.ParseGpxOutput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.ParseGpxOutput.prototype.clearWaypointsList = function() {
+  return this.setWaypointsList([]);
+};
+
+
+/**
+ * repeated Route routes = 9;
+ * @return {!Array<!proto.christiangeorgelucas.gpx_tools.Route>}
+ */
+proto.christiangeorgelucas.gpx_tools.ParseGpxOutput.prototype.getRoutesList = function() {
+  return /** @type{!Array<!proto.christiangeorgelucas.gpx_tools.Route>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.christiangeorgelucas.gpx_tools.Route, 9));
+};
+
+
+/**
+ * @param {!Array<!proto.christiangeorgelucas.gpx_tools.Route>} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.ParseGpxOutput} returns this
+*/
+proto.christiangeorgelucas.gpx_tools.ParseGpxOutput.prototype.setRoutesList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 9, value);
+};
+
+
+/**
+ * @param {!proto.christiangeorgelucas.gpx_tools.Route=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.christiangeorgelucas.gpx_tools.Route}
+ */
+proto.christiangeorgelucas.gpx_tools.ParseGpxOutput.prototype.addRoutes = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 9, opt_value, proto.christiangeorgelucas.gpx_tools.Route, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.christiangeorgelucas.gpx_tools.ParseGpxOutput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.ParseGpxOutput.prototype.clearRoutesList = function() {
+  return this.setRoutesList([]);
+};
+
+
+/**
+ * repeated Track tracks = 10;
+ * @return {!Array<!proto.christiangeorgelucas.gpx_tools.Track>}
+ */
+proto.christiangeorgelucas.gpx_tools.ParseGpxOutput.prototype.getTracksList = function() {
+  return /** @type{!Array<!proto.christiangeorgelucas.gpx_tools.Track>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.christiangeorgelucas.gpx_tools.Track, 10));
+};
+
+
+/**
+ * @param {!Array<!proto.christiangeorgelucas.gpx_tools.Track>} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.ParseGpxOutput} returns this
+*/
+proto.christiangeorgelucas.gpx_tools.ParseGpxOutput.prototype.setTracksList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 10, value);
+};
+
+
+/**
+ * @param {!proto.christiangeorgelucas.gpx_tools.Track=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.christiangeorgelucas.gpx_tools.Track}
+ */
+proto.christiangeorgelucas.gpx_tools.ParseGpxOutput.prototype.addTracks = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 10, opt_value, proto.christiangeorgelucas.gpx_tools.Track, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.christiangeorgelucas.gpx_tools.ParseGpxOutput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.ParseGpxOutput.prototype.clearTracksList = function() {
+  return this.setTracksList([]);
+};
+
+
+/**
+ * optional bool ok = 11;
+ * @return {boolean}
+ */
+proto.christiangeorgelucas.gpx_tools.ParseGpxOutput.prototype.getOk = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 11, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.ParseGpxOutput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.ParseGpxOutput.prototype.setOk = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 11, value);
+};
+
+
+/**
+ * optional GpxError error = 12;
+ * @return {?proto.christiangeorgelucas.gpx_tools.GpxError}
+ */
+proto.christiangeorgelucas.gpx_tools.ParseGpxOutput.prototype.getError = function() {
+  return /** @type{?proto.christiangeorgelucas.gpx_tools.GpxError} */ (
+    jspb.Message.getWrapperField(this, proto.christiangeorgelucas.gpx_tools.GpxError, 12));
+};
+
+
+/**
+ * @param {?proto.christiangeorgelucas.gpx_tools.GpxError|undefined} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.ParseGpxOutput} returns this
+*/
+proto.christiangeorgelucas.gpx_tools.ParseGpxOutput.prototype.setError = function(value) {
+  return jspb.Message.setWrapperField(this, 12, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.christiangeorgelucas.gpx_tools.ParseGpxOutput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.ParseGpxOutput.prototype.clearError = function() {
+  return this.setError(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.christiangeorgelucas.gpx_tools.ParseGpxOutput.prototype.hasError = function() {
+  return jspb.Message.getField(this, 12) != null;
+};
+
+
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.christiangeorgelucas.gpx_tools.ListTracksInput.prototype.toObject = function(opt_includeInstance) {
+  return proto.christiangeorgelucas.gpx_tools.ListTracksInput.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.christiangeorgelucas.gpx_tools.ListTracksInput} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.ListTracksInput.toObject = function(includeInstance, msg) {
+  var f, obj = {
+doc: (f = msg.getDoc()) && proto.christiangeorgelucas.gpx_tools.Doc.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.christiangeorgelucas.gpx_tools.ListTracksInput}
+ */
+proto.christiangeorgelucas.gpx_tools.ListTracksInput.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.christiangeorgelucas.gpx_tools.ListTracksInput;
+  return proto.christiangeorgelucas.gpx_tools.ListTracksInput.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.christiangeorgelucas.gpx_tools.ListTracksInput} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.christiangeorgelucas.gpx_tools.ListTracksInput}
+ */
+proto.christiangeorgelucas.gpx_tools.ListTracksInput.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new proto.christiangeorgelucas.gpx_tools.Doc;
+      reader.readMessage(value,proto.christiangeorgelucas.gpx_tools.Doc.deserializeBinaryFromReader);
+      msg.setDoc(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.christiangeorgelucas.gpx_tools.ListTracksInput.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.christiangeorgelucas.gpx_tools.ListTracksInput.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.christiangeorgelucas.gpx_tools.ListTracksInput} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.ListTracksInput.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getDoc();
+  if (f != null) {
+    writer.writeMessage(
+      1,
+      f,
+      proto.christiangeorgelucas.gpx_tools.Doc.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * optional Doc doc = 1;
+ * @return {?proto.christiangeorgelucas.gpx_tools.Doc}
+ */
+proto.christiangeorgelucas.gpx_tools.ListTracksInput.prototype.getDoc = function() {
+  return /** @type{?proto.christiangeorgelucas.gpx_tools.Doc} */ (
+    jspb.Message.getWrapperField(this, proto.christiangeorgelucas.gpx_tools.Doc, 1));
+};
+
+
+/**
+ * @param {?proto.christiangeorgelucas.gpx_tools.Doc|undefined} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.ListTracksInput} returns this
+*/
+proto.christiangeorgelucas.gpx_tools.ListTracksInput.prototype.setDoc = function(value) {
+  return jspb.Message.setWrapperField(this, 1, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.christiangeorgelucas.gpx_tools.ListTracksInput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.ListTracksInput.prototype.clearDoc = function() {
+  return this.setDoc(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.christiangeorgelucas.gpx_tools.ListTracksInput.prototype.hasDoc = function() {
+  return jspb.Message.getField(this, 1) != null;
+};
+
+
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.christiangeorgelucas.gpx_tools.TrackSummary.prototype.toObject = function(opt_includeInstance) {
+  return proto.christiangeorgelucas.gpx_tools.TrackSummary.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.christiangeorgelucas.gpx_tools.TrackSummary} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.TrackSummary.toObject = function(includeInstance, msg) {
+  var f, obj = {
+name: jspb.Message.getFieldWithDefault(msg, 1, ""),
+segmentCount: jspb.Message.getFieldWithDefault(msg, 2, 0),
+pointCount: jspb.Message.getFieldWithDefault(msg, 3, 0),
+index: jspb.Message.getFieldWithDefault(msg, 4, 0)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.christiangeorgelucas.gpx_tools.TrackSummary}
+ */
+proto.christiangeorgelucas.gpx_tools.TrackSummary.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.christiangeorgelucas.gpx_tools.TrackSummary;
+  return proto.christiangeorgelucas.gpx_tools.TrackSummary.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.christiangeorgelucas.gpx_tools.TrackSummary} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.christiangeorgelucas.gpx_tools.TrackSummary}
+ */
+proto.christiangeorgelucas.gpx_tools.TrackSummary.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setName(value);
+      break;
+    case 2:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setSegmentCount(value);
+      break;
+    case 3:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setPointCount(value);
+      break;
+    case 4:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setIndex(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.christiangeorgelucas.gpx_tools.TrackSummary.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.christiangeorgelucas.gpx_tools.TrackSummary.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.christiangeorgelucas.gpx_tools.TrackSummary} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.TrackSummary.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getName();
+  if (f.length > 0) {
+    writer.writeString(
+      1,
+      f
+    );
+  }
+  f = message.getSegmentCount();
+  if (f !== 0) {
+    writer.writeInt32(
+      2,
+      f
+    );
+  }
+  f = message.getPointCount();
+  if (f !== 0) {
+    writer.writeInt32(
+      3,
+      f
+    );
+  }
+  f = message.getIndex();
+  if (f !== 0) {
+    writer.writeInt32(
+      4,
+      f
+    );
+  }
+};
+
+
+/**
+ * optional string name = 1;
+ * @return {string}
+ */
+proto.christiangeorgelucas.gpx_tools.TrackSummary.prototype.getName = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.TrackSummary} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.TrackSummary.prototype.setName = function(value) {
+  return jspb.Message.setProto3StringField(this, 1, value);
+};
+
+
+/**
+ * optional int32 segment_count = 2;
+ * @return {number}
+ */
+proto.christiangeorgelucas.gpx_tools.TrackSummary.prototype.getSegmentCount = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.TrackSummary} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.TrackSummary.prototype.setSegmentCount = function(value) {
+  return jspb.Message.setProto3IntField(this, 2, value);
+};
+
+
+/**
+ * optional int32 point_count = 3;
+ * @return {number}
+ */
+proto.christiangeorgelucas.gpx_tools.TrackSummary.prototype.getPointCount = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.TrackSummary} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.TrackSummary.prototype.setPointCount = function(value) {
+  return jspb.Message.setProto3IntField(this, 3, value);
+};
+
+
+/**
+ * optional int32 index = 4;
+ * @return {number}
+ */
+proto.christiangeorgelucas.gpx_tools.TrackSummary.prototype.getIndex = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 4, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.TrackSummary} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.TrackSummary.prototype.setIndex = function(value) {
+  return jspb.Message.setProto3IntField(this, 4, value);
+};
+
+
+
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.christiangeorgelucas.gpx_tools.ListTracksOutput.repeatedFields_ = [1];
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.christiangeorgelucas.gpx_tools.ListTracksOutput.prototype.toObject = function(opt_includeInstance) {
+  return proto.christiangeorgelucas.gpx_tools.ListTracksOutput.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.christiangeorgelucas.gpx_tools.ListTracksOutput} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.ListTracksOutput.toObject = function(includeInstance, msg) {
+  var f, obj = {
+tracksList: jspb.Message.toObjectList(msg.getTracksList(),
+    proto.christiangeorgelucas.gpx_tools.TrackSummary.toObject, includeInstance),
+ok: jspb.Message.getBooleanFieldWithDefault(msg, 2, false),
+error: (f = msg.getError()) && proto.christiangeorgelucas.gpx_tools.GpxError.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.christiangeorgelucas.gpx_tools.ListTracksOutput}
+ */
+proto.christiangeorgelucas.gpx_tools.ListTracksOutput.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.christiangeorgelucas.gpx_tools.ListTracksOutput;
+  return proto.christiangeorgelucas.gpx_tools.ListTracksOutput.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.christiangeorgelucas.gpx_tools.ListTracksOutput} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.christiangeorgelucas.gpx_tools.ListTracksOutput}
+ */
+proto.christiangeorgelucas.gpx_tools.ListTracksOutput.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new proto.christiangeorgelucas.gpx_tools.TrackSummary;
+      reader.readMessage(value,proto.christiangeorgelucas.gpx_tools.TrackSummary.deserializeBinaryFromReader);
+      msg.addTracks(value);
+      break;
+    case 2:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setOk(value);
+      break;
+    case 3:
+      var value = new proto.christiangeorgelucas.gpx_tools.GpxError;
+      reader.readMessage(value,proto.christiangeorgelucas.gpx_tools.GpxError.deserializeBinaryFromReader);
+      msg.setError(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.christiangeorgelucas.gpx_tools.ListTracksOutput.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.christiangeorgelucas.gpx_tools.ListTracksOutput.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.christiangeorgelucas.gpx_tools.ListTracksOutput} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.ListTracksOutput.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getTracksList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      1,
+      f,
+      proto.christiangeorgelucas.gpx_tools.TrackSummary.serializeBinaryToWriter
+    );
+  }
+  f = message.getOk();
+  if (f) {
+    writer.writeBool(
+      2,
+      f
+    );
+  }
+  f = message.getError();
+  if (f != null) {
+    writer.writeMessage(
+      3,
+      f,
+      proto.christiangeorgelucas.gpx_tools.GpxError.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * repeated TrackSummary tracks = 1;
+ * @return {!Array<!proto.christiangeorgelucas.gpx_tools.TrackSummary>}
+ */
+proto.christiangeorgelucas.gpx_tools.ListTracksOutput.prototype.getTracksList = function() {
+  return /** @type{!Array<!proto.christiangeorgelucas.gpx_tools.TrackSummary>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.christiangeorgelucas.gpx_tools.TrackSummary, 1));
+};
+
+
+/**
+ * @param {!Array<!proto.christiangeorgelucas.gpx_tools.TrackSummary>} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.ListTracksOutput} returns this
+*/
+proto.christiangeorgelucas.gpx_tools.ListTracksOutput.prototype.setTracksList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 1, value);
+};
+
+
+/**
+ * @param {!proto.christiangeorgelucas.gpx_tools.TrackSummary=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.christiangeorgelucas.gpx_tools.TrackSummary}
+ */
+proto.christiangeorgelucas.gpx_tools.ListTracksOutput.prototype.addTracks = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.christiangeorgelucas.gpx_tools.TrackSummary, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.christiangeorgelucas.gpx_tools.ListTracksOutput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.ListTracksOutput.prototype.clearTracksList = function() {
+  return this.setTracksList([]);
+};
+
+
+/**
+ * optional bool ok = 2;
+ * @return {boolean}
+ */
+proto.christiangeorgelucas.gpx_tools.ListTracksOutput.prototype.getOk = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 2, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.ListTracksOutput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.ListTracksOutput.prototype.setOk = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 2, value);
+};
+
+
+/**
+ * optional GpxError error = 3;
+ * @return {?proto.christiangeorgelucas.gpx_tools.GpxError}
+ */
+proto.christiangeorgelucas.gpx_tools.ListTracksOutput.prototype.getError = function() {
+  return /** @type{?proto.christiangeorgelucas.gpx_tools.GpxError} */ (
+    jspb.Message.getWrapperField(this, proto.christiangeorgelucas.gpx_tools.GpxError, 3));
+};
+
+
+/**
+ * @param {?proto.christiangeorgelucas.gpx_tools.GpxError|undefined} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.ListTracksOutput} returns this
+*/
+proto.christiangeorgelucas.gpx_tools.ListTracksOutput.prototype.setError = function(value) {
+  return jspb.Message.setWrapperField(this, 3, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.christiangeorgelucas.gpx_tools.ListTracksOutput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.ListTracksOutput.prototype.clearError = function() {
+  return this.setError(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.christiangeorgelucas.gpx_tools.ListTracksOutput.prototype.hasError = function() {
+  return jspb.Message.getField(this, 3) != null;
+};
+
+
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.christiangeorgelucas.gpx_tools.GetTrackPointsInput.prototype.toObject = function(opt_includeInstance) {
+  return proto.christiangeorgelucas.gpx_tools.GetTrackPointsInput.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.christiangeorgelucas.gpx_tools.GetTrackPointsInput} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.GetTrackPointsInput.toObject = function(includeInstance, msg) {
+  var f, obj = {
+doc: (f = msg.getDoc()) && proto.christiangeorgelucas.gpx_tools.Doc.toObject(includeInstance, f),
+trackIndex: jspb.Message.getFieldWithDefault(msg, 2, 0)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetTrackPointsInput}
+ */
+proto.christiangeorgelucas.gpx_tools.GetTrackPointsInput.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.christiangeorgelucas.gpx_tools.GetTrackPointsInput;
+  return proto.christiangeorgelucas.gpx_tools.GetTrackPointsInput.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.christiangeorgelucas.gpx_tools.GetTrackPointsInput} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetTrackPointsInput}
+ */
+proto.christiangeorgelucas.gpx_tools.GetTrackPointsInput.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new proto.christiangeorgelucas.gpx_tools.Doc;
+      reader.readMessage(value,proto.christiangeorgelucas.gpx_tools.Doc.deserializeBinaryFromReader);
+      msg.setDoc(value);
+      break;
+    case 2:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setTrackIndex(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.christiangeorgelucas.gpx_tools.GetTrackPointsInput.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.christiangeorgelucas.gpx_tools.GetTrackPointsInput.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.christiangeorgelucas.gpx_tools.GetTrackPointsInput} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.GetTrackPointsInput.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getDoc();
+  if (f != null) {
+    writer.writeMessage(
+      1,
+      f,
+      proto.christiangeorgelucas.gpx_tools.Doc.serializeBinaryToWriter
+    );
+  }
+  f = message.getTrackIndex();
+  if (f !== 0) {
+    writer.writeInt32(
+      2,
+      f
+    );
+  }
+};
+
+
+/**
+ * optional Doc doc = 1;
+ * @return {?proto.christiangeorgelucas.gpx_tools.Doc}
+ */
+proto.christiangeorgelucas.gpx_tools.GetTrackPointsInput.prototype.getDoc = function() {
+  return /** @type{?proto.christiangeorgelucas.gpx_tools.Doc} */ (
+    jspb.Message.getWrapperField(this, proto.christiangeorgelucas.gpx_tools.Doc, 1));
+};
+
+
+/**
+ * @param {?proto.christiangeorgelucas.gpx_tools.Doc|undefined} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetTrackPointsInput} returns this
+*/
+proto.christiangeorgelucas.gpx_tools.GetTrackPointsInput.prototype.setDoc = function(value) {
+  return jspb.Message.setWrapperField(this, 1, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetTrackPointsInput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.GetTrackPointsInput.prototype.clearDoc = function() {
+  return this.setDoc(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.christiangeorgelucas.gpx_tools.GetTrackPointsInput.prototype.hasDoc = function() {
+  return jspb.Message.getField(this, 1) != null;
+};
+
+
+/**
+ * optional int32 track_index = 2;
+ * @return {number}
+ */
+proto.christiangeorgelucas.gpx_tools.GetTrackPointsInput.prototype.getTrackIndex = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetTrackPointsInput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.GetTrackPointsInput.prototype.setTrackIndex = function(value) {
+  return jspb.Message.setProto3IntField(this, 2, value);
+};
+
+
+
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.christiangeorgelucas.gpx_tools.GetTrackPointsOutput.repeatedFields_ = [1];
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.christiangeorgelucas.gpx_tools.GetTrackPointsOutput.prototype.toObject = function(opt_includeInstance) {
+  return proto.christiangeorgelucas.gpx_tools.GetTrackPointsOutput.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.christiangeorgelucas.gpx_tools.GetTrackPointsOutput} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.GetTrackPointsOutput.toObject = function(includeInstance, msg) {
+  var f, obj = {
+pointsList: jspb.Message.toObjectList(msg.getPointsList(),
+    proto.christiangeorgelucas.gpx_tools.Point.toObject, includeInstance),
+truncated: jspb.Message.getBooleanFieldWithDefault(msg, 2, false),
+ok: jspb.Message.getBooleanFieldWithDefault(msg, 3, false),
+error: (f = msg.getError()) && proto.christiangeorgelucas.gpx_tools.GpxError.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetTrackPointsOutput}
+ */
+proto.christiangeorgelucas.gpx_tools.GetTrackPointsOutput.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.christiangeorgelucas.gpx_tools.GetTrackPointsOutput;
+  return proto.christiangeorgelucas.gpx_tools.GetTrackPointsOutput.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.christiangeorgelucas.gpx_tools.GetTrackPointsOutput} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetTrackPointsOutput}
+ */
+proto.christiangeorgelucas.gpx_tools.GetTrackPointsOutput.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new proto.christiangeorgelucas.gpx_tools.Point;
+      reader.readMessage(value,proto.christiangeorgelucas.gpx_tools.Point.deserializeBinaryFromReader);
+      msg.addPoints(value);
+      break;
+    case 2:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setTruncated(value);
+      break;
+    case 3:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setOk(value);
+      break;
+    case 4:
+      var value = new proto.christiangeorgelucas.gpx_tools.GpxError;
+      reader.readMessage(value,proto.christiangeorgelucas.gpx_tools.GpxError.deserializeBinaryFromReader);
+      msg.setError(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.christiangeorgelucas.gpx_tools.GetTrackPointsOutput.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.christiangeorgelucas.gpx_tools.GetTrackPointsOutput.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.christiangeorgelucas.gpx_tools.GetTrackPointsOutput} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.GetTrackPointsOutput.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getPointsList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      1,
+      f,
+      proto.christiangeorgelucas.gpx_tools.Point.serializeBinaryToWriter
+    );
+  }
+  f = message.getTruncated();
+  if (f) {
+    writer.writeBool(
+      2,
+      f
+    );
+  }
+  f = message.getOk();
+  if (f) {
+    writer.writeBool(
+      3,
+      f
+    );
+  }
+  f = message.getError();
+  if (f != null) {
+    writer.writeMessage(
+      4,
+      f,
+      proto.christiangeorgelucas.gpx_tools.GpxError.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * repeated Point points = 1;
+ * @return {!Array<!proto.christiangeorgelucas.gpx_tools.Point>}
+ */
+proto.christiangeorgelucas.gpx_tools.GetTrackPointsOutput.prototype.getPointsList = function() {
+  return /** @type{!Array<!proto.christiangeorgelucas.gpx_tools.Point>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.christiangeorgelucas.gpx_tools.Point, 1));
+};
+
+
+/**
+ * @param {!Array<!proto.christiangeorgelucas.gpx_tools.Point>} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetTrackPointsOutput} returns this
+*/
+proto.christiangeorgelucas.gpx_tools.GetTrackPointsOutput.prototype.setPointsList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 1, value);
+};
+
+
+/**
+ * @param {!proto.christiangeorgelucas.gpx_tools.Point=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.christiangeorgelucas.gpx_tools.Point}
+ */
+proto.christiangeorgelucas.gpx_tools.GetTrackPointsOutput.prototype.addPoints = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.christiangeorgelucas.gpx_tools.Point, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetTrackPointsOutput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.GetTrackPointsOutput.prototype.clearPointsList = function() {
+  return this.setPointsList([]);
+};
+
+
+/**
+ * optional bool truncated = 2;
+ * @return {boolean}
+ */
+proto.christiangeorgelucas.gpx_tools.GetTrackPointsOutput.prototype.getTruncated = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 2, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetTrackPointsOutput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.GetTrackPointsOutput.prototype.setTruncated = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 2, value);
+};
+
+
+/**
+ * optional bool ok = 3;
+ * @return {boolean}
+ */
+proto.christiangeorgelucas.gpx_tools.GetTrackPointsOutput.prototype.getOk = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 3, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetTrackPointsOutput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.GetTrackPointsOutput.prototype.setOk = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 3, value);
+};
+
+
+/**
+ * optional GpxError error = 4;
+ * @return {?proto.christiangeorgelucas.gpx_tools.GpxError}
+ */
+proto.christiangeorgelucas.gpx_tools.GetTrackPointsOutput.prototype.getError = function() {
+  return /** @type{?proto.christiangeorgelucas.gpx_tools.GpxError} */ (
+    jspb.Message.getWrapperField(this, proto.christiangeorgelucas.gpx_tools.GpxError, 4));
+};
+
+
+/**
+ * @param {?proto.christiangeorgelucas.gpx_tools.GpxError|undefined} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetTrackPointsOutput} returns this
+*/
+proto.christiangeorgelucas.gpx_tools.GetTrackPointsOutput.prototype.setError = function(value) {
+  return jspb.Message.setWrapperField(this, 4, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetTrackPointsOutput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.GetTrackPointsOutput.prototype.clearError = function() {
+  return this.setError(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.christiangeorgelucas.gpx_tools.GetTrackPointsOutput.prototype.hasError = function() {
+  return jspb.Message.getField(this, 4) != null;
+};
+
+
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.christiangeorgelucas.gpx_tools.ListWaypointsInput.prototype.toObject = function(opt_includeInstance) {
+  return proto.christiangeorgelucas.gpx_tools.ListWaypointsInput.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.christiangeorgelucas.gpx_tools.ListWaypointsInput} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.ListWaypointsInput.toObject = function(includeInstance, msg) {
+  var f, obj = {
+doc: (f = msg.getDoc()) && proto.christiangeorgelucas.gpx_tools.Doc.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.christiangeorgelucas.gpx_tools.ListWaypointsInput}
+ */
+proto.christiangeorgelucas.gpx_tools.ListWaypointsInput.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.christiangeorgelucas.gpx_tools.ListWaypointsInput;
+  return proto.christiangeorgelucas.gpx_tools.ListWaypointsInput.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.christiangeorgelucas.gpx_tools.ListWaypointsInput} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.christiangeorgelucas.gpx_tools.ListWaypointsInput}
+ */
+proto.christiangeorgelucas.gpx_tools.ListWaypointsInput.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new proto.christiangeorgelucas.gpx_tools.Doc;
+      reader.readMessage(value,proto.christiangeorgelucas.gpx_tools.Doc.deserializeBinaryFromReader);
+      msg.setDoc(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.christiangeorgelucas.gpx_tools.ListWaypointsInput.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.christiangeorgelucas.gpx_tools.ListWaypointsInput.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.christiangeorgelucas.gpx_tools.ListWaypointsInput} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.ListWaypointsInput.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getDoc();
+  if (f != null) {
+    writer.writeMessage(
+      1,
+      f,
+      proto.christiangeorgelucas.gpx_tools.Doc.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * optional Doc doc = 1;
+ * @return {?proto.christiangeorgelucas.gpx_tools.Doc}
+ */
+proto.christiangeorgelucas.gpx_tools.ListWaypointsInput.prototype.getDoc = function() {
+  return /** @type{?proto.christiangeorgelucas.gpx_tools.Doc} */ (
+    jspb.Message.getWrapperField(this, proto.christiangeorgelucas.gpx_tools.Doc, 1));
+};
+
+
+/**
+ * @param {?proto.christiangeorgelucas.gpx_tools.Doc|undefined} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.ListWaypointsInput} returns this
+*/
+proto.christiangeorgelucas.gpx_tools.ListWaypointsInput.prototype.setDoc = function(value) {
+  return jspb.Message.setWrapperField(this, 1, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.christiangeorgelucas.gpx_tools.ListWaypointsInput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.ListWaypointsInput.prototype.clearDoc = function() {
+  return this.setDoc(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.christiangeorgelucas.gpx_tools.ListWaypointsInput.prototype.hasDoc = function() {
+  return jspb.Message.getField(this, 1) != null;
+};
+
+
+
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.christiangeorgelucas.gpx_tools.ListWaypointsOutput.repeatedFields_ = [1];
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.christiangeorgelucas.gpx_tools.ListWaypointsOutput.prototype.toObject = function(opt_includeInstance) {
+  return proto.christiangeorgelucas.gpx_tools.ListWaypointsOutput.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.christiangeorgelucas.gpx_tools.ListWaypointsOutput} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.ListWaypointsOutput.toObject = function(includeInstance, msg) {
+  var f, obj = {
+waypointsList: jspb.Message.toObjectList(msg.getWaypointsList(),
+    proto.christiangeorgelucas.gpx_tools.Waypoint.toObject, includeInstance),
+ok: jspb.Message.getBooleanFieldWithDefault(msg, 2, false),
+error: (f = msg.getError()) && proto.christiangeorgelucas.gpx_tools.GpxError.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.christiangeorgelucas.gpx_tools.ListWaypointsOutput}
+ */
+proto.christiangeorgelucas.gpx_tools.ListWaypointsOutput.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.christiangeorgelucas.gpx_tools.ListWaypointsOutput;
+  return proto.christiangeorgelucas.gpx_tools.ListWaypointsOutput.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.christiangeorgelucas.gpx_tools.ListWaypointsOutput} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.christiangeorgelucas.gpx_tools.ListWaypointsOutput}
+ */
+proto.christiangeorgelucas.gpx_tools.ListWaypointsOutput.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new proto.christiangeorgelucas.gpx_tools.Waypoint;
+      reader.readMessage(value,proto.christiangeorgelucas.gpx_tools.Waypoint.deserializeBinaryFromReader);
+      msg.addWaypoints(value);
+      break;
+    case 2:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setOk(value);
+      break;
+    case 3:
+      var value = new proto.christiangeorgelucas.gpx_tools.GpxError;
+      reader.readMessage(value,proto.christiangeorgelucas.gpx_tools.GpxError.deserializeBinaryFromReader);
+      msg.setError(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.christiangeorgelucas.gpx_tools.ListWaypointsOutput.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.christiangeorgelucas.gpx_tools.ListWaypointsOutput.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.christiangeorgelucas.gpx_tools.ListWaypointsOutput} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.ListWaypointsOutput.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getWaypointsList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      1,
+      f,
+      proto.christiangeorgelucas.gpx_tools.Waypoint.serializeBinaryToWriter
+    );
+  }
+  f = message.getOk();
+  if (f) {
+    writer.writeBool(
+      2,
+      f
+    );
+  }
+  f = message.getError();
+  if (f != null) {
+    writer.writeMessage(
+      3,
+      f,
+      proto.christiangeorgelucas.gpx_tools.GpxError.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * repeated Waypoint waypoints = 1;
+ * @return {!Array<!proto.christiangeorgelucas.gpx_tools.Waypoint>}
+ */
+proto.christiangeorgelucas.gpx_tools.ListWaypointsOutput.prototype.getWaypointsList = function() {
+  return /** @type{!Array<!proto.christiangeorgelucas.gpx_tools.Waypoint>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.christiangeorgelucas.gpx_tools.Waypoint, 1));
+};
+
+
+/**
+ * @param {!Array<!proto.christiangeorgelucas.gpx_tools.Waypoint>} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.ListWaypointsOutput} returns this
+*/
+proto.christiangeorgelucas.gpx_tools.ListWaypointsOutput.prototype.setWaypointsList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 1, value);
+};
+
+
+/**
+ * @param {!proto.christiangeorgelucas.gpx_tools.Waypoint=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.christiangeorgelucas.gpx_tools.Waypoint}
+ */
+proto.christiangeorgelucas.gpx_tools.ListWaypointsOutput.prototype.addWaypoints = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.christiangeorgelucas.gpx_tools.Waypoint, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.christiangeorgelucas.gpx_tools.ListWaypointsOutput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.ListWaypointsOutput.prototype.clearWaypointsList = function() {
+  return this.setWaypointsList([]);
+};
+
+
+/**
+ * optional bool ok = 2;
+ * @return {boolean}
+ */
+proto.christiangeorgelucas.gpx_tools.ListWaypointsOutput.prototype.getOk = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 2, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.ListWaypointsOutput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.ListWaypointsOutput.prototype.setOk = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 2, value);
+};
+
+
+/**
+ * optional GpxError error = 3;
+ * @return {?proto.christiangeorgelucas.gpx_tools.GpxError}
+ */
+proto.christiangeorgelucas.gpx_tools.ListWaypointsOutput.prototype.getError = function() {
+  return /** @type{?proto.christiangeorgelucas.gpx_tools.GpxError} */ (
+    jspb.Message.getWrapperField(this, proto.christiangeorgelucas.gpx_tools.GpxError, 3));
+};
+
+
+/**
+ * @param {?proto.christiangeorgelucas.gpx_tools.GpxError|undefined} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.ListWaypointsOutput} returns this
+*/
+proto.christiangeorgelucas.gpx_tools.ListWaypointsOutput.prototype.setError = function(value) {
+  return jspb.Message.setWrapperField(this, 3, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.christiangeorgelucas.gpx_tools.ListWaypointsOutput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.ListWaypointsOutput.prototype.clearError = function() {
+  return this.setError(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.christiangeorgelucas.gpx_tools.ListWaypointsOutput.prototype.hasError = function() {
+  return jspb.Message.getField(this, 3) != null;
+};
+
+
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.christiangeorgelucas.gpx_tools.ListRoutesInput.prototype.toObject = function(opt_includeInstance) {
+  return proto.christiangeorgelucas.gpx_tools.ListRoutesInput.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.christiangeorgelucas.gpx_tools.ListRoutesInput} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.ListRoutesInput.toObject = function(includeInstance, msg) {
+  var f, obj = {
+doc: (f = msg.getDoc()) && proto.christiangeorgelucas.gpx_tools.Doc.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.christiangeorgelucas.gpx_tools.ListRoutesInput}
+ */
+proto.christiangeorgelucas.gpx_tools.ListRoutesInput.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.christiangeorgelucas.gpx_tools.ListRoutesInput;
+  return proto.christiangeorgelucas.gpx_tools.ListRoutesInput.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.christiangeorgelucas.gpx_tools.ListRoutesInput} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.christiangeorgelucas.gpx_tools.ListRoutesInput}
+ */
+proto.christiangeorgelucas.gpx_tools.ListRoutesInput.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new proto.christiangeorgelucas.gpx_tools.Doc;
+      reader.readMessage(value,proto.christiangeorgelucas.gpx_tools.Doc.deserializeBinaryFromReader);
+      msg.setDoc(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.christiangeorgelucas.gpx_tools.ListRoutesInput.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.christiangeorgelucas.gpx_tools.ListRoutesInput.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.christiangeorgelucas.gpx_tools.ListRoutesInput} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.ListRoutesInput.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getDoc();
+  if (f != null) {
+    writer.writeMessage(
+      1,
+      f,
+      proto.christiangeorgelucas.gpx_tools.Doc.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * optional Doc doc = 1;
+ * @return {?proto.christiangeorgelucas.gpx_tools.Doc}
+ */
+proto.christiangeorgelucas.gpx_tools.ListRoutesInput.prototype.getDoc = function() {
+  return /** @type{?proto.christiangeorgelucas.gpx_tools.Doc} */ (
+    jspb.Message.getWrapperField(this, proto.christiangeorgelucas.gpx_tools.Doc, 1));
+};
+
+
+/**
+ * @param {?proto.christiangeorgelucas.gpx_tools.Doc|undefined} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.ListRoutesInput} returns this
+*/
+proto.christiangeorgelucas.gpx_tools.ListRoutesInput.prototype.setDoc = function(value) {
+  return jspb.Message.setWrapperField(this, 1, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.christiangeorgelucas.gpx_tools.ListRoutesInput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.ListRoutesInput.prototype.clearDoc = function() {
+  return this.setDoc(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.christiangeorgelucas.gpx_tools.ListRoutesInput.prototype.hasDoc = function() {
+  return jspb.Message.getField(this, 1) != null;
+};
+
+
+
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.christiangeorgelucas.gpx_tools.ListRoutesOutput.repeatedFields_ = [1];
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.christiangeorgelucas.gpx_tools.ListRoutesOutput.prototype.toObject = function(opt_includeInstance) {
+  return proto.christiangeorgelucas.gpx_tools.ListRoutesOutput.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.christiangeorgelucas.gpx_tools.ListRoutesOutput} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.ListRoutesOutput.toObject = function(includeInstance, msg) {
+  var f, obj = {
+routesList: jspb.Message.toObjectList(msg.getRoutesList(),
+    proto.christiangeorgelucas.gpx_tools.Route.toObject, includeInstance),
+ok: jspb.Message.getBooleanFieldWithDefault(msg, 2, false),
+error: (f = msg.getError()) && proto.christiangeorgelucas.gpx_tools.GpxError.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.christiangeorgelucas.gpx_tools.ListRoutesOutput}
+ */
+proto.christiangeorgelucas.gpx_tools.ListRoutesOutput.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.christiangeorgelucas.gpx_tools.ListRoutesOutput;
+  return proto.christiangeorgelucas.gpx_tools.ListRoutesOutput.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.christiangeorgelucas.gpx_tools.ListRoutesOutput} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.christiangeorgelucas.gpx_tools.ListRoutesOutput}
+ */
+proto.christiangeorgelucas.gpx_tools.ListRoutesOutput.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new proto.christiangeorgelucas.gpx_tools.Route;
+      reader.readMessage(value,proto.christiangeorgelucas.gpx_tools.Route.deserializeBinaryFromReader);
+      msg.addRoutes(value);
+      break;
+    case 2:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setOk(value);
+      break;
+    case 3:
+      var value = new proto.christiangeorgelucas.gpx_tools.GpxError;
+      reader.readMessage(value,proto.christiangeorgelucas.gpx_tools.GpxError.deserializeBinaryFromReader);
+      msg.setError(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.christiangeorgelucas.gpx_tools.ListRoutesOutput.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.christiangeorgelucas.gpx_tools.ListRoutesOutput.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.christiangeorgelucas.gpx_tools.ListRoutesOutput} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.ListRoutesOutput.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getRoutesList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      1,
+      f,
+      proto.christiangeorgelucas.gpx_tools.Route.serializeBinaryToWriter
+    );
+  }
+  f = message.getOk();
+  if (f) {
+    writer.writeBool(
+      2,
+      f
+    );
+  }
+  f = message.getError();
+  if (f != null) {
+    writer.writeMessage(
+      3,
+      f,
+      proto.christiangeorgelucas.gpx_tools.GpxError.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * repeated Route routes = 1;
+ * @return {!Array<!proto.christiangeorgelucas.gpx_tools.Route>}
+ */
+proto.christiangeorgelucas.gpx_tools.ListRoutesOutput.prototype.getRoutesList = function() {
+  return /** @type{!Array<!proto.christiangeorgelucas.gpx_tools.Route>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.christiangeorgelucas.gpx_tools.Route, 1));
+};
+
+
+/**
+ * @param {!Array<!proto.christiangeorgelucas.gpx_tools.Route>} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.ListRoutesOutput} returns this
+*/
+proto.christiangeorgelucas.gpx_tools.ListRoutesOutput.prototype.setRoutesList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 1, value);
+};
+
+
+/**
+ * @param {!proto.christiangeorgelucas.gpx_tools.Route=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.christiangeorgelucas.gpx_tools.Route}
+ */
+proto.christiangeorgelucas.gpx_tools.ListRoutesOutput.prototype.addRoutes = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.christiangeorgelucas.gpx_tools.Route, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.christiangeorgelucas.gpx_tools.ListRoutesOutput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.ListRoutesOutput.prototype.clearRoutesList = function() {
+  return this.setRoutesList([]);
+};
+
+
+/**
+ * optional bool ok = 2;
+ * @return {boolean}
+ */
+proto.christiangeorgelucas.gpx_tools.ListRoutesOutput.prototype.getOk = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 2, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.ListRoutesOutput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.ListRoutesOutput.prototype.setOk = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 2, value);
+};
+
+
+/**
+ * optional GpxError error = 3;
+ * @return {?proto.christiangeorgelucas.gpx_tools.GpxError}
+ */
+proto.christiangeorgelucas.gpx_tools.ListRoutesOutput.prototype.getError = function() {
+  return /** @type{?proto.christiangeorgelucas.gpx_tools.GpxError} */ (
+    jspb.Message.getWrapperField(this, proto.christiangeorgelucas.gpx_tools.GpxError, 3));
+};
+
+
+/**
+ * @param {?proto.christiangeorgelucas.gpx_tools.GpxError|undefined} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.ListRoutesOutput} returns this
+*/
+proto.christiangeorgelucas.gpx_tools.ListRoutesOutput.prototype.setError = function(value) {
+  return jspb.Message.setWrapperField(this, 3, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.christiangeorgelucas.gpx_tools.ListRoutesOutput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.ListRoutesOutput.prototype.clearError = function() {
+  return this.setError(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.christiangeorgelucas.gpx_tools.ListRoutesOutput.prototype.hasError = function() {
+  return jspb.Message.getField(this, 3) != null;
+};
+
+
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.christiangeorgelucas.gpx_tools.GetGpxMetadataInput.prototype.toObject = function(opt_includeInstance) {
+  return proto.christiangeorgelucas.gpx_tools.GetGpxMetadataInput.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.christiangeorgelucas.gpx_tools.GetGpxMetadataInput} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.GetGpxMetadataInput.toObject = function(includeInstance, msg) {
+  var f, obj = {
+doc: (f = msg.getDoc()) && proto.christiangeorgelucas.gpx_tools.Doc.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetGpxMetadataInput}
+ */
+proto.christiangeorgelucas.gpx_tools.GetGpxMetadataInput.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.christiangeorgelucas.gpx_tools.GetGpxMetadataInput;
+  return proto.christiangeorgelucas.gpx_tools.GetGpxMetadataInput.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.christiangeorgelucas.gpx_tools.GetGpxMetadataInput} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetGpxMetadataInput}
+ */
+proto.christiangeorgelucas.gpx_tools.GetGpxMetadataInput.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new proto.christiangeorgelucas.gpx_tools.Doc;
+      reader.readMessage(value,proto.christiangeorgelucas.gpx_tools.Doc.deserializeBinaryFromReader);
+      msg.setDoc(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.christiangeorgelucas.gpx_tools.GetGpxMetadataInput.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.christiangeorgelucas.gpx_tools.GetGpxMetadataInput.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.christiangeorgelucas.gpx_tools.GetGpxMetadataInput} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.GetGpxMetadataInput.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getDoc();
+  if (f != null) {
+    writer.writeMessage(
+      1,
+      f,
+      proto.christiangeorgelucas.gpx_tools.Doc.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * optional Doc doc = 1;
+ * @return {?proto.christiangeorgelucas.gpx_tools.Doc}
+ */
+proto.christiangeorgelucas.gpx_tools.GetGpxMetadataInput.prototype.getDoc = function() {
+  return /** @type{?proto.christiangeorgelucas.gpx_tools.Doc} */ (
+    jspb.Message.getWrapperField(this, proto.christiangeorgelucas.gpx_tools.Doc, 1));
+};
+
+
+/**
+ * @param {?proto.christiangeorgelucas.gpx_tools.Doc|undefined} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetGpxMetadataInput} returns this
+*/
+proto.christiangeorgelucas.gpx_tools.GetGpxMetadataInput.prototype.setDoc = function(value) {
+  return jspb.Message.setWrapperField(this, 1, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetGpxMetadataInput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.GetGpxMetadataInput.prototype.clearDoc = function() {
+  return this.setDoc(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.christiangeorgelucas.gpx_tools.GetGpxMetadataInput.prototype.hasDoc = function() {
+  return jspb.Message.getField(this, 1) != null;
+};
+
+
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.christiangeorgelucas.gpx_tools.GetGpxMetadataOutput.prototype.toObject = function(opt_includeInstance) {
+  return proto.christiangeorgelucas.gpx_tools.GetGpxMetadataOutput.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.christiangeorgelucas.gpx_tools.GetGpxMetadataOutput} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.GetGpxMetadataOutput.toObject = function(includeInstance, msg) {
+  var f, obj = {
+name: jspb.Message.getFieldWithDefault(msg, 1, ""),
+description: jspb.Message.getFieldWithDefault(msg, 2, ""),
+author: jspb.Message.getFieldWithDefault(msg, 3, ""),
+time: jspb.Message.getFieldWithDefault(msg, 4, ""),
+hasTime: jspb.Message.getBooleanFieldWithDefault(msg, 5, false),
+bounds: (f = msg.getBounds()) && proto.christiangeorgelucas.gpx_tools.BoundingBox.toObject(includeInstance, f),
+hasBounds: jspb.Message.getBooleanFieldWithDefault(msg, 7, false),
+ok: jspb.Message.getBooleanFieldWithDefault(msg, 8, false),
+error: (f = msg.getError()) && proto.christiangeorgelucas.gpx_tools.GpxError.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetGpxMetadataOutput}
+ */
+proto.christiangeorgelucas.gpx_tools.GetGpxMetadataOutput.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.christiangeorgelucas.gpx_tools.GetGpxMetadataOutput;
+  return proto.christiangeorgelucas.gpx_tools.GetGpxMetadataOutput.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.christiangeorgelucas.gpx_tools.GetGpxMetadataOutput} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetGpxMetadataOutput}
+ */
+proto.christiangeorgelucas.gpx_tools.GetGpxMetadataOutput.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setName(value);
+      break;
+    case 2:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setDescription(value);
+      break;
+    case 3:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setAuthor(value);
+      break;
+    case 4:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setTime(value);
+      break;
+    case 5:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setHasTime(value);
+      break;
+    case 6:
+      var value = new proto.christiangeorgelucas.gpx_tools.BoundingBox;
+      reader.readMessage(value,proto.christiangeorgelucas.gpx_tools.BoundingBox.deserializeBinaryFromReader);
+      msg.setBounds(value);
+      break;
+    case 7:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setHasBounds(value);
+      break;
+    case 8:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setOk(value);
+      break;
+    case 9:
+      var value = new proto.christiangeorgelucas.gpx_tools.GpxError;
+      reader.readMessage(value,proto.christiangeorgelucas.gpx_tools.GpxError.deserializeBinaryFromReader);
+      msg.setError(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.christiangeorgelucas.gpx_tools.GetGpxMetadataOutput.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.christiangeorgelucas.gpx_tools.GetGpxMetadataOutput.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.christiangeorgelucas.gpx_tools.GetGpxMetadataOutput} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.GetGpxMetadataOutput.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getName();
+  if (f.length > 0) {
+    writer.writeString(
+      1,
+      f
+    );
+  }
+  f = message.getDescription();
+  if (f.length > 0) {
+    writer.writeString(
+      2,
+      f
+    );
+  }
+  f = message.getAuthor();
+  if (f.length > 0) {
+    writer.writeString(
+      3,
+      f
+    );
+  }
+  f = message.getTime();
+  if (f.length > 0) {
+    writer.writeString(
+      4,
+      f
+    );
+  }
+  f = message.getHasTime();
+  if (f) {
+    writer.writeBool(
+      5,
+      f
+    );
+  }
+  f = message.getBounds();
+  if (f != null) {
+    writer.writeMessage(
+      6,
+      f,
+      proto.christiangeorgelucas.gpx_tools.BoundingBox.serializeBinaryToWriter
+    );
+  }
+  f = message.getHasBounds();
+  if (f) {
+    writer.writeBool(
+      7,
+      f
+    );
+  }
+  f = message.getOk();
+  if (f) {
+    writer.writeBool(
+      8,
+      f
+    );
+  }
+  f = message.getError();
+  if (f != null) {
+    writer.writeMessage(
+      9,
+      f,
+      proto.christiangeorgelucas.gpx_tools.GpxError.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * optional string name = 1;
+ * @return {string}
+ */
+proto.christiangeorgelucas.gpx_tools.GetGpxMetadataOutput.prototype.getName = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetGpxMetadataOutput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.GetGpxMetadataOutput.prototype.setName = function(value) {
+  return jspb.Message.setProto3StringField(this, 1, value);
+};
+
+
+/**
+ * optional string description = 2;
+ * @return {string}
+ */
+proto.christiangeorgelucas.gpx_tools.GetGpxMetadataOutput.prototype.getDescription = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetGpxMetadataOutput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.GetGpxMetadataOutput.prototype.setDescription = function(value) {
+  return jspb.Message.setProto3StringField(this, 2, value);
+};
+
+
+/**
+ * optional string author = 3;
+ * @return {string}
+ */
+proto.christiangeorgelucas.gpx_tools.GetGpxMetadataOutput.prototype.getAuthor = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetGpxMetadataOutput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.GetGpxMetadataOutput.prototype.setAuthor = function(value) {
+  return jspb.Message.setProto3StringField(this, 3, value);
+};
+
+
+/**
+ * optional string time = 4;
+ * @return {string}
+ */
+proto.christiangeorgelucas.gpx_tools.GetGpxMetadataOutput.prototype.getTime = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetGpxMetadataOutput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.GetGpxMetadataOutput.prototype.setTime = function(value) {
+  return jspb.Message.setProto3StringField(this, 4, value);
+};
+
+
+/**
+ * optional bool has_time = 5;
+ * @return {boolean}
+ */
+proto.christiangeorgelucas.gpx_tools.GetGpxMetadataOutput.prototype.getHasTime = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 5, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetGpxMetadataOutput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.GetGpxMetadataOutput.prototype.setHasTime = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 5, value);
+};
+
+
+/**
+ * optional BoundingBox bounds = 6;
+ * @return {?proto.christiangeorgelucas.gpx_tools.BoundingBox}
+ */
+proto.christiangeorgelucas.gpx_tools.GetGpxMetadataOutput.prototype.getBounds = function() {
+  return /** @type{?proto.christiangeorgelucas.gpx_tools.BoundingBox} */ (
+    jspb.Message.getWrapperField(this, proto.christiangeorgelucas.gpx_tools.BoundingBox, 6));
+};
+
+
+/**
+ * @param {?proto.christiangeorgelucas.gpx_tools.BoundingBox|undefined} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetGpxMetadataOutput} returns this
+*/
+proto.christiangeorgelucas.gpx_tools.GetGpxMetadataOutput.prototype.setBounds = function(value) {
+  return jspb.Message.setWrapperField(this, 6, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetGpxMetadataOutput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.GetGpxMetadataOutput.prototype.clearBounds = function() {
+  return this.setBounds(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.christiangeorgelucas.gpx_tools.GetGpxMetadataOutput.prototype.hasBounds = function() {
+  return jspb.Message.getField(this, 6) != null;
+};
+
+
+/**
+ * optional bool has_bounds = 7;
+ * @return {boolean}
+ */
+proto.christiangeorgelucas.gpx_tools.GetGpxMetadataOutput.prototype.getHasBounds = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 7, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetGpxMetadataOutput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.GetGpxMetadataOutput.prototype.setHasBounds = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 7, value);
+};
+
+
+/**
+ * optional bool ok = 8;
+ * @return {boolean}
+ */
+proto.christiangeorgelucas.gpx_tools.GetGpxMetadataOutput.prototype.getOk = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 8, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetGpxMetadataOutput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.GetGpxMetadataOutput.prototype.setOk = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 8, value);
+};
+
+
+/**
+ * optional GpxError error = 9;
+ * @return {?proto.christiangeorgelucas.gpx_tools.GpxError}
+ */
+proto.christiangeorgelucas.gpx_tools.GetGpxMetadataOutput.prototype.getError = function() {
+  return /** @type{?proto.christiangeorgelucas.gpx_tools.GpxError} */ (
+    jspb.Message.getWrapperField(this, proto.christiangeorgelucas.gpx_tools.GpxError, 9));
+};
+
+
+/**
+ * @param {?proto.christiangeorgelucas.gpx_tools.GpxError|undefined} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetGpxMetadataOutput} returns this
+*/
+proto.christiangeorgelucas.gpx_tools.GetGpxMetadataOutput.prototype.setError = function(value) {
+  return jspb.Message.setWrapperField(this, 9, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetGpxMetadataOutput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.GetGpxMetadataOutput.prototype.clearError = function() {
+  return this.setError(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.christiangeorgelucas.gpx_tools.GetGpxMetadataOutput.prototype.hasError = function() {
+  return jspb.Message.getField(this, 9) != null;
+};
+
+
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.christiangeorgelucas.gpx_tools.GetBoundingBoxInput.prototype.toObject = function(opt_includeInstance) {
+  return proto.christiangeorgelucas.gpx_tools.GetBoundingBoxInput.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.christiangeorgelucas.gpx_tools.GetBoundingBoxInput} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.GetBoundingBoxInput.toObject = function(includeInstance, msg) {
+  var f, obj = {
+doc: (f = msg.getDoc()) && proto.christiangeorgelucas.gpx_tools.Doc.toObject(includeInstance, f),
+trackIndex: jspb.Message.getFieldWithDefault(msg, 2, 0),
+hasTrackIndex: jspb.Message.getBooleanFieldWithDefault(msg, 3, false)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetBoundingBoxInput}
+ */
+proto.christiangeorgelucas.gpx_tools.GetBoundingBoxInput.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.christiangeorgelucas.gpx_tools.GetBoundingBoxInput;
+  return proto.christiangeorgelucas.gpx_tools.GetBoundingBoxInput.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.christiangeorgelucas.gpx_tools.GetBoundingBoxInput} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetBoundingBoxInput}
+ */
+proto.christiangeorgelucas.gpx_tools.GetBoundingBoxInput.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new proto.christiangeorgelucas.gpx_tools.Doc;
+      reader.readMessage(value,proto.christiangeorgelucas.gpx_tools.Doc.deserializeBinaryFromReader);
+      msg.setDoc(value);
+      break;
+    case 2:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setTrackIndex(value);
+      break;
+    case 3:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setHasTrackIndex(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.christiangeorgelucas.gpx_tools.GetBoundingBoxInput.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.christiangeorgelucas.gpx_tools.GetBoundingBoxInput.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.christiangeorgelucas.gpx_tools.GetBoundingBoxInput} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.GetBoundingBoxInput.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getDoc();
+  if (f != null) {
+    writer.writeMessage(
+      1,
+      f,
+      proto.christiangeorgelucas.gpx_tools.Doc.serializeBinaryToWriter
+    );
+  }
+  f = message.getTrackIndex();
+  if (f !== 0) {
+    writer.writeInt32(
+      2,
+      f
+    );
+  }
+  f = message.getHasTrackIndex();
+  if (f) {
+    writer.writeBool(
+      3,
+      f
+    );
+  }
+};
+
+
+/**
+ * optional Doc doc = 1;
+ * @return {?proto.christiangeorgelucas.gpx_tools.Doc}
+ */
+proto.christiangeorgelucas.gpx_tools.GetBoundingBoxInput.prototype.getDoc = function() {
+  return /** @type{?proto.christiangeorgelucas.gpx_tools.Doc} */ (
+    jspb.Message.getWrapperField(this, proto.christiangeorgelucas.gpx_tools.Doc, 1));
+};
+
+
+/**
+ * @param {?proto.christiangeorgelucas.gpx_tools.Doc|undefined} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetBoundingBoxInput} returns this
+*/
+proto.christiangeorgelucas.gpx_tools.GetBoundingBoxInput.prototype.setDoc = function(value) {
+  return jspb.Message.setWrapperField(this, 1, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetBoundingBoxInput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.GetBoundingBoxInput.prototype.clearDoc = function() {
+  return this.setDoc(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.christiangeorgelucas.gpx_tools.GetBoundingBoxInput.prototype.hasDoc = function() {
+  return jspb.Message.getField(this, 1) != null;
+};
+
+
+/**
+ * optional int32 track_index = 2;
+ * @return {number}
+ */
+proto.christiangeorgelucas.gpx_tools.GetBoundingBoxInput.prototype.getTrackIndex = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetBoundingBoxInput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.GetBoundingBoxInput.prototype.setTrackIndex = function(value) {
+  return jspb.Message.setProto3IntField(this, 2, value);
+};
+
+
+/**
+ * optional bool has_track_index = 3;
+ * @return {boolean}
+ */
+proto.christiangeorgelucas.gpx_tools.GetBoundingBoxInput.prototype.getHasTrackIndex = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 3, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetBoundingBoxInput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.GetBoundingBoxInput.prototype.setHasTrackIndex = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 3, value);
+};
+
+
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.christiangeorgelucas.gpx_tools.GetBoundingBoxOutput.prototype.toObject = function(opt_includeInstance) {
+  return proto.christiangeorgelucas.gpx_tools.GetBoundingBoxOutput.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.christiangeorgelucas.gpx_tools.GetBoundingBoxOutput} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.GetBoundingBoxOutput.toObject = function(includeInstance, msg) {
+  var f, obj = {
+bounds: (f = msg.getBounds()) && proto.christiangeorgelucas.gpx_tools.BoundingBox.toObject(includeInstance, f),
+ok: jspb.Message.getBooleanFieldWithDefault(msg, 2, false),
+error: (f = msg.getError()) && proto.christiangeorgelucas.gpx_tools.GpxError.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetBoundingBoxOutput}
+ */
+proto.christiangeorgelucas.gpx_tools.GetBoundingBoxOutput.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.christiangeorgelucas.gpx_tools.GetBoundingBoxOutput;
+  return proto.christiangeorgelucas.gpx_tools.GetBoundingBoxOutput.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.christiangeorgelucas.gpx_tools.GetBoundingBoxOutput} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetBoundingBoxOutput}
+ */
+proto.christiangeorgelucas.gpx_tools.GetBoundingBoxOutput.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new proto.christiangeorgelucas.gpx_tools.BoundingBox;
+      reader.readMessage(value,proto.christiangeorgelucas.gpx_tools.BoundingBox.deserializeBinaryFromReader);
+      msg.setBounds(value);
+      break;
+    case 2:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setOk(value);
+      break;
+    case 3:
+      var value = new proto.christiangeorgelucas.gpx_tools.GpxError;
+      reader.readMessage(value,proto.christiangeorgelucas.gpx_tools.GpxError.deserializeBinaryFromReader);
+      msg.setError(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.christiangeorgelucas.gpx_tools.GetBoundingBoxOutput.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.christiangeorgelucas.gpx_tools.GetBoundingBoxOutput.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.christiangeorgelucas.gpx_tools.GetBoundingBoxOutput} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.GetBoundingBoxOutput.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getBounds();
+  if (f != null) {
+    writer.writeMessage(
+      1,
+      f,
+      proto.christiangeorgelucas.gpx_tools.BoundingBox.serializeBinaryToWriter
+    );
+  }
+  f = message.getOk();
+  if (f) {
+    writer.writeBool(
+      2,
+      f
+    );
+  }
+  f = message.getError();
+  if (f != null) {
+    writer.writeMessage(
+      3,
+      f,
+      proto.christiangeorgelucas.gpx_tools.GpxError.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * optional BoundingBox bounds = 1;
+ * @return {?proto.christiangeorgelucas.gpx_tools.BoundingBox}
+ */
+proto.christiangeorgelucas.gpx_tools.GetBoundingBoxOutput.prototype.getBounds = function() {
+  return /** @type{?proto.christiangeorgelucas.gpx_tools.BoundingBox} */ (
+    jspb.Message.getWrapperField(this, proto.christiangeorgelucas.gpx_tools.BoundingBox, 1));
+};
+
+
+/**
+ * @param {?proto.christiangeorgelucas.gpx_tools.BoundingBox|undefined} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetBoundingBoxOutput} returns this
+*/
+proto.christiangeorgelucas.gpx_tools.GetBoundingBoxOutput.prototype.setBounds = function(value) {
+  return jspb.Message.setWrapperField(this, 1, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetBoundingBoxOutput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.GetBoundingBoxOutput.prototype.clearBounds = function() {
+  return this.setBounds(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.christiangeorgelucas.gpx_tools.GetBoundingBoxOutput.prototype.hasBounds = function() {
+  return jspb.Message.getField(this, 1) != null;
+};
+
+
+/**
+ * optional bool ok = 2;
+ * @return {boolean}
+ */
+proto.christiangeorgelucas.gpx_tools.GetBoundingBoxOutput.prototype.getOk = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 2, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetBoundingBoxOutput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.GetBoundingBoxOutput.prototype.setOk = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 2, value);
+};
+
+
+/**
+ * optional GpxError error = 3;
+ * @return {?proto.christiangeorgelucas.gpx_tools.GpxError}
+ */
+proto.christiangeorgelucas.gpx_tools.GetBoundingBoxOutput.prototype.getError = function() {
+  return /** @type{?proto.christiangeorgelucas.gpx_tools.GpxError} */ (
+    jspb.Message.getWrapperField(this, proto.christiangeorgelucas.gpx_tools.GpxError, 3));
+};
+
+
+/**
+ * @param {?proto.christiangeorgelucas.gpx_tools.GpxError|undefined} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetBoundingBoxOutput} returns this
+*/
+proto.christiangeorgelucas.gpx_tools.GetBoundingBoxOutput.prototype.setError = function(value) {
+  return jspb.Message.setWrapperField(this, 3, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetBoundingBoxOutput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.GetBoundingBoxOutput.prototype.clearError = function() {
+  return this.setError(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.christiangeorgelucas.gpx_tools.GetBoundingBoxOutput.prototype.hasError = function() {
+  return jspb.Message.getField(this, 3) != null;
+};
+
+
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.christiangeorgelucas.gpx_tools.GetElevationProfileInput.prototype.toObject = function(opt_includeInstance) {
+  return proto.christiangeorgelucas.gpx_tools.GetElevationProfileInput.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.christiangeorgelucas.gpx_tools.GetElevationProfileInput} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.GetElevationProfileInput.toObject = function(includeInstance, msg) {
+  var f, obj = {
+doc: (f = msg.getDoc()) && proto.christiangeorgelucas.gpx_tools.Doc.toObject(includeInstance, f),
+trackIndex: jspb.Message.getFieldWithDefault(msg, 2, 0)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetElevationProfileInput}
+ */
+proto.christiangeorgelucas.gpx_tools.GetElevationProfileInput.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.christiangeorgelucas.gpx_tools.GetElevationProfileInput;
+  return proto.christiangeorgelucas.gpx_tools.GetElevationProfileInput.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.christiangeorgelucas.gpx_tools.GetElevationProfileInput} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetElevationProfileInput}
+ */
+proto.christiangeorgelucas.gpx_tools.GetElevationProfileInput.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new proto.christiangeorgelucas.gpx_tools.Doc;
+      reader.readMessage(value,proto.christiangeorgelucas.gpx_tools.Doc.deserializeBinaryFromReader);
+      msg.setDoc(value);
+      break;
+    case 2:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setTrackIndex(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.christiangeorgelucas.gpx_tools.GetElevationProfileInput.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.christiangeorgelucas.gpx_tools.GetElevationProfileInput.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.christiangeorgelucas.gpx_tools.GetElevationProfileInput} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.GetElevationProfileInput.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getDoc();
+  if (f != null) {
+    writer.writeMessage(
+      1,
+      f,
+      proto.christiangeorgelucas.gpx_tools.Doc.serializeBinaryToWriter
+    );
+  }
+  f = message.getTrackIndex();
+  if (f !== 0) {
+    writer.writeInt32(
+      2,
+      f
+    );
+  }
+};
+
+
+/**
+ * optional Doc doc = 1;
+ * @return {?proto.christiangeorgelucas.gpx_tools.Doc}
+ */
+proto.christiangeorgelucas.gpx_tools.GetElevationProfileInput.prototype.getDoc = function() {
+  return /** @type{?proto.christiangeorgelucas.gpx_tools.Doc} */ (
+    jspb.Message.getWrapperField(this, proto.christiangeorgelucas.gpx_tools.Doc, 1));
+};
+
+
+/**
+ * @param {?proto.christiangeorgelucas.gpx_tools.Doc|undefined} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetElevationProfileInput} returns this
+*/
+proto.christiangeorgelucas.gpx_tools.GetElevationProfileInput.prototype.setDoc = function(value) {
+  return jspb.Message.setWrapperField(this, 1, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetElevationProfileInput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.GetElevationProfileInput.prototype.clearDoc = function() {
+  return this.setDoc(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.christiangeorgelucas.gpx_tools.GetElevationProfileInput.prototype.hasDoc = function() {
+  return jspb.Message.getField(this, 1) != null;
+};
+
+
+/**
+ * optional int32 track_index = 2;
+ * @return {number}
+ */
+proto.christiangeorgelucas.gpx_tools.GetElevationProfileInput.prototype.getTrackIndex = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetElevationProfileInput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.GetElevationProfileInput.prototype.setTrackIndex = function(value) {
+  return jspb.Message.setProto3IntField(this, 2, value);
+};
+
+
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.christiangeorgelucas.gpx_tools.ElevationPoint.prototype.toObject = function(opt_includeInstance) {
+  return proto.christiangeorgelucas.gpx_tools.ElevationPoint.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.christiangeorgelucas.gpx_tools.ElevationPoint} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.ElevationPoint.toObject = function(includeInstance, msg) {
+  var f, obj = {
+index: jspb.Message.getFieldWithDefault(msg, 1, 0),
+elevation: jspb.Message.getFloatingPointFieldWithDefault(msg, 2, 0.0),
+hasElevation: jspb.Message.getBooleanFieldWithDefault(msg, 3, false),
+time: jspb.Message.getFieldWithDefault(msg, 4, ""),
+hasTime: jspb.Message.getBooleanFieldWithDefault(msg, 5, false)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.christiangeorgelucas.gpx_tools.ElevationPoint}
+ */
+proto.christiangeorgelucas.gpx_tools.ElevationPoint.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.christiangeorgelucas.gpx_tools.ElevationPoint;
+  return proto.christiangeorgelucas.gpx_tools.ElevationPoint.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.christiangeorgelucas.gpx_tools.ElevationPoint} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.christiangeorgelucas.gpx_tools.ElevationPoint}
+ */
+proto.christiangeorgelucas.gpx_tools.ElevationPoint.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setIndex(value);
+      break;
+    case 2:
+      var value = /** @type {number} */ (reader.readDouble());
+      msg.setElevation(value);
+      break;
+    case 3:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setHasElevation(value);
+      break;
+    case 4:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setTime(value);
+      break;
+    case 5:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setHasTime(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.christiangeorgelucas.gpx_tools.ElevationPoint.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.christiangeorgelucas.gpx_tools.ElevationPoint.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.christiangeorgelucas.gpx_tools.ElevationPoint} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.ElevationPoint.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getIndex();
+  if (f !== 0) {
+    writer.writeInt32(
+      1,
+      f
+    );
+  }
+  f = message.getElevation();
+  if (f !== 0.0) {
+    writer.writeDouble(
+      2,
+      f
+    );
+  }
+  f = message.getHasElevation();
+  if (f) {
+    writer.writeBool(
+      3,
+      f
+    );
+  }
+  f = message.getTime();
+  if (f.length > 0) {
+    writer.writeString(
+      4,
+      f
+    );
+  }
+  f = message.getHasTime();
+  if (f) {
+    writer.writeBool(
+      5,
+      f
+    );
+  }
+};
+
+
+/**
+ * optional int32 index = 1;
+ * @return {number}
+ */
+proto.christiangeorgelucas.gpx_tools.ElevationPoint.prototype.getIndex = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.ElevationPoint} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.ElevationPoint.prototype.setIndex = function(value) {
+  return jspb.Message.setProto3IntField(this, 1, value);
+};
+
+
+/**
+ * optional double elevation = 2;
+ * @return {number}
+ */
+proto.christiangeorgelucas.gpx_tools.ElevationPoint.prototype.getElevation = function() {
+  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 2, 0.0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.ElevationPoint} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.ElevationPoint.prototype.setElevation = function(value) {
+  return jspb.Message.setProto3FloatField(this, 2, value);
+};
+
+
+/**
+ * optional bool has_elevation = 3;
+ * @return {boolean}
+ */
+proto.christiangeorgelucas.gpx_tools.ElevationPoint.prototype.getHasElevation = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 3, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.ElevationPoint} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.ElevationPoint.prototype.setHasElevation = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 3, value);
+};
+
+
+/**
+ * optional string time = 4;
+ * @return {string}
+ */
+proto.christiangeorgelucas.gpx_tools.ElevationPoint.prototype.getTime = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.ElevationPoint} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.ElevationPoint.prototype.setTime = function(value) {
+  return jspb.Message.setProto3StringField(this, 4, value);
+};
+
+
+/**
+ * optional bool has_time = 5;
+ * @return {boolean}
+ */
+proto.christiangeorgelucas.gpx_tools.ElevationPoint.prototype.getHasTime = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 5, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.ElevationPoint} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.ElevationPoint.prototype.setHasTime = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 5, value);
+};
+
+
+
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.christiangeorgelucas.gpx_tools.GetElevationProfileOutput.repeatedFields_ = [1];
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.christiangeorgelucas.gpx_tools.GetElevationProfileOutput.prototype.toObject = function(opt_includeInstance) {
+  return proto.christiangeorgelucas.gpx_tools.GetElevationProfileOutput.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.christiangeorgelucas.gpx_tools.GetElevationProfileOutput} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.GetElevationProfileOutput.toObject = function(includeInstance, msg) {
+  var f, obj = {
+pointsList: jspb.Message.toObjectList(msg.getPointsList(),
+    proto.christiangeorgelucas.gpx_tools.ElevationPoint.toObject, includeInstance),
+truncated: jspb.Message.getBooleanFieldWithDefault(msg, 2, false),
+ok: jspb.Message.getBooleanFieldWithDefault(msg, 3, false),
+error: (f = msg.getError()) && proto.christiangeorgelucas.gpx_tools.GpxError.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetElevationProfileOutput}
+ */
+proto.christiangeorgelucas.gpx_tools.GetElevationProfileOutput.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.christiangeorgelucas.gpx_tools.GetElevationProfileOutput;
+  return proto.christiangeorgelucas.gpx_tools.GetElevationProfileOutput.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.christiangeorgelucas.gpx_tools.GetElevationProfileOutput} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetElevationProfileOutput}
+ */
+proto.christiangeorgelucas.gpx_tools.GetElevationProfileOutput.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new proto.christiangeorgelucas.gpx_tools.ElevationPoint;
+      reader.readMessage(value,proto.christiangeorgelucas.gpx_tools.ElevationPoint.deserializeBinaryFromReader);
+      msg.addPoints(value);
+      break;
+    case 2:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setTruncated(value);
+      break;
+    case 3:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setOk(value);
+      break;
+    case 4:
+      var value = new proto.christiangeorgelucas.gpx_tools.GpxError;
+      reader.readMessage(value,proto.christiangeorgelucas.gpx_tools.GpxError.deserializeBinaryFromReader);
+      msg.setError(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.christiangeorgelucas.gpx_tools.GetElevationProfileOutput.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.christiangeorgelucas.gpx_tools.GetElevationProfileOutput.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.christiangeorgelucas.gpx_tools.GetElevationProfileOutput} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.GetElevationProfileOutput.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getPointsList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      1,
+      f,
+      proto.christiangeorgelucas.gpx_tools.ElevationPoint.serializeBinaryToWriter
+    );
+  }
+  f = message.getTruncated();
+  if (f) {
+    writer.writeBool(
+      2,
+      f
+    );
+  }
+  f = message.getOk();
+  if (f) {
+    writer.writeBool(
+      3,
+      f
+    );
+  }
+  f = message.getError();
+  if (f != null) {
+    writer.writeMessage(
+      4,
+      f,
+      proto.christiangeorgelucas.gpx_tools.GpxError.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * repeated ElevationPoint points = 1;
+ * @return {!Array<!proto.christiangeorgelucas.gpx_tools.ElevationPoint>}
+ */
+proto.christiangeorgelucas.gpx_tools.GetElevationProfileOutput.prototype.getPointsList = function() {
+  return /** @type{!Array<!proto.christiangeorgelucas.gpx_tools.ElevationPoint>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.christiangeorgelucas.gpx_tools.ElevationPoint, 1));
+};
+
+
+/**
+ * @param {!Array<!proto.christiangeorgelucas.gpx_tools.ElevationPoint>} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetElevationProfileOutput} returns this
+*/
+proto.christiangeorgelucas.gpx_tools.GetElevationProfileOutput.prototype.setPointsList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 1, value);
+};
+
+
+/**
+ * @param {!proto.christiangeorgelucas.gpx_tools.ElevationPoint=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.christiangeorgelucas.gpx_tools.ElevationPoint}
+ */
+proto.christiangeorgelucas.gpx_tools.GetElevationProfileOutput.prototype.addPoints = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.christiangeorgelucas.gpx_tools.ElevationPoint, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetElevationProfileOutput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.GetElevationProfileOutput.prototype.clearPointsList = function() {
+  return this.setPointsList([]);
+};
+
+
+/**
+ * optional bool truncated = 2;
+ * @return {boolean}
+ */
+proto.christiangeorgelucas.gpx_tools.GetElevationProfileOutput.prototype.getTruncated = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 2, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetElevationProfileOutput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.GetElevationProfileOutput.prototype.setTruncated = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 2, value);
+};
+
+
+/**
+ * optional bool ok = 3;
+ * @return {boolean}
+ */
+proto.christiangeorgelucas.gpx_tools.GetElevationProfileOutput.prototype.getOk = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 3, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetElevationProfileOutput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.GetElevationProfileOutput.prototype.setOk = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 3, value);
+};
+
+
+/**
+ * optional GpxError error = 4;
+ * @return {?proto.christiangeorgelucas.gpx_tools.GpxError}
+ */
+proto.christiangeorgelucas.gpx_tools.GetElevationProfileOutput.prototype.getError = function() {
+  return /** @type{?proto.christiangeorgelucas.gpx_tools.GpxError} */ (
+    jspb.Message.getWrapperField(this, proto.christiangeorgelucas.gpx_tools.GpxError, 4));
+};
+
+
+/**
+ * @param {?proto.christiangeorgelucas.gpx_tools.GpxError|undefined} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetElevationProfileOutput} returns this
+*/
+proto.christiangeorgelucas.gpx_tools.GetElevationProfileOutput.prototype.setError = function(value) {
+  return jspb.Message.setWrapperField(this, 4, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetElevationProfileOutput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.GetElevationProfileOutput.prototype.clearError = function() {
+  return this.setError(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.christiangeorgelucas.gpx_tools.GetElevationProfileOutput.prototype.hasError = function() {
+  return jspb.Message.getField(this, 4) != null;
+};
+
+
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.christiangeorgelucas.gpx_tools.GetTimeRangeInput.prototype.toObject = function(opt_includeInstance) {
+  return proto.christiangeorgelucas.gpx_tools.GetTimeRangeInput.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.christiangeorgelucas.gpx_tools.GetTimeRangeInput} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.GetTimeRangeInput.toObject = function(includeInstance, msg) {
+  var f, obj = {
+doc: (f = msg.getDoc()) && proto.christiangeorgelucas.gpx_tools.Doc.toObject(includeInstance, f),
+trackIndex: jspb.Message.getFieldWithDefault(msg, 2, 0)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetTimeRangeInput}
+ */
+proto.christiangeorgelucas.gpx_tools.GetTimeRangeInput.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.christiangeorgelucas.gpx_tools.GetTimeRangeInput;
+  return proto.christiangeorgelucas.gpx_tools.GetTimeRangeInput.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.christiangeorgelucas.gpx_tools.GetTimeRangeInput} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetTimeRangeInput}
+ */
+proto.christiangeorgelucas.gpx_tools.GetTimeRangeInput.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new proto.christiangeorgelucas.gpx_tools.Doc;
+      reader.readMessage(value,proto.christiangeorgelucas.gpx_tools.Doc.deserializeBinaryFromReader);
+      msg.setDoc(value);
+      break;
+    case 2:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setTrackIndex(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.christiangeorgelucas.gpx_tools.GetTimeRangeInput.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.christiangeorgelucas.gpx_tools.GetTimeRangeInput.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.christiangeorgelucas.gpx_tools.GetTimeRangeInput} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.GetTimeRangeInput.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getDoc();
+  if (f != null) {
+    writer.writeMessage(
+      1,
+      f,
+      proto.christiangeorgelucas.gpx_tools.Doc.serializeBinaryToWriter
+    );
+  }
+  f = message.getTrackIndex();
+  if (f !== 0) {
+    writer.writeInt32(
+      2,
+      f
+    );
+  }
+};
+
+
+/**
+ * optional Doc doc = 1;
+ * @return {?proto.christiangeorgelucas.gpx_tools.Doc}
+ */
+proto.christiangeorgelucas.gpx_tools.GetTimeRangeInput.prototype.getDoc = function() {
+  return /** @type{?proto.christiangeorgelucas.gpx_tools.Doc} */ (
+    jspb.Message.getWrapperField(this, proto.christiangeorgelucas.gpx_tools.Doc, 1));
+};
+
+
+/**
+ * @param {?proto.christiangeorgelucas.gpx_tools.Doc|undefined} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetTimeRangeInput} returns this
+*/
+proto.christiangeorgelucas.gpx_tools.GetTimeRangeInput.prototype.setDoc = function(value) {
+  return jspb.Message.setWrapperField(this, 1, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetTimeRangeInput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.GetTimeRangeInput.prototype.clearDoc = function() {
+  return this.setDoc(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.christiangeorgelucas.gpx_tools.GetTimeRangeInput.prototype.hasDoc = function() {
+  return jspb.Message.getField(this, 1) != null;
+};
+
+
+/**
+ * optional int32 track_index = 2;
+ * @return {number}
+ */
+proto.christiangeorgelucas.gpx_tools.GetTimeRangeInput.prototype.getTrackIndex = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetTimeRangeInput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.GetTimeRangeInput.prototype.setTrackIndex = function(value) {
+  return jspb.Message.setProto3IntField(this, 2, value);
+};
+
+
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.christiangeorgelucas.gpx_tools.GetTimeRangeOutput.prototype.toObject = function(opt_includeInstance) {
+  return proto.christiangeorgelucas.gpx_tools.GetTimeRangeOutput.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.christiangeorgelucas.gpx_tools.GetTimeRangeOutput} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.GetTimeRangeOutput.toObject = function(includeInstance, msg) {
+  var f, obj = {
+startTime: jspb.Message.getFieldWithDefault(msg, 1, ""),
+endTime: jspb.Message.getFieldWithDefault(msg, 2, ""),
+hasRange: jspb.Message.getBooleanFieldWithDefault(msg, 3, false),
+ok: jspb.Message.getBooleanFieldWithDefault(msg, 4, false),
+error: (f = msg.getError()) && proto.christiangeorgelucas.gpx_tools.GpxError.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetTimeRangeOutput}
+ */
+proto.christiangeorgelucas.gpx_tools.GetTimeRangeOutput.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.christiangeorgelucas.gpx_tools.GetTimeRangeOutput;
+  return proto.christiangeorgelucas.gpx_tools.GetTimeRangeOutput.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.christiangeorgelucas.gpx_tools.GetTimeRangeOutput} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetTimeRangeOutput}
+ */
+proto.christiangeorgelucas.gpx_tools.GetTimeRangeOutput.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setStartTime(value);
+      break;
+    case 2:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setEndTime(value);
+      break;
+    case 3:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setHasRange(value);
+      break;
+    case 4:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setOk(value);
+      break;
+    case 5:
+      var value = new proto.christiangeorgelucas.gpx_tools.GpxError;
+      reader.readMessage(value,proto.christiangeorgelucas.gpx_tools.GpxError.deserializeBinaryFromReader);
+      msg.setError(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.christiangeorgelucas.gpx_tools.GetTimeRangeOutput.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.christiangeorgelucas.gpx_tools.GetTimeRangeOutput.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.christiangeorgelucas.gpx_tools.GetTimeRangeOutput} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.GetTimeRangeOutput.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getStartTime();
+  if (f.length > 0) {
+    writer.writeString(
+      1,
+      f
+    );
+  }
+  f = message.getEndTime();
+  if (f.length > 0) {
+    writer.writeString(
+      2,
+      f
+    );
+  }
+  f = message.getHasRange();
+  if (f) {
+    writer.writeBool(
+      3,
+      f
+    );
+  }
+  f = message.getOk();
+  if (f) {
+    writer.writeBool(
+      4,
+      f
+    );
+  }
+  f = message.getError();
+  if (f != null) {
+    writer.writeMessage(
+      5,
+      f,
+      proto.christiangeorgelucas.gpx_tools.GpxError.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * optional string start_time = 1;
+ * @return {string}
+ */
+proto.christiangeorgelucas.gpx_tools.GetTimeRangeOutput.prototype.getStartTime = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetTimeRangeOutput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.GetTimeRangeOutput.prototype.setStartTime = function(value) {
+  return jspb.Message.setProto3StringField(this, 1, value);
+};
+
+
+/**
+ * optional string end_time = 2;
+ * @return {string}
+ */
+proto.christiangeorgelucas.gpx_tools.GetTimeRangeOutput.prototype.getEndTime = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetTimeRangeOutput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.GetTimeRangeOutput.prototype.setEndTime = function(value) {
+  return jspb.Message.setProto3StringField(this, 2, value);
+};
+
+
+/**
+ * optional bool has_range = 3;
+ * @return {boolean}
+ */
+proto.christiangeorgelucas.gpx_tools.GetTimeRangeOutput.prototype.getHasRange = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 3, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetTimeRangeOutput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.GetTimeRangeOutput.prototype.setHasRange = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 3, value);
+};
+
+
+/**
+ * optional bool ok = 4;
+ * @return {boolean}
+ */
+proto.christiangeorgelucas.gpx_tools.GetTimeRangeOutput.prototype.getOk = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 4, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetTimeRangeOutput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.GetTimeRangeOutput.prototype.setOk = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 4, value);
+};
+
+
+/**
+ * optional GpxError error = 5;
+ * @return {?proto.christiangeorgelucas.gpx_tools.GpxError}
+ */
+proto.christiangeorgelucas.gpx_tools.GetTimeRangeOutput.prototype.getError = function() {
+  return /** @type{?proto.christiangeorgelucas.gpx_tools.GpxError} */ (
+    jspb.Message.getWrapperField(this, proto.christiangeorgelucas.gpx_tools.GpxError, 5));
+};
+
+
+/**
+ * @param {?proto.christiangeorgelucas.gpx_tools.GpxError|undefined} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetTimeRangeOutput} returns this
+*/
+proto.christiangeorgelucas.gpx_tools.GetTimeRangeOutput.prototype.setError = function(value) {
+  return jspb.Message.setWrapperField(this, 5, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetTimeRangeOutput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.GetTimeRangeOutput.prototype.clearError = function() {
+  return this.setError(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.christiangeorgelucas.gpx_tools.GetTimeRangeOutput.prototype.hasError = function() {
+  return jspb.Message.getField(this, 5) != null;
+};
+
+
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.christiangeorgelucas.gpx_tools.GetSummaryInput.prototype.toObject = function(opt_includeInstance) {
+  return proto.christiangeorgelucas.gpx_tools.GetSummaryInput.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.christiangeorgelucas.gpx_tools.GetSummaryInput} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.GetSummaryInput.toObject = function(includeInstance, msg) {
+  var f, obj = {
+doc: (f = msg.getDoc()) && proto.christiangeorgelucas.gpx_tools.Doc.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetSummaryInput}
+ */
+proto.christiangeorgelucas.gpx_tools.GetSummaryInput.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.christiangeorgelucas.gpx_tools.GetSummaryInput;
+  return proto.christiangeorgelucas.gpx_tools.GetSummaryInput.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.christiangeorgelucas.gpx_tools.GetSummaryInput} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetSummaryInput}
+ */
+proto.christiangeorgelucas.gpx_tools.GetSummaryInput.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new proto.christiangeorgelucas.gpx_tools.Doc;
+      reader.readMessage(value,proto.christiangeorgelucas.gpx_tools.Doc.deserializeBinaryFromReader);
+      msg.setDoc(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.christiangeorgelucas.gpx_tools.GetSummaryInput.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.christiangeorgelucas.gpx_tools.GetSummaryInput.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.christiangeorgelucas.gpx_tools.GetSummaryInput} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.GetSummaryInput.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getDoc();
+  if (f != null) {
+    writer.writeMessage(
+      1,
+      f,
+      proto.christiangeorgelucas.gpx_tools.Doc.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * optional Doc doc = 1;
+ * @return {?proto.christiangeorgelucas.gpx_tools.Doc}
+ */
+proto.christiangeorgelucas.gpx_tools.GetSummaryInput.prototype.getDoc = function() {
+  return /** @type{?proto.christiangeorgelucas.gpx_tools.Doc} */ (
+    jspb.Message.getWrapperField(this, proto.christiangeorgelucas.gpx_tools.Doc, 1));
+};
+
+
+/**
+ * @param {?proto.christiangeorgelucas.gpx_tools.Doc|undefined} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetSummaryInput} returns this
+*/
+proto.christiangeorgelucas.gpx_tools.GetSummaryInput.prototype.setDoc = function(value) {
+  return jspb.Message.setWrapperField(this, 1, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetSummaryInput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.GetSummaryInput.prototype.clearDoc = function() {
+  return this.setDoc(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.christiangeorgelucas.gpx_tools.GetSummaryInput.prototype.hasDoc = function() {
+  return jspb.Message.getField(this, 1) != null;
+};
+
+
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.christiangeorgelucas.gpx_tools.GetSummaryOutput.prototype.toObject = function(opt_includeInstance) {
+  return proto.christiangeorgelucas.gpx_tools.GetSummaryOutput.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.christiangeorgelucas.gpx_tools.GetSummaryOutput} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.GetSummaryOutput.toObject = function(includeInstance, msg) {
+  var f, obj = {
+format: jspb.Message.getFieldWithDefault(msg, 1, ""),
+trackCount: jspb.Message.getFieldWithDefault(msg, 2, 0),
+routeCount: jspb.Message.getFieldWithDefault(msg, 3, 0),
+waypointCount: jspb.Message.getFieldWithDefault(msg, 4, 0),
+totalTrackPoints: jspb.Message.getFieldWithDefault(msg, 5, 0),
+totalRoutePoints: jspb.Message.getFieldWithDefault(msg, 6, 0),
+placemarkCount: jspb.Message.getFieldWithDefault(msg, 7, 0),
+ok: jspb.Message.getBooleanFieldWithDefault(msg, 8, false),
+error: (f = msg.getError()) && proto.christiangeorgelucas.gpx_tools.GpxError.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetSummaryOutput}
+ */
+proto.christiangeorgelucas.gpx_tools.GetSummaryOutput.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.christiangeorgelucas.gpx_tools.GetSummaryOutput;
+  return proto.christiangeorgelucas.gpx_tools.GetSummaryOutput.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.christiangeorgelucas.gpx_tools.GetSummaryOutput} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetSummaryOutput}
+ */
+proto.christiangeorgelucas.gpx_tools.GetSummaryOutput.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setFormat(value);
+      break;
+    case 2:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setTrackCount(value);
+      break;
+    case 3:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setRouteCount(value);
+      break;
+    case 4:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setWaypointCount(value);
+      break;
+    case 5:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setTotalTrackPoints(value);
+      break;
+    case 6:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setTotalRoutePoints(value);
+      break;
+    case 7:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setPlacemarkCount(value);
+      break;
+    case 8:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setOk(value);
+      break;
+    case 9:
+      var value = new proto.christiangeorgelucas.gpx_tools.GpxError;
+      reader.readMessage(value,proto.christiangeorgelucas.gpx_tools.GpxError.deserializeBinaryFromReader);
+      msg.setError(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.christiangeorgelucas.gpx_tools.GetSummaryOutput.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.christiangeorgelucas.gpx_tools.GetSummaryOutput.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.christiangeorgelucas.gpx_tools.GetSummaryOutput} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.GetSummaryOutput.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getFormat();
+  if (f.length > 0) {
+    writer.writeString(
+      1,
+      f
+    );
+  }
+  f = message.getTrackCount();
+  if (f !== 0) {
+    writer.writeInt32(
+      2,
+      f
+    );
+  }
+  f = message.getRouteCount();
+  if (f !== 0) {
+    writer.writeInt32(
+      3,
+      f
+    );
+  }
+  f = message.getWaypointCount();
+  if (f !== 0) {
+    writer.writeInt32(
+      4,
+      f
+    );
+  }
+  f = message.getTotalTrackPoints();
+  if (f !== 0) {
+    writer.writeInt32(
+      5,
+      f
+    );
+  }
+  f = message.getTotalRoutePoints();
+  if (f !== 0) {
+    writer.writeInt32(
+      6,
+      f
+    );
+  }
+  f = message.getPlacemarkCount();
+  if (f !== 0) {
+    writer.writeInt32(
+      7,
+      f
+    );
+  }
+  f = message.getOk();
+  if (f) {
+    writer.writeBool(
+      8,
+      f
+    );
+  }
+  f = message.getError();
+  if (f != null) {
+    writer.writeMessage(
+      9,
+      f,
+      proto.christiangeorgelucas.gpx_tools.GpxError.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * optional string format = 1;
+ * @return {string}
+ */
+proto.christiangeorgelucas.gpx_tools.GetSummaryOutput.prototype.getFormat = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetSummaryOutput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.GetSummaryOutput.prototype.setFormat = function(value) {
+  return jspb.Message.setProto3StringField(this, 1, value);
+};
+
+
+/**
+ * optional int32 track_count = 2;
+ * @return {number}
+ */
+proto.christiangeorgelucas.gpx_tools.GetSummaryOutput.prototype.getTrackCount = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetSummaryOutput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.GetSummaryOutput.prototype.setTrackCount = function(value) {
+  return jspb.Message.setProto3IntField(this, 2, value);
+};
+
+
+/**
+ * optional int32 route_count = 3;
+ * @return {number}
+ */
+proto.christiangeorgelucas.gpx_tools.GetSummaryOutput.prototype.getRouteCount = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetSummaryOutput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.GetSummaryOutput.prototype.setRouteCount = function(value) {
+  return jspb.Message.setProto3IntField(this, 3, value);
+};
+
+
+/**
+ * optional int32 waypoint_count = 4;
+ * @return {number}
+ */
+proto.christiangeorgelucas.gpx_tools.GetSummaryOutput.prototype.getWaypointCount = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 4, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetSummaryOutput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.GetSummaryOutput.prototype.setWaypointCount = function(value) {
+  return jspb.Message.setProto3IntField(this, 4, value);
+};
+
+
+/**
+ * optional int32 total_track_points = 5;
+ * @return {number}
+ */
+proto.christiangeorgelucas.gpx_tools.GetSummaryOutput.prototype.getTotalTrackPoints = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 5, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetSummaryOutput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.GetSummaryOutput.prototype.setTotalTrackPoints = function(value) {
+  return jspb.Message.setProto3IntField(this, 5, value);
+};
+
+
+/**
+ * optional int32 total_route_points = 6;
+ * @return {number}
+ */
+proto.christiangeorgelucas.gpx_tools.GetSummaryOutput.prototype.getTotalRoutePoints = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 6, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetSummaryOutput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.GetSummaryOutput.prototype.setTotalRoutePoints = function(value) {
+  return jspb.Message.setProto3IntField(this, 6, value);
+};
+
+
+/**
+ * optional int32 placemark_count = 7;
+ * @return {number}
+ */
+proto.christiangeorgelucas.gpx_tools.GetSummaryOutput.prototype.getPlacemarkCount = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 7, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetSummaryOutput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.GetSummaryOutput.prototype.setPlacemarkCount = function(value) {
+  return jspb.Message.setProto3IntField(this, 7, value);
+};
+
+
+/**
+ * optional bool ok = 8;
+ * @return {boolean}
+ */
+proto.christiangeorgelucas.gpx_tools.GetSummaryOutput.prototype.getOk = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 8, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetSummaryOutput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.GetSummaryOutput.prototype.setOk = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 8, value);
+};
+
+
+/**
+ * optional GpxError error = 9;
+ * @return {?proto.christiangeorgelucas.gpx_tools.GpxError}
+ */
+proto.christiangeorgelucas.gpx_tools.GetSummaryOutput.prototype.getError = function() {
+  return /** @type{?proto.christiangeorgelucas.gpx_tools.GpxError} */ (
+    jspb.Message.getWrapperField(this, proto.christiangeorgelucas.gpx_tools.GpxError, 9));
+};
+
+
+/**
+ * @param {?proto.christiangeorgelucas.gpx_tools.GpxError|undefined} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetSummaryOutput} returns this
+*/
+proto.christiangeorgelucas.gpx_tools.GetSummaryOutput.prototype.setError = function(value) {
+  return jspb.Message.setWrapperField(this, 9, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetSummaryOutput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.GetSummaryOutput.prototype.clearError = function() {
+  return this.setError(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.christiangeorgelucas.gpx_tools.GetSummaryOutput.prototype.hasError = function() {
+  return jspb.Message.getField(this, 9) != null;
+};
+
+
+
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.christiangeorgelucas.gpx_tools.Placemark.repeatedFields_ = [4];
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.christiangeorgelucas.gpx_tools.Placemark.prototype.toObject = function(opt_includeInstance) {
+  return proto.christiangeorgelucas.gpx_tools.Placemark.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.christiangeorgelucas.gpx_tools.Placemark} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.Placemark.toObject = function(includeInstance, msg) {
+  var f, obj = {
+name: jspb.Message.getFieldWithDefault(msg, 1, ""),
+description: jspb.Message.getFieldWithDefault(msg, 2, ""),
+geometryType: jspb.Message.getFieldWithDefault(msg, 3, ""),
+coordinatesList: jspb.Message.toObjectList(msg.getCoordinatesList(),
+    proto.christiangeorgelucas.gpx_tools.Point.toObject, includeInstance),
+index: jspb.Message.getFieldWithDefault(msg, 5, 0)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.christiangeorgelucas.gpx_tools.Placemark}
+ */
+proto.christiangeorgelucas.gpx_tools.Placemark.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.christiangeorgelucas.gpx_tools.Placemark;
+  return proto.christiangeorgelucas.gpx_tools.Placemark.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.christiangeorgelucas.gpx_tools.Placemark} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.christiangeorgelucas.gpx_tools.Placemark}
+ */
+proto.christiangeorgelucas.gpx_tools.Placemark.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setName(value);
+      break;
+    case 2:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setDescription(value);
+      break;
+    case 3:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setGeometryType(value);
+      break;
+    case 4:
+      var value = new proto.christiangeorgelucas.gpx_tools.Point;
+      reader.readMessage(value,proto.christiangeorgelucas.gpx_tools.Point.deserializeBinaryFromReader);
+      msg.addCoordinates(value);
+      break;
+    case 5:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setIndex(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.christiangeorgelucas.gpx_tools.Placemark.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.christiangeorgelucas.gpx_tools.Placemark.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.christiangeorgelucas.gpx_tools.Placemark} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.Placemark.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getName();
+  if (f.length > 0) {
+    writer.writeString(
+      1,
+      f
+    );
+  }
+  f = message.getDescription();
+  if (f.length > 0) {
+    writer.writeString(
+      2,
+      f
+    );
+  }
+  f = message.getGeometryType();
+  if (f.length > 0) {
+    writer.writeString(
+      3,
+      f
+    );
+  }
+  f = message.getCoordinatesList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      4,
+      f,
+      proto.christiangeorgelucas.gpx_tools.Point.serializeBinaryToWriter
+    );
+  }
+  f = message.getIndex();
+  if (f !== 0) {
+    writer.writeInt32(
+      5,
+      f
+    );
+  }
+};
+
+
+/**
+ * optional string name = 1;
+ * @return {string}
+ */
+proto.christiangeorgelucas.gpx_tools.Placemark.prototype.getName = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.Placemark} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.Placemark.prototype.setName = function(value) {
+  return jspb.Message.setProto3StringField(this, 1, value);
+};
+
+
+/**
+ * optional string description = 2;
+ * @return {string}
+ */
+proto.christiangeorgelucas.gpx_tools.Placemark.prototype.getDescription = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.Placemark} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.Placemark.prototype.setDescription = function(value) {
+  return jspb.Message.setProto3StringField(this, 2, value);
+};
+
+
+/**
+ * optional string geometry_type = 3;
+ * @return {string}
+ */
+proto.christiangeorgelucas.gpx_tools.Placemark.prototype.getGeometryType = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.Placemark} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.Placemark.prototype.setGeometryType = function(value) {
+  return jspb.Message.setProto3StringField(this, 3, value);
+};
+
+
+/**
+ * repeated Point coordinates = 4;
+ * @return {!Array<!proto.christiangeorgelucas.gpx_tools.Point>}
+ */
+proto.christiangeorgelucas.gpx_tools.Placemark.prototype.getCoordinatesList = function() {
+  return /** @type{!Array<!proto.christiangeorgelucas.gpx_tools.Point>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.christiangeorgelucas.gpx_tools.Point, 4));
+};
+
+
+/**
+ * @param {!Array<!proto.christiangeorgelucas.gpx_tools.Point>} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.Placemark} returns this
+*/
+proto.christiangeorgelucas.gpx_tools.Placemark.prototype.setCoordinatesList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 4, value);
+};
+
+
+/**
+ * @param {!proto.christiangeorgelucas.gpx_tools.Point=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.christiangeorgelucas.gpx_tools.Point}
+ */
+proto.christiangeorgelucas.gpx_tools.Placemark.prototype.addCoordinates = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 4, opt_value, proto.christiangeorgelucas.gpx_tools.Point, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.christiangeorgelucas.gpx_tools.Placemark} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.Placemark.prototype.clearCoordinatesList = function() {
+  return this.setCoordinatesList([]);
+};
+
+
+/**
+ * optional int32 index = 5;
+ * @return {number}
+ */
+proto.christiangeorgelucas.gpx_tools.Placemark.prototype.getIndex = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 5, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.Placemark} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.Placemark.prototype.setIndex = function(value) {
+  return jspb.Message.setProto3IntField(this, 5, value);
+};
+
+
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.christiangeorgelucas.gpx_tools.ParseKmlInput.prototype.toObject = function(opt_includeInstance) {
+  return proto.christiangeorgelucas.gpx_tools.ParseKmlInput.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.christiangeorgelucas.gpx_tools.ParseKmlInput} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.ParseKmlInput.toObject = function(includeInstance, msg) {
+  var f, obj = {
+doc: (f = msg.getDoc()) && proto.christiangeorgelucas.gpx_tools.Doc.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.christiangeorgelucas.gpx_tools.ParseKmlInput}
+ */
+proto.christiangeorgelucas.gpx_tools.ParseKmlInput.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.christiangeorgelucas.gpx_tools.ParseKmlInput;
+  return proto.christiangeorgelucas.gpx_tools.ParseKmlInput.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.christiangeorgelucas.gpx_tools.ParseKmlInput} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.christiangeorgelucas.gpx_tools.ParseKmlInput}
+ */
+proto.christiangeorgelucas.gpx_tools.ParseKmlInput.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new proto.christiangeorgelucas.gpx_tools.Doc;
+      reader.readMessage(value,proto.christiangeorgelucas.gpx_tools.Doc.deserializeBinaryFromReader);
+      msg.setDoc(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.christiangeorgelucas.gpx_tools.ParseKmlInput.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.christiangeorgelucas.gpx_tools.ParseKmlInput.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.christiangeorgelucas.gpx_tools.ParseKmlInput} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.ParseKmlInput.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getDoc();
+  if (f != null) {
+    writer.writeMessage(
+      1,
+      f,
+      proto.christiangeorgelucas.gpx_tools.Doc.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * optional Doc doc = 1;
+ * @return {?proto.christiangeorgelucas.gpx_tools.Doc}
+ */
+proto.christiangeorgelucas.gpx_tools.ParseKmlInput.prototype.getDoc = function() {
+  return /** @type{?proto.christiangeorgelucas.gpx_tools.Doc} */ (
+    jspb.Message.getWrapperField(this, proto.christiangeorgelucas.gpx_tools.Doc, 1));
+};
+
+
+/**
+ * @param {?proto.christiangeorgelucas.gpx_tools.Doc|undefined} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.ParseKmlInput} returns this
+*/
+proto.christiangeorgelucas.gpx_tools.ParseKmlInput.prototype.setDoc = function(value) {
+  return jspb.Message.setWrapperField(this, 1, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.christiangeorgelucas.gpx_tools.ParseKmlInput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.ParseKmlInput.prototype.clearDoc = function() {
+  return this.setDoc(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.christiangeorgelucas.gpx_tools.ParseKmlInput.prototype.hasDoc = function() {
+  return jspb.Message.getField(this, 1) != null;
+};
+
+
+
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.christiangeorgelucas.gpx_tools.ParseKmlOutput.repeatedFields_ = [2];
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.christiangeorgelucas.gpx_tools.ParseKmlOutput.prototype.toObject = function(opt_includeInstance) {
+  return proto.christiangeorgelucas.gpx_tools.ParseKmlOutput.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.christiangeorgelucas.gpx_tools.ParseKmlOutput} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.ParseKmlOutput.toObject = function(includeInstance, msg) {
+  var f, obj = {
+documentName: jspb.Message.getFieldWithDefault(msg, 1, ""),
+placemarksList: jspb.Message.toObjectList(msg.getPlacemarksList(),
+    proto.christiangeorgelucas.gpx_tools.Placemark.toObject, includeInstance),
+ok: jspb.Message.getBooleanFieldWithDefault(msg, 3, false),
+error: (f = msg.getError()) && proto.christiangeorgelucas.gpx_tools.GpxError.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.christiangeorgelucas.gpx_tools.ParseKmlOutput}
+ */
+proto.christiangeorgelucas.gpx_tools.ParseKmlOutput.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.christiangeorgelucas.gpx_tools.ParseKmlOutput;
+  return proto.christiangeorgelucas.gpx_tools.ParseKmlOutput.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.christiangeorgelucas.gpx_tools.ParseKmlOutput} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.christiangeorgelucas.gpx_tools.ParseKmlOutput}
+ */
+proto.christiangeorgelucas.gpx_tools.ParseKmlOutput.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setDocumentName(value);
+      break;
+    case 2:
+      var value = new proto.christiangeorgelucas.gpx_tools.Placemark;
+      reader.readMessage(value,proto.christiangeorgelucas.gpx_tools.Placemark.deserializeBinaryFromReader);
+      msg.addPlacemarks(value);
+      break;
+    case 3:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setOk(value);
+      break;
+    case 4:
+      var value = new proto.christiangeorgelucas.gpx_tools.GpxError;
+      reader.readMessage(value,proto.christiangeorgelucas.gpx_tools.GpxError.deserializeBinaryFromReader);
+      msg.setError(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.christiangeorgelucas.gpx_tools.ParseKmlOutput.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.christiangeorgelucas.gpx_tools.ParseKmlOutput.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.christiangeorgelucas.gpx_tools.ParseKmlOutput} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.ParseKmlOutput.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getDocumentName();
+  if (f.length > 0) {
+    writer.writeString(
+      1,
+      f
+    );
+  }
+  f = message.getPlacemarksList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      2,
+      f,
+      proto.christiangeorgelucas.gpx_tools.Placemark.serializeBinaryToWriter
+    );
+  }
+  f = message.getOk();
+  if (f) {
+    writer.writeBool(
+      3,
+      f
+    );
+  }
+  f = message.getError();
+  if (f != null) {
+    writer.writeMessage(
+      4,
+      f,
+      proto.christiangeorgelucas.gpx_tools.GpxError.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * optional string document_name = 1;
+ * @return {string}
+ */
+proto.christiangeorgelucas.gpx_tools.ParseKmlOutput.prototype.getDocumentName = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.ParseKmlOutput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.ParseKmlOutput.prototype.setDocumentName = function(value) {
+  return jspb.Message.setProto3StringField(this, 1, value);
+};
+
+
+/**
+ * repeated Placemark placemarks = 2;
+ * @return {!Array<!proto.christiangeorgelucas.gpx_tools.Placemark>}
+ */
+proto.christiangeorgelucas.gpx_tools.ParseKmlOutput.prototype.getPlacemarksList = function() {
+  return /** @type{!Array<!proto.christiangeorgelucas.gpx_tools.Placemark>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.christiangeorgelucas.gpx_tools.Placemark, 2));
+};
+
+
+/**
+ * @param {!Array<!proto.christiangeorgelucas.gpx_tools.Placemark>} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.ParseKmlOutput} returns this
+*/
+proto.christiangeorgelucas.gpx_tools.ParseKmlOutput.prototype.setPlacemarksList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 2, value);
+};
+
+
+/**
+ * @param {!proto.christiangeorgelucas.gpx_tools.Placemark=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.christiangeorgelucas.gpx_tools.Placemark}
+ */
+proto.christiangeorgelucas.gpx_tools.ParseKmlOutput.prototype.addPlacemarks = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 2, opt_value, proto.christiangeorgelucas.gpx_tools.Placemark, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.christiangeorgelucas.gpx_tools.ParseKmlOutput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.ParseKmlOutput.prototype.clearPlacemarksList = function() {
+  return this.setPlacemarksList([]);
+};
+
+
+/**
+ * optional bool ok = 3;
+ * @return {boolean}
+ */
+proto.christiangeorgelucas.gpx_tools.ParseKmlOutput.prototype.getOk = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 3, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.ParseKmlOutput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.ParseKmlOutput.prototype.setOk = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 3, value);
+};
+
+
+/**
+ * optional GpxError error = 4;
+ * @return {?proto.christiangeorgelucas.gpx_tools.GpxError}
+ */
+proto.christiangeorgelucas.gpx_tools.ParseKmlOutput.prototype.getError = function() {
+  return /** @type{?proto.christiangeorgelucas.gpx_tools.GpxError} */ (
+    jspb.Message.getWrapperField(this, proto.christiangeorgelucas.gpx_tools.GpxError, 4));
+};
+
+
+/**
+ * @param {?proto.christiangeorgelucas.gpx_tools.GpxError|undefined} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.ParseKmlOutput} returns this
+*/
+proto.christiangeorgelucas.gpx_tools.ParseKmlOutput.prototype.setError = function(value) {
+  return jspb.Message.setWrapperField(this, 4, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.christiangeorgelucas.gpx_tools.ParseKmlOutput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.ParseKmlOutput.prototype.clearError = function() {
+  return this.setError(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.christiangeorgelucas.gpx_tools.ParseKmlOutput.prototype.hasError = function() {
+  return jspb.Message.getField(this, 4) != null;
+};
+
+
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.christiangeorgelucas.gpx_tools.ListPlacemarksInput.prototype.toObject = function(opt_includeInstance) {
+  return proto.christiangeorgelucas.gpx_tools.ListPlacemarksInput.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.christiangeorgelucas.gpx_tools.ListPlacemarksInput} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.ListPlacemarksInput.toObject = function(includeInstance, msg) {
+  var f, obj = {
+doc: (f = msg.getDoc()) && proto.christiangeorgelucas.gpx_tools.Doc.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.christiangeorgelucas.gpx_tools.ListPlacemarksInput}
+ */
+proto.christiangeorgelucas.gpx_tools.ListPlacemarksInput.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.christiangeorgelucas.gpx_tools.ListPlacemarksInput;
+  return proto.christiangeorgelucas.gpx_tools.ListPlacemarksInput.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.christiangeorgelucas.gpx_tools.ListPlacemarksInput} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.christiangeorgelucas.gpx_tools.ListPlacemarksInput}
+ */
+proto.christiangeorgelucas.gpx_tools.ListPlacemarksInput.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new proto.christiangeorgelucas.gpx_tools.Doc;
+      reader.readMessage(value,proto.christiangeorgelucas.gpx_tools.Doc.deserializeBinaryFromReader);
+      msg.setDoc(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.christiangeorgelucas.gpx_tools.ListPlacemarksInput.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.christiangeorgelucas.gpx_tools.ListPlacemarksInput.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.christiangeorgelucas.gpx_tools.ListPlacemarksInput} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.ListPlacemarksInput.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getDoc();
+  if (f != null) {
+    writer.writeMessage(
+      1,
+      f,
+      proto.christiangeorgelucas.gpx_tools.Doc.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * optional Doc doc = 1;
+ * @return {?proto.christiangeorgelucas.gpx_tools.Doc}
+ */
+proto.christiangeorgelucas.gpx_tools.ListPlacemarksInput.prototype.getDoc = function() {
+  return /** @type{?proto.christiangeorgelucas.gpx_tools.Doc} */ (
+    jspb.Message.getWrapperField(this, proto.christiangeorgelucas.gpx_tools.Doc, 1));
+};
+
+
+/**
+ * @param {?proto.christiangeorgelucas.gpx_tools.Doc|undefined} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.ListPlacemarksInput} returns this
+*/
+proto.christiangeorgelucas.gpx_tools.ListPlacemarksInput.prototype.setDoc = function(value) {
+  return jspb.Message.setWrapperField(this, 1, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.christiangeorgelucas.gpx_tools.ListPlacemarksInput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.ListPlacemarksInput.prototype.clearDoc = function() {
+  return this.setDoc(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.christiangeorgelucas.gpx_tools.ListPlacemarksInput.prototype.hasDoc = function() {
+  return jspb.Message.getField(this, 1) != null;
+};
+
+
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.christiangeorgelucas.gpx_tools.PlacemarkSummary.prototype.toObject = function(opt_includeInstance) {
+  return proto.christiangeorgelucas.gpx_tools.PlacemarkSummary.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.christiangeorgelucas.gpx_tools.PlacemarkSummary} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.PlacemarkSummary.toObject = function(includeInstance, msg) {
+  var f, obj = {
+name: jspb.Message.getFieldWithDefault(msg, 1, ""),
+description: jspb.Message.getFieldWithDefault(msg, 2, ""),
+geometryType: jspb.Message.getFieldWithDefault(msg, 3, ""),
+coordinateCount: jspb.Message.getFieldWithDefault(msg, 4, 0),
+index: jspb.Message.getFieldWithDefault(msg, 5, 0)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.christiangeorgelucas.gpx_tools.PlacemarkSummary}
+ */
+proto.christiangeorgelucas.gpx_tools.PlacemarkSummary.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.christiangeorgelucas.gpx_tools.PlacemarkSummary;
+  return proto.christiangeorgelucas.gpx_tools.PlacemarkSummary.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.christiangeorgelucas.gpx_tools.PlacemarkSummary} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.christiangeorgelucas.gpx_tools.PlacemarkSummary}
+ */
+proto.christiangeorgelucas.gpx_tools.PlacemarkSummary.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setName(value);
+      break;
+    case 2:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setDescription(value);
+      break;
+    case 3:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setGeometryType(value);
+      break;
+    case 4:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setCoordinateCount(value);
+      break;
+    case 5:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setIndex(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.christiangeorgelucas.gpx_tools.PlacemarkSummary.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.christiangeorgelucas.gpx_tools.PlacemarkSummary.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.christiangeorgelucas.gpx_tools.PlacemarkSummary} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.PlacemarkSummary.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getName();
+  if (f.length > 0) {
+    writer.writeString(
+      1,
+      f
+    );
+  }
+  f = message.getDescription();
+  if (f.length > 0) {
+    writer.writeString(
+      2,
+      f
+    );
+  }
+  f = message.getGeometryType();
+  if (f.length > 0) {
+    writer.writeString(
+      3,
+      f
+    );
+  }
+  f = message.getCoordinateCount();
+  if (f !== 0) {
+    writer.writeInt32(
+      4,
+      f
+    );
+  }
+  f = message.getIndex();
+  if (f !== 0) {
+    writer.writeInt32(
+      5,
+      f
+    );
+  }
+};
+
+
+/**
+ * optional string name = 1;
+ * @return {string}
+ */
+proto.christiangeorgelucas.gpx_tools.PlacemarkSummary.prototype.getName = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.PlacemarkSummary} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.PlacemarkSummary.prototype.setName = function(value) {
+  return jspb.Message.setProto3StringField(this, 1, value);
+};
+
+
+/**
+ * optional string description = 2;
+ * @return {string}
+ */
+proto.christiangeorgelucas.gpx_tools.PlacemarkSummary.prototype.getDescription = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.PlacemarkSummary} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.PlacemarkSummary.prototype.setDescription = function(value) {
+  return jspb.Message.setProto3StringField(this, 2, value);
+};
+
+
+/**
+ * optional string geometry_type = 3;
+ * @return {string}
+ */
+proto.christiangeorgelucas.gpx_tools.PlacemarkSummary.prototype.getGeometryType = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.PlacemarkSummary} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.PlacemarkSummary.prototype.setGeometryType = function(value) {
+  return jspb.Message.setProto3StringField(this, 3, value);
+};
+
+
+/**
+ * optional int32 coordinate_count = 4;
+ * @return {number}
+ */
+proto.christiangeorgelucas.gpx_tools.PlacemarkSummary.prototype.getCoordinateCount = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 4, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.PlacemarkSummary} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.PlacemarkSummary.prototype.setCoordinateCount = function(value) {
+  return jspb.Message.setProto3IntField(this, 4, value);
+};
+
+
+/**
+ * optional int32 index = 5;
+ * @return {number}
+ */
+proto.christiangeorgelucas.gpx_tools.PlacemarkSummary.prototype.getIndex = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 5, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.PlacemarkSummary} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.PlacemarkSummary.prototype.setIndex = function(value) {
+  return jspb.Message.setProto3IntField(this, 5, value);
+};
+
+
+
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.christiangeorgelucas.gpx_tools.ListPlacemarksOutput.repeatedFields_ = [1];
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.christiangeorgelucas.gpx_tools.ListPlacemarksOutput.prototype.toObject = function(opt_includeInstance) {
+  return proto.christiangeorgelucas.gpx_tools.ListPlacemarksOutput.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.christiangeorgelucas.gpx_tools.ListPlacemarksOutput} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.ListPlacemarksOutput.toObject = function(includeInstance, msg) {
+  var f, obj = {
+placemarksList: jspb.Message.toObjectList(msg.getPlacemarksList(),
+    proto.christiangeorgelucas.gpx_tools.PlacemarkSummary.toObject, includeInstance),
+ok: jspb.Message.getBooleanFieldWithDefault(msg, 2, false),
+error: (f = msg.getError()) && proto.christiangeorgelucas.gpx_tools.GpxError.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.christiangeorgelucas.gpx_tools.ListPlacemarksOutput}
+ */
+proto.christiangeorgelucas.gpx_tools.ListPlacemarksOutput.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.christiangeorgelucas.gpx_tools.ListPlacemarksOutput;
+  return proto.christiangeorgelucas.gpx_tools.ListPlacemarksOutput.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.christiangeorgelucas.gpx_tools.ListPlacemarksOutput} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.christiangeorgelucas.gpx_tools.ListPlacemarksOutput}
+ */
+proto.christiangeorgelucas.gpx_tools.ListPlacemarksOutput.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new proto.christiangeorgelucas.gpx_tools.PlacemarkSummary;
+      reader.readMessage(value,proto.christiangeorgelucas.gpx_tools.PlacemarkSummary.deserializeBinaryFromReader);
+      msg.addPlacemarks(value);
+      break;
+    case 2:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setOk(value);
+      break;
+    case 3:
+      var value = new proto.christiangeorgelucas.gpx_tools.GpxError;
+      reader.readMessage(value,proto.christiangeorgelucas.gpx_tools.GpxError.deserializeBinaryFromReader);
+      msg.setError(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.christiangeorgelucas.gpx_tools.ListPlacemarksOutput.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.christiangeorgelucas.gpx_tools.ListPlacemarksOutput.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.christiangeorgelucas.gpx_tools.ListPlacemarksOutput} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.ListPlacemarksOutput.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getPlacemarksList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      1,
+      f,
+      proto.christiangeorgelucas.gpx_tools.PlacemarkSummary.serializeBinaryToWriter
+    );
+  }
+  f = message.getOk();
+  if (f) {
+    writer.writeBool(
+      2,
+      f
+    );
+  }
+  f = message.getError();
+  if (f != null) {
+    writer.writeMessage(
+      3,
+      f,
+      proto.christiangeorgelucas.gpx_tools.GpxError.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * repeated PlacemarkSummary placemarks = 1;
+ * @return {!Array<!proto.christiangeorgelucas.gpx_tools.PlacemarkSummary>}
+ */
+proto.christiangeorgelucas.gpx_tools.ListPlacemarksOutput.prototype.getPlacemarksList = function() {
+  return /** @type{!Array<!proto.christiangeorgelucas.gpx_tools.PlacemarkSummary>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.christiangeorgelucas.gpx_tools.PlacemarkSummary, 1));
+};
+
+
+/**
+ * @param {!Array<!proto.christiangeorgelucas.gpx_tools.PlacemarkSummary>} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.ListPlacemarksOutput} returns this
+*/
+proto.christiangeorgelucas.gpx_tools.ListPlacemarksOutput.prototype.setPlacemarksList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 1, value);
+};
+
+
+/**
+ * @param {!proto.christiangeorgelucas.gpx_tools.PlacemarkSummary=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.christiangeorgelucas.gpx_tools.PlacemarkSummary}
+ */
+proto.christiangeorgelucas.gpx_tools.ListPlacemarksOutput.prototype.addPlacemarks = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.christiangeorgelucas.gpx_tools.PlacemarkSummary, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.christiangeorgelucas.gpx_tools.ListPlacemarksOutput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.ListPlacemarksOutput.prototype.clearPlacemarksList = function() {
+  return this.setPlacemarksList([]);
+};
+
+
+/**
+ * optional bool ok = 2;
+ * @return {boolean}
+ */
+proto.christiangeorgelucas.gpx_tools.ListPlacemarksOutput.prototype.getOk = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 2, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.ListPlacemarksOutput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.ListPlacemarksOutput.prototype.setOk = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 2, value);
+};
+
+
+/**
+ * optional GpxError error = 3;
+ * @return {?proto.christiangeorgelucas.gpx_tools.GpxError}
+ */
+proto.christiangeorgelucas.gpx_tools.ListPlacemarksOutput.prototype.getError = function() {
+  return /** @type{?proto.christiangeorgelucas.gpx_tools.GpxError} */ (
+    jspb.Message.getWrapperField(this, proto.christiangeorgelucas.gpx_tools.GpxError, 3));
+};
+
+
+/**
+ * @param {?proto.christiangeorgelucas.gpx_tools.GpxError|undefined} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.ListPlacemarksOutput} returns this
+*/
+proto.christiangeorgelucas.gpx_tools.ListPlacemarksOutput.prototype.setError = function(value) {
+  return jspb.Message.setWrapperField(this, 3, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.christiangeorgelucas.gpx_tools.ListPlacemarksOutput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.ListPlacemarksOutput.prototype.clearError = function() {
+  return this.setError(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.christiangeorgelucas.gpx_tools.ListPlacemarksOutput.prototype.hasError = function() {
+  return jspb.Message.getField(this, 3) != null;
+};
+
+
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.christiangeorgelucas.gpx_tools.GetKmlGeometriesInput.prototype.toObject = function(opt_includeInstance) {
+  return proto.christiangeorgelucas.gpx_tools.GetKmlGeometriesInput.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.christiangeorgelucas.gpx_tools.GetKmlGeometriesInput} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.GetKmlGeometriesInput.toObject = function(includeInstance, msg) {
+  var f, obj = {
+doc: (f = msg.getDoc()) && proto.christiangeorgelucas.gpx_tools.Doc.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetKmlGeometriesInput}
+ */
+proto.christiangeorgelucas.gpx_tools.GetKmlGeometriesInput.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.christiangeorgelucas.gpx_tools.GetKmlGeometriesInput;
+  return proto.christiangeorgelucas.gpx_tools.GetKmlGeometriesInput.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.christiangeorgelucas.gpx_tools.GetKmlGeometriesInput} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetKmlGeometriesInput}
+ */
+proto.christiangeorgelucas.gpx_tools.GetKmlGeometriesInput.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new proto.christiangeorgelucas.gpx_tools.Doc;
+      reader.readMessage(value,proto.christiangeorgelucas.gpx_tools.Doc.deserializeBinaryFromReader);
+      msg.setDoc(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.christiangeorgelucas.gpx_tools.GetKmlGeometriesInput.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.christiangeorgelucas.gpx_tools.GetKmlGeometriesInput.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.christiangeorgelucas.gpx_tools.GetKmlGeometriesInput} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.GetKmlGeometriesInput.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getDoc();
+  if (f != null) {
+    writer.writeMessage(
+      1,
+      f,
+      proto.christiangeorgelucas.gpx_tools.Doc.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * optional Doc doc = 1;
+ * @return {?proto.christiangeorgelucas.gpx_tools.Doc}
+ */
+proto.christiangeorgelucas.gpx_tools.GetKmlGeometriesInput.prototype.getDoc = function() {
+  return /** @type{?proto.christiangeorgelucas.gpx_tools.Doc} */ (
+    jspb.Message.getWrapperField(this, proto.christiangeorgelucas.gpx_tools.Doc, 1));
+};
+
+
+/**
+ * @param {?proto.christiangeorgelucas.gpx_tools.Doc|undefined} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetKmlGeometriesInput} returns this
+*/
+proto.christiangeorgelucas.gpx_tools.GetKmlGeometriesInput.prototype.setDoc = function(value) {
+  return jspb.Message.setWrapperField(this, 1, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetKmlGeometriesInput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.GetKmlGeometriesInput.prototype.clearDoc = function() {
+  return this.setDoc(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.christiangeorgelucas.gpx_tools.GetKmlGeometriesInput.prototype.hasDoc = function() {
+  return jspb.Message.getField(this, 1) != null;
+};
+
+
+
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.christiangeorgelucas.gpx_tools.KmlGeometry.repeatedFields_ = [2];
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.christiangeorgelucas.gpx_tools.KmlGeometry.prototype.toObject = function(opt_includeInstance) {
+  return proto.christiangeorgelucas.gpx_tools.KmlGeometry.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.christiangeorgelucas.gpx_tools.KmlGeometry} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.KmlGeometry.toObject = function(includeInstance, msg) {
+  var f, obj = {
+geometryType: jspb.Message.getFieldWithDefault(msg, 1, ""),
+coordinatesList: jspb.Message.toObjectList(msg.getCoordinatesList(),
+    proto.christiangeorgelucas.gpx_tools.Point.toObject, includeInstance),
+placemarkIndex: jspb.Message.getFieldWithDefault(msg, 3, 0),
+placemarkName: jspb.Message.getFieldWithDefault(msg, 4, "")
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.christiangeorgelucas.gpx_tools.KmlGeometry}
+ */
+proto.christiangeorgelucas.gpx_tools.KmlGeometry.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.christiangeorgelucas.gpx_tools.KmlGeometry;
+  return proto.christiangeorgelucas.gpx_tools.KmlGeometry.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.christiangeorgelucas.gpx_tools.KmlGeometry} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.christiangeorgelucas.gpx_tools.KmlGeometry}
+ */
+proto.christiangeorgelucas.gpx_tools.KmlGeometry.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setGeometryType(value);
+      break;
+    case 2:
+      var value = new proto.christiangeorgelucas.gpx_tools.Point;
+      reader.readMessage(value,proto.christiangeorgelucas.gpx_tools.Point.deserializeBinaryFromReader);
+      msg.addCoordinates(value);
+      break;
+    case 3:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setPlacemarkIndex(value);
+      break;
+    case 4:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setPlacemarkName(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.christiangeorgelucas.gpx_tools.KmlGeometry.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.christiangeorgelucas.gpx_tools.KmlGeometry.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.christiangeorgelucas.gpx_tools.KmlGeometry} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.KmlGeometry.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getGeometryType();
+  if (f.length > 0) {
+    writer.writeString(
+      1,
+      f
+    );
+  }
+  f = message.getCoordinatesList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      2,
+      f,
+      proto.christiangeorgelucas.gpx_tools.Point.serializeBinaryToWriter
+    );
+  }
+  f = message.getPlacemarkIndex();
+  if (f !== 0) {
+    writer.writeInt32(
+      3,
+      f
+    );
+  }
+  f = message.getPlacemarkName();
+  if (f.length > 0) {
+    writer.writeString(
+      4,
+      f
+    );
+  }
+};
+
+
+/**
+ * optional string geometry_type = 1;
+ * @return {string}
+ */
+proto.christiangeorgelucas.gpx_tools.KmlGeometry.prototype.getGeometryType = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.KmlGeometry} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.KmlGeometry.prototype.setGeometryType = function(value) {
+  return jspb.Message.setProto3StringField(this, 1, value);
+};
+
+
+/**
+ * repeated Point coordinates = 2;
+ * @return {!Array<!proto.christiangeorgelucas.gpx_tools.Point>}
+ */
+proto.christiangeorgelucas.gpx_tools.KmlGeometry.prototype.getCoordinatesList = function() {
+  return /** @type{!Array<!proto.christiangeorgelucas.gpx_tools.Point>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.christiangeorgelucas.gpx_tools.Point, 2));
+};
+
+
+/**
+ * @param {!Array<!proto.christiangeorgelucas.gpx_tools.Point>} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.KmlGeometry} returns this
+*/
+proto.christiangeorgelucas.gpx_tools.KmlGeometry.prototype.setCoordinatesList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 2, value);
+};
+
+
+/**
+ * @param {!proto.christiangeorgelucas.gpx_tools.Point=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.christiangeorgelucas.gpx_tools.Point}
+ */
+proto.christiangeorgelucas.gpx_tools.KmlGeometry.prototype.addCoordinates = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 2, opt_value, proto.christiangeorgelucas.gpx_tools.Point, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.christiangeorgelucas.gpx_tools.KmlGeometry} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.KmlGeometry.prototype.clearCoordinatesList = function() {
+  return this.setCoordinatesList([]);
+};
+
+
+/**
+ * optional int32 placemark_index = 3;
+ * @return {number}
+ */
+proto.christiangeorgelucas.gpx_tools.KmlGeometry.prototype.getPlacemarkIndex = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.KmlGeometry} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.KmlGeometry.prototype.setPlacemarkIndex = function(value) {
+  return jspb.Message.setProto3IntField(this, 3, value);
+};
+
+
+/**
+ * optional string placemark_name = 4;
+ * @return {string}
+ */
+proto.christiangeorgelucas.gpx_tools.KmlGeometry.prototype.getPlacemarkName = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.KmlGeometry} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.KmlGeometry.prototype.setPlacemarkName = function(value) {
+  return jspb.Message.setProto3StringField(this, 4, value);
+};
+
+
+
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.christiangeorgelucas.gpx_tools.GetKmlGeometriesOutput.repeatedFields_ = [1];
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.christiangeorgelucas.gpx_tools.GetKmlGeometriesOutput.prototype.toObject = function(opt_includeInstance) {
+  return proto.christiangeorgelucas.gpx_tools.GetKmlGeometriesOutput.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.christiangeorgelucas.gpx_tools.GetKmlGeometriesOutput} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.GetKmlGeometriesOutput.toObject = function(includeInstance, msg) {
+  var f, obj = {
+geometriesList: jspb.Message.toObjectList(msg.getGeometriesList(),
+    proto.christiangeorgelucas.gpx_tools.KmlGeometry.toObject, includeInstance),
+truncated: jspb.Message.getBooleanFieldWithDefault(msg, 2, false),
+ok: jspb.Message.getBooleanFieldWithDefault(msg, 3, false),
+error: (f = msg.getError()) && proto.christiangeorgelucas.gpx_tools.GpxError.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetKmlGeometriesOutput}
+ */
+proto.christiangeorgelucas.gpx_tools.GetKmlGeometriesOutput.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.christiangeorgelucas.gpx_tools.GetKmlGeometriesOutput;
+  return proto.christiangeorgelucas.gpx_tools.GetKmlGeometriesOutput.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.christiangeorgelucas.gpx_tools.GetKmlGeometriesOutput} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetKmlGeometriesOutput}
+ */
+proto.christiangeorgelucas.gpx_tools.GetKmlGeometriesOutput.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new proto.christiangeorgelucas.gpx_tools.KmlGeometry;
+      reader.readMessage(value,proto.christiangeorgelucas.gpx_tools.KmlGeometry.deserializeBinaryFromReader);
+      msg.addGeometries(value);
+      break;
+    case 2:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setTruncated(value);
+      break;
+    case 3:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setOk(value);
+      break;
+    case 4:
+      var value = new proto.christiangeorgelucas.gpx_tools.GpxError;
+      reader.readMessage(value,proto.christiangeorgelucas.gpx_tools.GpxError.deserializeBinaryFromReader);
+      msg.setError(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.christiangeorgelucas.gpx_tools.GetKmlGeometriesOutput.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.christiangeorgelucas.gpx_tools.GetKmlGeometriesOutput.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.christiangeorgelucas.gpx_tools.GetKmlGeometriesOutput} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.GetKmlGeometriesOutput.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getGeometriesList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      1,
+      f,
+      proto.christiangeorgelucas.gpx_tools.KmlGeometry.serializeBinaryToWriter
+    );
+  }
+  f = message.getTruncated();
+  if (f) {
+    writer.writeBool(
+      2,
+      f
+    );
+  }
+  f = message.getOk();
+  if (f) {
+    writer.writeBool(
+      3,
+      f
+    );
+  }
+  f = message.getError();
+  if (f != null) {
+    writer.writeMessage(
+      4,
+      f,
+      proto.christiangeorgelucas.gpx_tools.GpxError.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * repeated KmlGeometry geometries = 1;
+ * @return {!Array<!proto.christiangeorgelucas.gpx_tools.KmlGeometry>}
+ */
+proto.christiangeorgelucas.gpx_tools.GetKmlGeometriesOutput.prototype.getGeometriesList = function() {
+  return /** @type{!Array<!proto.christiangeorgelucas.gpx_tools.KmlGeometry>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.christiangeorgelucas.gpx_tools.KmlGeometry, 1));
+};
+
+
+/**
+ * @param {!Array<!proto.christiangeorgelucas.gpx_tools.KmlGeometry>} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetKmlGeometriesOutput} returns this
+*/
+proto.christiangeorgelucas.gpx_tools.GetKmlGeometriesOutput.prototype.setGeometriesList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 1, value);
+};
+
+
+/**
+ * @param {!proto.christiangeorgelucas.gpx_tools.KmlGeometry=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.christiangeorgelucas.gpx_tools.KmlGeometry}
+ */
+proto.christiangeorgelucas.gpx_tools.GetKmlGeometriesOutput.prototype.addGeometries = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.christiangeorgelucas.gpx_tools.KmlGeometry, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetKmlGeometriesOutput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.GetKmlGeometriesOutput.prototype.clearGeometriesList = function() {
+  return this.setGeometriesList([]);
+};
+
+
+/**
+ * optional bool truncated = 2;
+ * @return {boolean}
+ */
+proto.christiangeorgelucas.gpx_tools.GetKmlGeometriesOutput.prototype.getTruncated = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 2, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetKmlGeometriesOutput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.GetKmlGeometriesOutput.prototype.setTruncated = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 2, value);
+};
+
+
+/**
+ * optional bool ok = 3;
+ * @return {boolean}
+ */
+proto.christiangeorgelucas.gpx_tools.GetKmlGeometriesOutput.prototype.getOk = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 3, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetKmlGeometriesOutput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.GetKmlGeometriesOutput.prototype.setOk = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 3, value);
+};
+
+
+/**
+ * optional GpxError error = 4;
+ * @return {?proto.christiangeorgelucas.gpx_tools.GpxError}
+ */
+proto.christiangeorgelucas.gpx_tools.GetKmlGeometriesOutput.prototype.getError = function() {
+  return /** @type{?proto.christiangeorgelucas.gpx_tools.GpxError} */ (
+    jspb.Message.getWrapperField(this, proto.christiangeorgelucas.gpx_tools.GpxError, 4));
+};
+
+
+/**
+ * @param {?proto.christiangeorgelucas.gpx_tools.GpxError|undefined} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetKmlGeometriesOutput} returns this
+*/
+proto.christiangeorgelucas.gpx_tools.GetKmlGeometriesOutput.prototype.setError = function(value) {
+  return jspb.Message.setWrapperField(this, 4, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.christiangeorgelucas.gpx_tools.GetKmlGeometriesOutput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.GetKmlGeometriesOutput.prototype.clearError = function() {
+  return this.setError(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.christiangeorgelucas.gpx_tools.GetKmlGeometriesOutput.prototype.hasError = function() {
+  return jspb.Message.getField(this, 4) != null;
+};
+
+
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.christiangeorgelucas.gpx_tools.GpxTrackToGeoJsonInput.prototype.toObject = function(opt_includeInstance) {
+  return proto.christiangeorgelucas.gpx_tools.GpxTrackToGeoJsonInput.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.christiangeorgelucas.gpx_tools.GpxTrackToGeoJsonInput} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.GpxTrackToGeoJsonInput.toObject = function(includeInstance, msg) {
+  var f, obj = {
+doc: (f = msg.getDoc()) && proto.christiangeorgelucas.gpx_tools.Doc.toObject(includeInstance, f),
+trackIndex: jspb.Message.getFieldWithDefault(msg, 2, 0)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.christiangeorgelucas.gpx_tools.GpxTrackToGeoJsonInput}
+ */
+proto.christiangeorgelucas.gpx_tools.GpxTrackToGeoJsonInput.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.christiangeorgelucas.gpx_tools.GpxTrackToGeoJsonInput;
+  return proto.christiangeorgelucas.gpx_tools.GpxTrackToGeoJsonInput.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.christiangeorgelucas.gpx_tools.GpxTrackToGeoJsonInput} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.christiangeorgelucas.gpx_tools.GpxTrackToGeoJsonInput}
+ */
+proto.christiangeorgelucas.gpx_tools.GpxTrackToGeoJsonInput.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new proto.christiangeorgelucas.gpx_tools.Doc;
+      reader.readMessage(value,proto.christiangeorgelucas.gpx_tools.Doc.deserializeBinaryFromReader);
+      msg.setDoc(value);
+      break;
+    case 2:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setTrackIndex(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.christiangeorgelucas.gpx_tools.GpxTrackToGeoJsonInput.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.christiangeorgelucas.gpx_tools.GpxTrackToGeoJsonInput.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.christiangeorgelucas.gpx_tools.GpxTrackToGeoJsonInput} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.GpxTrackToGeoJsonInput.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getDoc();
+  if (f != null) {
+    writer.writeMessage(
+      1,
+      f,
+      proto.christiangeorgelucas.gpx_tools.Doc.serializeBinaryToWriter
+    );
+  }
+  f = message.getTrackIndex();
+  if (f !== 0) {
+    writer.writeInt32(
+      2,
+      f
+    );
+  }
+};
+
+
+/**
+ * optional Doc doc = 1;
+ * @return {?proto.christiangeorgelucas.gpx_tools.Doc}
+ */
+proto.christiangeorgelucas.gpx_tools.GpxTrackToGeoJsonInput.prototype.getDoc = function() {
+  return /** @type{?proto.christiangeorgelucas.gpx_tools.Doc} */ (
+    jspb.Message.getWrapperField(this, proto.christiangeorgelucas.gpx_tools.Doc, 1));
+};
+
+
+/**
+ * @param {?proto.christiangeorgelucas.gpx_tools.Doc|undefined} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.GpxTrackToGeoJsonInput} returns this
+*/
+proto.christiangeorgelucas.gpx_tools.GpxTrackToGeoJsonInput.prototype.setDoc = function(value) {
+  return jspb.Message.setWrapperField(this, 1, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.christiangeorgelucas.gpx_tools.GpxTrackToGeoJsonInput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.GpxTrackToGeoJsonInput.prototype.clearDoc = function() {
+  return this.setDoc(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.christiangeorgelucas.gpx_tools.GpxTrackToGeoJsonInput.prototype.hasDoc = function() {
+  return jspb.Message.getField(this, 1) != null;
+};
+
+
+/**
+ * optional int32 track_index = 2;
+ * @return {number}
+ */
+proto.christiangeorgelucas.gpx_tools.GpxTrackToGeoJsonInput.prototype.getTrackIndex = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.GpxTrackToGeoJsonInput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.GpxTrackToGeoJsonInput.prototype.setTrackIndex = function(value) {
+  return jspb.Message.setProto3IntField(this, 2, value);
+};
+
+
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.christiangeorgelucas.gpx_tools.KmlToGeoJsonInput.prototype.toObject = function(opt_includeInstance) {
+  return proto.christiangeorgelucas.gpx_tools.KmlToGeoJsonInput.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.christiangeorgelucas.gpx_tools.KmlToGeoJsonInput} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.KmlToGeoJsonInput.toObject = function(includeInstance, msg) {
+  var f, obj = {
+doc: (f = msg.getDoc()) && proto.christiangeorgelucas.gpx_tools.Doc.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.christiangeorgelucas.gpx_tools.KmlToGeoJsonInput}
+ */
+proto.christiangeorgelucas.gpx_tools.KmlToGeoJsonInput.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.christiangeorgelucas.gpx_tools.KmlToGeoJsonInput;
+  return proto.christiangeorgelucas.gpx_tools.KmlToGeoJsonInput.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.christiangeorgelucas.gpx_tools.KmlToGeoJsonInput} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.christiangeorgelucas.gpx_tools.KmlToGeoJsonInput}
+ */
+proto.christiangeorgelucas.gpx_tools.KmlToGeoJsonInput.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new proto.christiangeorgelucas.gpx_tools.Doc;
+      reader.readMessage(value,proto.christiangeorgelucas.gpx_tools.Doc.deserializeBinaryFromReader);
+      msg.setDoc(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.christiangeorgelucas.gpx_tools.KmlToGeoJsonInput.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.christiangeorgelucas.gpx_tools.KmlToGeoJsonInput.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.christiangeorgelucas.gpx_tools.KmlToGeoJsonInput} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.KmlToGeoJsonInput.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getDoc();
+  if (f != null) {
+    writer.writeMessage(
+      1,
+      f,
+      proto.christiangeorgelucas.gpx_tools.Doc.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * optional Doc doc = 1;
+ * @return {?proto.christiangeorgelucas.gpx_tools.Doc}
+ */
+proto.christiangeorgelucas.gpx_tools.KmlToGeoJsonInput.prototype.getDoc = function() {
+  return /** @type{?proto.christiangeorgelucas.gpx_tools.Doc} */ (
+    jspb.Message.getWrapperField(this, proto.christiangeorgelucas.gpx_tools.Doc, 1));
+};
+
+
+/**
+ * @param {?proto.christiangeorgelucas.gpx_tools.Doc|undefined} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.KmlToGeoJsonInput} returns this
+*/
+proto.christiangeorgelucas.gpx_tools.KmlToGeoJsonInput.prototype.setDoc = function(value) {
+  return jspb.Message.setWrapperField(this, 1, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.christiangeorgelucas.gpx_tools.KmlToGeoJsonInput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.KmlToGeoJsonInput.prototype.clearDoc = function() {
+  return this.setDoc(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.christiangeorgelucas.gpx_tools.KmlToGeoJsonInput.prototype.hasDoc = function() {
+  return jspb.Message.getField(this, 1) != null;
+};
+
+
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.christiangeorgelucas.gpx_tools.ExtractAllCoordinatesInput.prototype.toObject = function(opt_includeInstance) {
+  return proto.christiangeorgelucas.gpx_tools.ExtractAllCoordinatesInput.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.christiangeorgelucas.gpx_tools.ExtractAllCoordinatesInput} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.ExtractAllCoordinatesInput.toObject = function(includeInstance, msg) {
+  var f, obj = {
+doc: (f = msg.getDoc()) && proto.christiangeorgelucas.gpx_tools.Doc.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.christiangeorgelucas.gpx_tools.ExtractAllCoordinatesInput}
+ */
+proto.christiangeorgelucas.gpx_tools.ExtractAllCoordinatesInput.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.christiangeorgelucas.gpx_tools.ExtractAllCoordinatesInput;
+  return proto.christiangeorgelucas.gpx_tools.ExtractAllCoordinatesInput.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.christiangeorgelucas.gpx_tools.ExtractAllCoordinatesInput} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.christiangeorgelucas.gpx_tools.ExtractAllCoordinatesInput}
+ */
+proto.christiangeorgelucas.gpx_tools.ExtractAllCoordinatesInput.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new proto.christiangeorgelucas.gpx_tools.Doc;
+      reader.readMessage(value,proto.christiangeorgelucas.gpx_tools.Doc.deserializeBinaryFromReader);
+      msg.setDoc(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.christiangeorgelucas.gpx_tools.ExtractAllCoordinatesInput.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.christiangeorgelucas.gpx_tools.ExtractAllCoordinatesInput.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.christiangeorgelucas.gpx_tools.ExtractAllCoordinatesInput} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.ExtractAllCoordinatesInput.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getDoc();
+  if (f != null) {
+    writer.writeMessage(
+      1,
+      f,
+      proto.christiangeorgelucas.gpx_tools.Doc.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * optional Doc doc = 1;
+ * @return {?proto.christiangeorgelucas.gpx_tools.Doc}
+ */
+proto.christiangeorgelucas.gpx_tools.ExtractAllCoordinatesInput.prototype.getDoc = function() {
+  return /** @type{?proto.christiangeorgelucas.gpx_tools.Doc} */ (
+    jspb.Message.getWrapperField(this, proto.christiangeorgelucas.gpx_tools.Doc, 1));
+};
+
+
+/**
+ * @param {?proto.christiangeorgelucas.gpx_tools.Doc|undefined} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.ExtractAllCoordinatesInput} returns this
+*/
+proto.christiangeorgelucas.gpx_tools.ExtractAllCoordinatesInput.prototype.setDoc = function(value) {
+  return jspb.Message.setWrapperField(this, 1, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.christiangeorgelucas.gpx_tools.ExtractAllCoordinatesInput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.ExtractAllCoordinatesInput.prototype.clearDoc = function() {
+  return this.setDoc(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.christiangeorgelucas.gpx_tools.ExtractAllCoordinatesInput.prototype.hasDoc = function() {
+  return jspb.Message.getField(this, 1) != null;
+};
+
+
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.christiangeorgelucas.gpx_tools.LatLon.prototype.toObject = function(opt_includeInstance) {
+  return proto.christiangeorgelucas.gpx_tools.LatLon.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.christiangeorgelucas.gpx_tools.LatLon} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.LatLon.toObject = function(includeInstance, msg) {
+  var f, obj = {
+lat: jspb.Message.getFloatingPointFieldWithDefault(msg, 1, 0.0),
+lon: jspb.Message.getFloatingPointFieldWithDefault(msg, 2, 0.0)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.christiangeorgelucas.gpx_tools.LatLon}
+ */
+proto.christiangeorgelucas.gpx_tools.LatLon.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.christiangeorgelucas.gpx_tools.LatLon;
+  return proto.christiangeorgelucas.gpx_tools.LatLon.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.christiangeorgelucas.gpx_tools.LatLon} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.christiangeorgelucas.gpx_tools.LatLon}
+ */
+proto.christiangeorgelucas.gpx_tools.LatLon.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {number} */ (reader.readDouble());
+      msg.setLat(value);
+      break;
+    case 2:
+      var value = /** @type {number} */ (reader.readDouble());
+      msg.setLon(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.christiangeorgelucas.gpx_tools.LatLon.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.christiangeorgelucas.gpx_tools.LatLon.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.christiangeorgelucas.gpx_tools.LatLon} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.LatLon.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getLat();
+  if (f !== 0.0) {
+    writer.writeDouble(
+      1,
+      f
+    );
+  }
+  f = message.getLon();
+  if (f !== 0.0) {
+    writer.writeDouble(
+      2,
+      f
+    );
+  }
+};
+
+
+/**
+ * optional double lat = 1;
+ * @return {number}
+ */
+proto.christiangeorgelucas.gpx_tools.LatLon.prototype.getLat = function() {
+  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 1, 0.0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.LatLon} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.LatLon.prototype.setLat = function(value) {
+  return jspb.Message.setProto3FloatField(this, 1, value);
+};
+
+
+/**
+ * optional double lon = 2;
+ * @return {number}
+ */
+proto.christiangeorgelucas.gpx_tools.LatLon.prototype.getLon = function() {
+  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 2, 0.0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.LatLon} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.LatLon.prototype.setLon = function(value) {
+  return jspb.Message.setProto3FloatField(this, 2, value);
+};
+
+
+
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.christiangeorgelucas.gpx_tools.ExtractAllCoordinatesOutput.repeatedFields_ = [1];
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.christiangeorgelucas.gpx_tools.ExtractAllCoordinatesOutput.prototype.toObject = function(opt_includeInstance) {
+  return proto.christiangeorgelucas.gpx_tools.ExtractAllCoordinatesOutput.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.christiangeorgelucas.gpx_tools.ExtractAllCoordinatesOutput} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.ExtractAllCoordinatesOutput.toObject = function(includeInstance, msg) {
+  var f, obj = {
+coordinatesList: jspb.Message.toObjectList(msg.getCoordinatesList(),
+    proto.christiangeorgelucas.gpx_tools.LatLon.toObject, includeInstance),
+truncated: jspb.Message.getBooleanFieldWithDefault(msg, 2, false),
+format: jspb.Message.getFieldWithDefault(msg, 3, ""),
+ok: jspb.Message.getBooleanFieldWithDefault(msg, 4, false),
+error: (f = msg.getError()) && proto.christiangeorgelucas.gpx_tools.GpxError.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.christiangeorgelucas.gpx_tools.ExtractAllCoordinatesOutput}
+ */
+proto.christiangeorgelucas.gpx_tools.ExtractAllCoordinatesOutput.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.christiangeorgelucas.gpx_tools.ExtractAllCoordinatesOutput;
+  return proto.christiangeorgelucas.gpx_tools.ExtractAllCoordinatesOutput.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.christiangeorgelucas.gpx_tools.ExtractAllCoordinatesOutput} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.christiangeorgelucas.gpx_tools.ExtractAllCoordinatesOutput}
+ */
+proto.christiangeorgelucas.gpx_tools.ExtractAllCoordinatesOutput.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new proto.christiangeorgelucas.gpx_tools.LatLon;
+      reader.readMessage(value,proto.christiangeorgelucas.gpx_tools.LatLon.deserializeBinaryFromReader);
+      msg.addCoordinates(value);
+      break;
+    case 2:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setTruncated(value);
+      break;
+    case 3:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setFormat(value);
+      break;
+    case 4:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setOk(value);
+      break;
+    case 5:
+      var value = new proto.christiangeorgelucas.gpx_tools.GpxError;
+      reader.readMessage(value,proto.christiangeorgelucas.gpx_tools.GpxError.deserializeBinaryFromReader);
+      msg.setError(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.christiangeorgelucas.gpx_tools.ExtractAllCoordinatesOutput.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.christiangeorgelucas.gpx_tools.ExtractAllCoordinatesOutput.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.christiangeorgelucas.gpx_tools.ExtractAllCoordinatesOutput} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.christiangeorgelucas.gpx_tools.ExtractAllCoordinatesOutput.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getCoordinatesList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      1,
+      f,
+      proto.christiangeorgelucas.gpx_tools.LatLon.serializeBinaryToWriter
+    );
+  }
+  f = message.getTruncated();
+  if (f) {
+    writer.writeBool(
+      2,
+      f
+    );
+  }
+  f = message.getFormat();
+  if (f.length > 0) {
+    writer.writeString(
+      3,
+      f
+    );
+  }
+  f = message.getOk();
+  if (f) {
+    writer.writeBool(
+      4,
+      f
+    );
+  }
+  f = message.getError();
+  if (f != null) {
+    writer.writeMessage(
+      5,
+      f,
+      proto.christiangeorgelucas.gpx_tools.GpxError.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * repeated LatLon coordinates = 1;
+ * @return {!Array<!proto.christiangeorgelucas.gpx_tools.LatLon>}
+ */
+proto.christiangeorgelucas.gpx_tools.ExtractAllCoordinatesOutput.prototype.getCoordinatesList = function() {
+  return /** @type{!Array<!proto.christiangeorgelucas.gpx_tools.LatLon>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.christiangeorgelucas.gpx_tools.LatLon, 1));
+};
+
+
+/**
+ * @param {!Array<!proto.christiangeorgelucas.gpx_tools.LatLon>} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.ExtractAllCoordinatesOutput} returns this
+*/
+proto.christiangeorgelucas.gpx_tools.ExtractAllCoordinatesOutput.prototype.setCoordinatesList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 1, value);
+};
+
+
+/**
+ * @param {!proto.christiangeorgelucas.gpx_tools.LatLon=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.christiangeorgelucas.gpx_tools.LatLon}
+ */
+proto.christiangeorgelucas.gpx_tools.ExtractAllCoordinatesOutput.prototype.addCoordinates = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.christiangeorgelucas.gpx_tools.LatLon, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.christiangeorgelucas.gpx_tools.ExtractAllCoordinatesOutput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.ExtractAllCoordinatesOutput.prototype.clearCoordinatesList = function() {
+  return this.setCoordinatesList([]);
+};
+
+
+/**
+ * optional bool truncated = 2;
+ * @return {boolean}
+ */
+proto.christiangeorgelucas.gpx_tools.ExtractAllCoordinatesOutput.prototype.getTruncated = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 2, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.ExtractAllCoordinatesOutput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.ExtractAllCoordinatesOutput.prototype.setTruncated = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 2, value);
+};
+
+
+/**
+ * optional string format = 3;
+ * @return {string}
+ */
+proto.christiangeorgelucas.gpx_tools.ExtractAllCoordinatesOutput.prototype.getFormat = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.ExtractAllCoordinatesOutput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.ExtractAllCoordinatesOutput.prototype.setFormat = function(value) {
+  return jspb.Message.setProto3StringField(this, 3, value);
+};
+
+
+/**
+ * optional bool ok = 4;
+ * @return {boolean}
+ */
+proto.christiangeorgelucas.gpx_tools.ExtractAllCoordinatesOutput.prototype.getOk = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 4, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.ExtractAllCoordinatesOutput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.ExtractAllCoordinatesOutput.prototype.setOk = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 4, value);
+};
+
+
+/**
+ * optional GpxError error = 5;
+ * @return {?proto.christiangeorgelucas.gpx_tools.GpxError}
+ */
+proto.christiangeorgelucas.gpx_tools.ExtractAllCoordinatesOutput.prototype.getError = function() {
+  return /** @type{?proto.christiangeorgelucas.gpx_tools.GpxError} */ (
+    jspb.Message.getWrapperField(this, proto.christiangeorgelucas.gpx_tools.GpxError, 5));
+};
+
+
+/**
+ * @param {?proto.christiangeorgelucas.gpx_tools.GpxError|undefined} value
+ * @return {!proto.christiangeorgelucas.gpx_tools.ExtractAllCoordinatesOutput} returns this
+*/
+proto.christiangeorgelucas.gpx_tools.ExtractAllCoordinatesOutput.prototype.setError = function(value) {
+  return jspb.Message.setWrapperField(this, 5, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.christiangeorgelucas.gpx_tools.ExtractAllCoordinatesOutput} returns this
+ */
+proto.christiangeorgelucas.gpx_tools.ExtractAllCoordinatesOutput.prototype.clearError = function() {
+  return this.setError(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.christiangeorgelucas.gpx_tools.ExtractAllCoordinatesOutput.prototype.hasError = function() {
+  return jspb.Message.getField(this, 5) != null;
+};
+
+
+goog.object.extend(exports, proto.christiangeorgelucas.gpx_tools);

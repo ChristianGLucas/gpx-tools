@@ -1,0 +1,404 @@
+// This file defines the data contracts (messages) for your Axiom package.
+// Every node's --input and --output refers to a message defined here.
+//
+// Run `axiom create message <Name>` to scaffold a new message below.
+// Run `axiom generate` to compile these definitions into language bindings in gen/.
+//
+// DOCUMENTATION
+//   Comments written directly above a message or field declaration are extracted
+//   automatically at publish time and shown in the Axiom registry as documentation.
+//   Write your descriptions there — no separate doc files needed.
+//
+//   Leading comment  (no blank line before the declaration) → registry description ✓
+//   Detached comment (blank line before the declaration)    → ignored by registry  ✗
+//
+// This file is yours to edit. Axiom only appends new message blocks — it never
+// overwrites or removes content you have written.
+
+syntax = "proto3";
+
+package christiangeorgelucas.gpx_tools;
+
+// The canonical input envelope for every parsing node: the raw, caller-supplied
+// text of a GPX or KML document. Never fetched over a network and never read
+// from disk — the caller always supplies the full document text. XML is parsed
+// with external entities and DTDs rejected outright (no XXE); a document over
+// 3 MiB is rejected before any parsing work begins.
+message Doc {
+  string xml = 1;
+}
+
+// A structured error, returned instead of a crash for any malformed, oversized,
+// or unsafe input. code is a short machine-matchable token (EMPTY_INPUT,
+// INPUT_TOO_LARGE, PARSE_ERROR, XML_UNSAFE_ENTITY, WRONG_ROOT_ELEMENT,
+// UNSUPPORTED_FORMAT, TRACK_INDEX_OUT_OF_RANGE); message is human-readable.
+message GpxError {
+  string code = 1;
+  string message = 2;
+}
+
+// A single geographic point: latitude/longitude in decimal degrees (WGS-84),
+// with elevation (meters) and an ISO 8601 timestamp when the source document
+// carries them. segment_index is set only by nodes that flatten a multi-segment
+// track's points and is 0 in every other context.
+message Point {
+  double lat = 1;
+  double lon = 2;
+  double elevation = 3;
+  bool has_elevation = 4;
+  // Timestamp exactly as read from the document's <time> element (RFC 3339 /
+  // ISO 8601 text) — never generated, never reformatted.
+  string time = 5;
+  bool has_time = 6;
+  int32 segment_index = 7;
+}
+
+// One <trkseg> — a contiguous run of track points. A <trk> with no <trkseg>
+// children at all is never produced; GPX readers treat a bare <trk> as having
+// implicitly one empty segment, which is what an absent trkseg parses to here.
+message TrackSegment {
+  repeated Point points = 1;
+}
+
+// One GPX <trk>: an optionally-named track made of one or more segments (a
+// segment break is a real gap in the recording, e.g. the device paused).
+message Track {
+  string name = 1;
+  repeated TrackSegment segments = 2;
+}
+
+// One GPX <rte>: an optionally-named sequence of route points (a planned
+// path, not a recorded track).
+message Route {
+  string name = 1;
+  repeated Point points = 2;
+}
+
+// One GPX <wpt>: a single named point of interest.
+message Waypoint {
+  double lat = 1;
+  double lon = 2;
+  double elevation = 3;
+  bool has_elevation = 4;
+  string name = 5;
+  // The GPX <sym> element — a display-symbol name (e.g. "Flag, Blue"), not a
+  // controlled vocabulary the GPX spec constrains.
+  string symbol = 6;
+  string time = 7;
+  bool has_time = 8;
+}
+
+// A geographic bounding box: the minimum and maximum latitude/longitude that
+// enclose a set of points. Pure min/max — no distance or area is computed.
+message BoundingBox {
+  double min_lat = 1;
+  double max_lat = 2;
+  double min_lon = 3;
+  double max_lon = 4;
+}
+
+// The canonical GeoJSON (RFC 7946) output envelope, boundary-aligned with
+// christiangeorgelucas/geo-tools' Geometry message so output from this
+// package chains directly into geo-tools nodes: geojson carries
+// [longitude, latitude] axis order exactly as RFC 7946 requires. On failure
+// error is set and geojson is left empty.
+message GeoJson {
+  string geojson = 1;
+  string error = 2;
+}
+
+// ---- DetectFormat ----
+
+message DetectFormatInput {
+  Doc doc = 1;
+}
+
+message DetectFormatOutput {
+  // "gpx", "kml", or "unknown".
+  string format = 1;
+  bool ok = 2;
+  GpxError error = 3;
+}
+
+// ---- ParseGpx ----
+
+message ParseGpxInput {
+  Doc doc = 1;
+}
+
+message ParseGpxOutput {
+  string name = 1;
+  string description = 2;
+  string author = 3;
+  string time = 4;
+  bool has_time = 5;
+  BoundingBox bounds = 6;
+  bool has_bounds = 7;
+  repeated Waypoint waypoints = 8;
+  repeated Route routes = 9;
+  repeated Track tracks = 10;
+  bool ok = 11;
+  GpxError error = 12;
+}
+
+// ---- ListTracks ----
+
+message ListTracksInput {
+  Doc doc = 1;
+}
+
+// name/segment_count/point_count for one <trk>, plus its 0-based position
+// among the document's tracks (the index GetTrackPoints/GetBoundingBox/
+// GetElevationProfile/GetTimeRange/GpxTrackToGeoJson take as track_index).
+message TrackSummary {
+  string name = 1;
+  int32 segment_count = 2;
+  int32 point_count = 3;
+  int32 index = 4;
+}
+
+message ListTracksOutput {
+  repeated TrackSummary tracks = 1;
+  bool ok = 2;
+  GpxError error = 3;
+}
+
+// ---- GetTrackPoints ----
+
+message GetTrackPointsInput {
+  Doc doc = 1;
+  int32 track_index = 2;
+}
+
+message GetTrackPointsOutput {
+  // Every point of the chosen track, segments flattened in document order;
+  // each point's segment_index records which <trkseg> it came from.
+  repeated Point points = 1;
+  bool truncated = 2;
+  bool ok = 3;
+  GpxError error = 4;
+}
+
+// ---- ListWaypoints ----
+
+message ListWaypointsInput {
+  Doc doc = 1;
+}
+
+message ListWaypointsOutput {
+  repeated Waypoint waypoints = 1;
+  bool ok = 2;
+  GpxError error = 3;
+}
+
+// ---- ListRoutes ----
+
+message ListRoutesInput {
+  Doc doc = 1;
+}
+
+message ListRoutesOutput {
+  repeated Route routes = 1;
+  bool ok = 2;
+  GpxError error = 3;
+}
+
+// ---- GetGpxMetadata ----
+
+message GetGpxMetadataInput {
+  Doc doc = 1;
+}
+
+message GetGpxMetadataOutput {
+  string name = 1;
+  string description = 2;
+  string author = 3;
+  string time = 4;
+  bool has_time = 5;
+  BoundingBox bounds = 6;
+  bool has_bounds = 7;
+  bool ok = 8;
+  GpxError error = 9;
+}
+
+// ---- GetBoundingBox ----
+
+message GetBoundingBoxInput {
+  Doc doc = 1;
+  // 0-based track index to scope the box to a single track's points; when
+  // has_track_index is false, the box covers every point in the whole
+  // document (all tracks, routes, and waypoints).
+  int32 track_index = 2;
+  bool has_track_index = 3;
+}
+
+message GetBoundingBoxOutput {
+  BoundingBox bounds = 1;
+  bool ok = 2;
+  GpxError error = 3;
+}
+
+// ---- GetElevationProfile ----
+
+message GetElevationProfileInput {
+  Doc doc = 1;
+  int32 track_index = 2;
+}
+
+// One point's position in the elevation-profile output: its 0-based index
+// within the flattened point sequence, its elevation, and its timestamp.
+message ElevationPoint {
+  int32 index = 1;
+  double elevation = 2;
+  bool has_elevation = 3;
+  string time = 4;
+  bool has_time = 5;
+}
+
+message GetElevationProfileOutput {
+  repeated ElevationPoint points = 1;
+  bool truncated = 2;
+  bool ok = 3;
+  GpxError error = 4;
+}
+
+// ---- GetTimeRange ----
+
+message GetTimeRangeInput {
+  Doc doc = 1;
+  int32 track_index = 2;
+}
+
+message GetTimeRangeOutput {
+  string start_time = 1;
+  string end_time = 2;
+  bool has_range = 3;
+  bool ok = 4;
+  GpxError error = 5;
+}
+
+// ---- GetSummary ----
+
+message GetSummaryInput {
+  Doc doc = 1;
+}
+
+message GetSummaryOutput {
+  // "gpx" or "kml".
+  string format = 1;
+  int32 track_count = 2;
+  int32 route_count = 3;
+  int32 waypoint_count = 4;
+  int32 total_track_points = 5;
+  int32 total_route_points = 6;
+  // KML-only; 0 for a GPX document.
+  int32 placemark_count = 7;
+  bool ok = 8;
+  GpxError error = 9;
+}
+
+// ---- ParseKml ----
+
+// One KML <Placemark>: its name/description plus the flattened coordinates
+// of its geometry (Point/LineString/Polygon/LinearRing; the first ring of a
+// Polygon only — see GetKmlGeometries for every ring of a MultiGeometry).
+message Placemark {
+  string name = 1;
+  string description = 2;
+  // "Point", "LineString", "Polygon", "MultiGeometry", or "" when the
+  // placemark carries no recognized geometry.
+  string geometry_type = 3;
+  repeated Point coordinates = 4;
+  int32 index = 5;
+}
+
+message ParseKmlInput {
+  Doc doc = 1;
+}
+
+message ParseKmlOutput {
+  string document_name = 1;
+  repeated Placemark placemarks = 2;
+  bool ok = 3;
+  GpxError error = 4;
+}
+
+// ---- ListPlacemarks ----
+
+message ListPlacemarksInput {
+  Doc doc = 1;
+}
+
+message PlacemarkSummary {
+  string name = 1;
+  string description = 2;
+  string geometry_type = 3;
+  int32 coordinate_count = 4;
+  int32 index = 5;
+}
+
+message ListPlacemarksOutput {
+  repeated PlacemarkSummary placemarks = 1;
+  bool ok = 2;
+  GpxError error = 3;
+}
+
+// ---- GetKmlGeometries ----
+
+message GetKmlGeometriesInput {
+  Doc doc = 1;
+}
+
+// One geometry belonging to one placemark. A <MultiGeometry> or a <Polygon>
+// with inner boundaries yields multiple KmlGeometry entries sharing the same
+// placemark_index — one per Point/LineString/ring — each tagged with which
+// ring it is via geometry_type.
+message KmlGeometry {
+  // "Point", "LineString", "outerBoundaryIs", or "innerBoundaryIs".
+  string geometry_type = 1;
+  repeated Point coordinates = 2;
+  int32 placemark_index = 3;
+  string placemark_name = 4;
+}
+
+message GetKmlGeometriesOutput {
+  repeated KmlGeometry geometries = 1;
+  bool truncated = 2;
+  bool ok = 3;
+  GpxError error = 4;
+}
+
+// ---- GpxTrackToGeoJson ----
+
+message GpxTrackToGeoJsonInput {
+  Doc doc = 1;
+  int32 track_index = 2;
+}
+
+// ---- KmlToGeoJson ----
+
+message KmlToGeoJsonInput {
+  Doc doc = 1;
+}
+
+// ---- ExtractAllCoordinates ----
+
+message ExtractAllCoordinatesInput {
+  Doc doc = 1;
+}
+
+// A bare latitude/longitude pair, independent of which element (waypoint,
+// track point, route point, or KML coordinate) it came from.
+message LatLon {
+  double lat = 1;
+  double lon = 2;
+}
+
+message ExtractAllCoordinatesOutput {
+  repeated LatLon coordinates = 1;
+  bool truncated = 2;
+  // "gpx" or "kml" — the format ExtractAllCoordinates auto-detected.
+  string format = 3;
+  bool ok = 4;
+  GpxError error = 5;
+}
