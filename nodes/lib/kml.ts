@@ -181,11 +181,19 @@ export function parseKmlDocument(root: XmlDocRoot): KmlDocument {
   return { documentName, placemarks };
 }
 
-/** Every coordinate across every geometry of every placemark, flattened. */
+/** Every coordinate across every geometry of every placemark, flattened.
+ *
+ * Appends element-by-element rather than `out.push(...coords)` — spreading a
+ * large array into a function call's arguments can overflow the JS engine's
+ * call stack ("Maximum call stack size exceeded") well before any real
+ * memory limit is reached, which would crash the node instead of returning
+ * its result. A large-but-valid document must never crash. */
 export function allCoordinatesInKml(doc: KmlDocument): PointData[] {
   const out: PointData[] = [];
   for (const pm of doc.placemarks) {
-    for (const geom of pm.geometries) out.push(...geom.coordinates);
+    for (const geom of pm.geometries) {
+      for (const c of geom.coordinates) out.push(c);
+    }
   }
   return out;
 }

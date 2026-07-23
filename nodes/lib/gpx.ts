@@ -164,12 +164,18 @@ export function flattenTrackPoints(track: TrackData): PointData[] {
 }
 
 /** Every point anywhere in the document: all waypoints, all route points,
- * and every track point across every track/segment. */
+ * and every track point across every track/segment.
+ *
+ * Appends element-by-element rather than `out.push(...points)` — spreading a
+ * large array into a function call's arguments can overflow the JS engine's
+ * call stack ("Maximum call stack size exceeded") well before any real
+ * memory limit is reached, which would crash the node instead of returning
+ * its result. A large-but-valid document must never crash. */
 export function allPointsInDocument(doc: GpxDocument): PointData[] {
   const out: PointData[] = [];
   for (const w of doc.waypoints) out.push({ lat: w.lat, lon: w.lon, elevation: w.elevation, time: w.time, segmentIndex: 0 });
-  for (const r of doc.routes) out.push(...r.points);
-  for (const t of doc.tracks) out.push(...flattenTrackPoints(t));
+  for (const r of doc.routes) for (const p of r.points) out.push(p);
+  for (const t of doc.tracks) for (const p of flattenTrackPoints(t)) out.push(p);
   return out;
 }
 

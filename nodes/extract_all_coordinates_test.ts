@@ -42,4 +42,17 @@ describe('ExtractAllCoordinates', () => {
     const r2 = extractAllCoordinates(testContext, input(SAMPLE_GPX));
     expect(r1.toObject()).toEqual(r2.toObject());
   });
+
+  it('does not crash on a single track with a very large point count (no size cap; must not stack-overflow via array spread)', () => {
+    const n = 150000;
+    let xml = '<gpx version="1.1"><trk><name>Huge</name><trkseg>';
+    for (let i = 0; i < n; i++) {
+      xml += `<trkpt lat="${(i % 90).toFixed(4)}" lon="${(i % 180).toFixed(4)}"/>`;
+    }
+    xml += '</trkseg></trk></gpx>';
+
+    const result = extractAllCoordinates(testContext, input(xml));
+    expect(result.getOk()).toBe(true);
+    expect(result.getCoordinatesList()).toHaveLength(n);
+  });
 });

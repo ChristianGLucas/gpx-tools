@@ -1,4 +1,4 @@
-import { parseCoordinatesText } from './kml';
+import { allCoordinatesInKml, parseCoordinatesText } from './kml';
 
 describe('parseCoordinatesText', () => {
   it('parses whitespace/newline-separated "lon,lat,alt" tuples', () => {
@@ -29,5 +29,28 @@ describe('parseCoordinatesText', () => {
     const points = parseCoordinatesText('notanumber,37.8 -122.5,37.9');
     expect(points).toHaveLength(1);
     expect(points[0].lon).toBeCloseTo(-122.5);
+  });
+});
+
+describe('allCoordinatesInKml', () => {
+  it('does not crash on a single LineString with a very large coordinate count (no size cap; must not stack-overflow via array spread)', () => {
+    const n = 150000;
+    const parts: string[] = [];
+    for (let i = 0; i < n; i++) parts.push(`${-122 + (i % 100) * 0.001},${37 + (i % 100) * 0.001}`);
+    const doc = {
+      documentName: 'Huge',
+      placemarks: [
+        {
+          name: 'Huge Line',
+          description: '',
+          geometryType: 'LineString',
+          coordinates: [],
+          index: 0,
+          geometries: [{ geometryType: 'LineString', coordinates: parseCoordinatesText(parts.join(' ')) }],
+        },
+      ],
+    };
+    const coords = allCoordinatesInKml(doc);
+    expect(coords).toHaveLength(n);
   });
 });
