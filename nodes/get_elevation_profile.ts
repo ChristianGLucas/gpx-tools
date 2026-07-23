@@ -3,14 +3,12 @@ import { ElevationPoint, GetElevationProfileInput, GetElevationProfileOutput } f
 import { flattenTrackPoints } from './lib/gpx';
 import { toGpxError } from './lib/pb';
 import { loadGpxDocument } from './lib/parse_doc';
-import { MAX_POINTS } from './lib/xml_parser';
 
 /**
  * Extract a GPX track's elevation profile: the ordered elevation values
  * together with each point's index (position in the flattened point
  * sequence) and timestamp. Points with no <ele> element carry
- * has_elevation=false rather than a fabricated 0. Capped at 20,000 points
- * (truncated=true past the cap).
+ * has_elevation=false rather than a fabricated 0.
  *
  * @param ax - Platform context: ax.log for logging, ax.secrets for secrets.
  */
@@ -39,11 +37,9 @@ export function getElevationProfile(ax: AxiomContext, input: GetElevationProfile
   }
 
   const points = flattenTrackPoints(tracks[trackIndex]);
-  const truncated = points.length > MAX_POINTS;
-  const capped = truncated ? points.slice(0, MAX_POINTS) : points;
 
   out.setPointsList(
-    capped.map((p, index) => {
+    points.map((p, index) => {
       const msg = new ElevationPoint();
       msg.setIndex(index);
       if (p.elevation !== null) {
@@ -57,7 +53,6 @@ export function getElevationProfile(ax: AxiomContext, input: GetElevationProfile
       return msg;
     })
   );
-  out.setTruncated(truncated);
   out.setOk(true);
   return out;
 }

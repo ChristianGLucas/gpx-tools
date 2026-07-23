@@ -12,8 +12,6 @@
 import { PointData } from './gpx';
 import { XmlDocRoot, asArray, textOf, toFiniteNumber } from './xml_parser';
 
-const MAX_GEOMETRY_RECURSION = 32; // MultiGeometry-of-MultiGeometry is legal but never deep in practice.
-
 export interface KmlGeometryData {
   // 'Point' | 'LineString' | 'outerBoundaryIs' | 'innerBoundaryIs'
   geometryType: string;
@@ -71,9 +69,8 @@ function extractPolygonGeometries(v: XmlDocRoot): KmlGeometryData[] {
 }
 
 /** Every geometry directly under a placemark (or a MultiGeometry), recursing
- * into nested MultiGeometry up to MAX_GEOMETRY_RECURSION levels. */
-function extractGeometries(v: XmlDocRoot, depth: number): KmlGeometryData[] {
-  if (depth > MAX_GEOMETRY_RECURSION) return [];
+ * into nested MultiGeometry as deep as the document actually nests it. */
+function extractGeometries(v: XmlDocRoot): KmlGeometryData[] {
   const out: KmlGeometryData[] = [];
   for (const p of asArray<unknown>(v.Point as never)) {
     const obj = (p ?? {}) as XmlDocRoot;
@@ -87,7 +84,7 @@ function extractGeometries(v: XmlDocRoot, depth: number): KmlGeometryData[] {
     out.push(...extractPolygonGeometries((poly ?? {}) as XmlDocRoot));
   }
   for (const mg of asArray<unknown>(v.MultiGeometry as never)) {
-    out.push(...extractGeometries((mg ?? {}) as XmlDocRoot, depth + 1));
+    out.push(...extractGeometries((mg ?? {}) as XmlDocRoot));
   }
   return out;
 }
@@ -102,8 +99,7 @@ export type GeoJsonGeom =
  * separate outerBoundaryIs/innerBoundaryIs entries — the shape GeoJSON's
  * Polygon type actually needs (coordinates: one array of rings). Used only
  * by geojson.ts's KML->GeoJSON conversion. */
-export function extractGeoJsonGeometries(v: XmlDocRoot, depth = 0): GeoJsonGeom[] {
-  if (depth > MAX_GEOMETRY_RECURSION) return [];
+export function extractGeoJsonGeometries(v: XmlDocRoot): GeoJsonGeom[] {
   const out: GeoJsonGeom[] = [];
   for (const p of asArray<unknown>(v.Point as never)) {
     const obj = (p ?? {}) as XmlDocRoot;
@@ -129,7 +125,7 @@ export function extractGeoJsonGeometries(v: XmlDocRoot, depth = 0): GeoJsonGeom[
     if (rings.length > 0) out.push({ kind: 'Polygon', rings });
   }
   for (const mg of asArray<unknown>(v.MultiGeometry as never)) {
-    out.push(...extractGeoJsonGeometries((mg ?? {}) as XmlDocRoot, depth + 1));
+    out.push(...extractGeoJsonGeometries((mg ?? {}) as XmlDocRoot));
   }
   return out;
 }
@@ -145,7 +141,7 @@ function collapsedGeometryType(v: XmlDocRoot): string {
 function extractPlacemark(v: XmlDocRoot, index: number): PlacemarkData {
   const name = textOf(v.name);
   const description = textOf(v.description);
-  const geometries = extractGeometries(v, 0);
+  const geometries = extractGeometries(v);
   const geometryType = geometries.length > 0 ? collapsedGeometryType(v) : '';
   const coordinates = geometries.length > 0 ? geometries[0].coordinates : [];
   return { name, description, geometryType, coordinates, geometries, index };

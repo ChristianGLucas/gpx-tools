@@ -16,7 +16,6 @@ describe('ExtractAllCoordinates', () => {
     expect(result.getOk()).toBe(true);
     expect(result.getFormat()).toBe('gpx');
     expect(result.getCoordinatesList()).toHaveLength(9);
-    expect(result.getTruncated()).toBe(false);
   });
 
   it('extracts every coordinate from a KML document: 16 total across all placemark geometries', () => {

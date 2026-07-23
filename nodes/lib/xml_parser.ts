@@ -12,39 +12,6 @@
 import { XMLParser, XMLValidator } from 'fast-xml-parser';
 import { GuardError } from './guard';
 
-export const MAX_XML_BYTES = 3 * 1024 * 1024; // 3 MiB — headroom under the platform's ~4 MiB gRPC cap.
-export const MAX_POINTS = 20000; // cap on points/coordinates any single node response returns.
-export const MAX_XML_DEPTH = 200; // any real GPX/KML file nests well under 10 levels deep.
-
-/**
- * Cheap O(n) tag-depth scan over the RAW input text, run BEFORE the real
- * parser touches it. A byte-size cap alone does not bound nesting depth — a
- * document built almost entirely of one repeated short empty-element tag
- * can pack tens of thousands of nesting levels into a few KB, which risks a
- * native stack overflow (an unrecoverable process crash, not a catchable
- * error) in either fast-xml-parser's own recursive descent or this
- * package's recursive geometry walk. This is an approximate, conservative
- * bound (comments/CDATA are simply skipped, never miscounted as *deeper*
- * nesting) — it only needs to reject pathological nesting, not fully
- * re-parse the document.
- */
-export function exceedsMaxDepth(xml: string, maxDepth: number): boolean {
-  const tagRe = /<(\/?)([^!?\s/>][^>]*?)(\/?)>/g;
-  let depth = 0;
-  let match: RegExpExecArray | null;
-  while ((match = tagRe.exec(xml)) !== null) {
-    const isClosing = match[1] === '/';
-    const isSelfClosing = match[3] === '/';
-    if (isClosing) {
-      depth--;
-    } else if (!isSelfClosing) {
-      depth++;
-      if (depth > maxDepth) return true;
-    }
-  }
-  return false;
-}
-
 // Tag names that are always treated as arrays, regardless of how many times
 // they actually occur (0, 1, or many) and regardless of nesting depth. This
 // removes the classic fast-xml-parser landmine where a single occurrence
@@ -98,15 +65,6 @@ export interface ParsedXml {
  * process (external entities, DTDs).
  */
 export function parseXml(xml: string): ParsedXml | { error: GuardError } {
-  if (exceedsMaxDepth(xml, MAX_XML_DEPTH)) {
-    return {
-      error: {
-        code: 'EXCESSIVE_NESTING',
-        message: `Document nesting exceeds the ${MAX_XML_DEPTH}-level cap.`,
-      },
-    };
-  }
-
   const validation = XMLValidator.validate(xml, { allowBooleanAttributes: true });
   if (validation !== true) {
     return {

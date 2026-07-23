@@ -4,15 +4,13 @@ import { allPointsInDocument, parseGpxDocument } from './lib/gpx';
 import { allCoordinatesInKml, parseKmlDocument } from './lib/kml';
 import { toGpxError } from './lib/pb';
 import { loadAndParseXml } from './lib/parse_doc';
-import { MAX_POINTS } from './lib/xml_parser';
 
 /**
  * Extract every coordinate — from waypoints, route points, track points, or
  * KML placemark geometries — out of a GPX or KML document as one flat
  * lat/lon list, auto-detecting the format. The simplest node for a caller
  * that just wants "every point this file mentions" without caring about
- * GPX/KML structure. Capped at 20,000 coordinates (truncated=true past the
- * cap).
+ * GPX/KML structure.
  *
  * @param ax - Platform context: ax.log for logging, ax.secrets for secrets.
  */
@@ -40,18 +38,14 @@ export function extractAllCoordinates(ax: AxiomContext, input: ExtractAllCoordin
     return out;
   }
 
-  const truncated = points.length > MAX_POINTS;
-  const capped = truncated ? points.slice(0, MAX_POINTS) : points;
-
   out.setCoordinatesList(
-    capped.map((p) => {
+    points.map((p) => {
       const msg = new LatLon();
       msg.setLat(p.lat);
       msg.setLon(p.lon);
       return msg;
     })
   );
-  out.setTruncated(truncated);
   out.setOk(true);
   return out;
 }

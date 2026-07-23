@@ -3,15 +3,12 @@ import { GetTrackPointsInput, GetTrackPointsOutput } from '../gen/messages_pb';
 import { flattenTrackPoints } from './lib/gpx';
 import { toGpxError, toPointMsg } from './lib/pb';
 import { loadGpxDocument } from './lib/parse_doc';
-import { MAX_POINTS } from './lib/xml_parser';
 
 /**
  * Extract one GPX track's points — lat, lon, elevation, and time — as a
  * flat array, segments concatenated in document order with each point's
  * segment_index recording which <trkseg> it came from. An out-of-range
- * track_index returns a structured TRACK_INDEX_OUT_OF_RANGE error. Capped
- * at 20,000 points (truncated=true past the cap) to stay well under the
- * platform's transport limit on a single response.
+ * track_index returns a structured TRACK_INDEX_OUT_OF_RANGE error.
  *
  * @param ax - Platform context: ax.log for logging, ax.secrets for secrets.
  */
@@ -40,11 +37,8 @@ export function getTrackPoints(ax: AxiomContext, input: GetTrackPointsInput): Ge
   }
 
   const points = flattenTrackPoints(tracks[trackIndex]);
-  const truncated = points.length > MAX_POINTS;
-  const capped = truncated ? points.slice(0, MAX_POINTS) : points;
 
-  out.setPointsList(capped.map((p) => toPointMsg(p)));
-  out.setTruncated(truncated);
+  out.setPointsList(points.map((p) => toPointMsg(p)));
   out.setOk(true);
   return out;
 }

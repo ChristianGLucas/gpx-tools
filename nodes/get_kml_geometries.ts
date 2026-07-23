@@ -2,7 +2,6 @@ import { AxiomContext } from '../gen/axiomContext';
 import { GetKmlGeometriesInput, GetKmlGeometriesOutput, KmlGeometry } from '../gen/messages_pb';
 import { toGpxError, toPointMsg } from './lib/pb';
 import { loadKmlDocument } from './lib/parse_doc';
-import { MAX_POINTS } from './lib/xml_parser';
 
 /**
  * Extract every geometry from every KML placemark individually, including
@@ -10,8 +9,7 @@ import { MAX_POINTS } from './lib/xml_parser';
  * separately) and every child geometry of a MultiGeometry — where
  * ParseKml/ListPlacemarks collapse a placemark to one geometry_type, this
  * returns one entry per actual geometry element, each tagged with the
- * placemark it belongs to. Capped at 20,000 coordinates total
- * (truncated=true past the cap).
+ * placemark it belongs to.
  *
  * @param ax - Platform context: ax.log for logging, ax.secrets for secrets.
  */
@@ -27,22 +25,12 @@ export function getKmlGeometries(ax: AxiomContext, input: GetKmlGeometriesInput)
   }
 
   const entries: { geometryType: string; coordinates: ReturnType<typeof toPointMsg>[]; placemarkIndex: number; placemarkName: string }[] = [];
-  let totalCoords = 0;
-  let truncated = false;
 
-  outer: for (const pm of loaded.doc.placemarks) {
+  for (const pm of loaded.doc.placemarks) {
     for (const geom of pm.geometries) {
-      if (totalCoords >= MAX_POINTS) {
-        truncated = true;
-        break outer;
-      }
-      const remaining = MAX_POINTS - totalCoords;
-      const coordsSlice = geom.coordinates.length > remaining ? geom.coordinates.slice(0, remaining) : geom.coordinates;
-      if (coordsSlice.length < geom.coordinates.length) truncated = true;
-      totalCoords += coordsSlice.length;
       entries.push({
         geometryType: geom.geometryType,
-        coordinates: coordsSlice.map((c) => toPointMsg(c)),
+        coordinates: geom.coordinates.map((c) => toPointMsg(c)),
         placemarkIndex: pm.index,
         placemarkName: pm.name,
       });
@@ -59,7 +47,6 @@ export function getKmlGeometries(ax: AxiomContext, input: GetKmlGeometriesInput)
       return msg;
     })
   );
-  out.setTruncated(truncated);
   out.setOk(true);
   return out;
 }

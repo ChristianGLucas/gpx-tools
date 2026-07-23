@@ -2,9 +2,9 @@
 // XML, and (for format-specific nodes) require the right root element.
 
 import { GpxDocument, parseGpxDocument } from './gpx';
-import { checkEmpty, checkSize, GuardError } from './guard';
+import { checkEmpty, GuardError } from './guard';
 import { KmlDocument, parseKmlDocument } from './kml';
-import { MAX_XML_BYTES, XmlDocRoot, detectFormatFromRootKey, parseXml } from './xml_parser';
+import { XmlDocRoot, detectFormatFromRootKey, parseXml } from './xml_parser';
 
 export interface LoadedXml {
   root: XmlDocRoot;
@@ -14,9 +14,6 @@ export interface LoadedXml {
 export function loadAndParseXml(xml: string): LoadedXml | { error: GuardError } {
   const emptyErr = checkEmpty(xml, 'doc.xml');
   if (emptyErr) return { error: emptyErr };
-
-  const sizeErr = checkSize(xml, MAX_XML_BYTES, 'doc.xml');
-  if (sizeErr) return { error: sizeErr };
 
   const parsed = parseXml(xml);
   if ('error' in parsed) return { error: parsed.error };

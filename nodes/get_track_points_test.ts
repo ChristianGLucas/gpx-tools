@@ -15,7 +15,6 @@ describe('GetTrackPoints', () => {
   it('flattens a multi-segment track into one ordered array, tagging each point with its segment_index', () => {
     const result = getTrackPoints(testContext, input(SAMPLE_GPX, 0));
     expect(result.getOk()).toBe(true);
-    expect(result.getTruncated()).toBe(false);
 
     const points = result.getPointsList();
     expect(points).toHaveLength(3);
@@ -40,18 +39,16 @@ describe('GetTrackPoints', () => {
     expect(result.getError()?.getCode()).toBe('TRACK_INDEX_OUT_OF_RANGE');
   });
 
-  it('caps points at MAX_POINTS and reports truncated=true', () => {
+  it('returns every point in a large track without truncation', () => {
     let xml = '<gpx version="1.1"><trk><name>Huge</name><trkseg>';
     for (let i = 0; i < 20005; i++) {
       xml += `<trkpt lat="${(i % 90).toFixed(4)}" lon="${(i % 180).toFixed(4)}"/>`;
     }
     xml += '</trkseg></trk></gpx>';
-    expect(Buffer.byteLength(xml, 'utf8')).toBeLessThan(3 * 1024 * 1024);
 
     const result = getTrackPoints(testContext, input(xml, 0));
     expect(result.getOk()).toBe(true);
-    expect(result.getTruncated()).toBe(true);
-    expect(result.getPointsList()).toHaveLength(20000);
+    expect(result.getPointsList()).toHaveLength(20005);
   });
 
   it('is deterministic across repeated calls with the same input', () => {

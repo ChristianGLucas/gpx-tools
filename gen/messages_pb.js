@@ -4840,8 +4840,7 @@ proto.christiangeorgelucas.gpx_tools.GetTrackPointsOutput.toObject = function(in
   var f, obj = {
 pointsList: jspb.Message.toObjectList(msg.getPointsList(),
     proto.christiangeorgelucas.gpx_tools.Point.toObject, includeInstance),
-truncated: jspb.Message.getBooleanFieldWithDefault(msg, 2, false),
-ok: jspb.Message.getBooleanFieldWithDefault(msg, 3, false),
+ok: jspb.Message.getBooleanFieldWithDefault(msg, 2, false),
 error: (f = msg.getError()) && proto.christiangeorgelucas.gpx_tools.GpxError.toObject(includeInstance, f)
   };
 
@@ -4886,13 +4885,9 @@ proto.christiangeorgelucas.gpx_tools.GetTrackPointsOutput.deserializeBinaryFromR
       break;
     case 2:
       var value = /** @type {boolean} */ (reader.readBool());
-      msg.setTruncated(value);
-      break;
-    case 3:
-      var value = /** @type {boolean} */ (reader.readBool());
       msg.setOk(value);
       break;
-    case 4:
+    case 3:
       var value = new proto.christiangeorgelucas.gpx_tools.GpxError;
       reader.readMessage(value,proto.christiangeorgelucas.gpx_tools.GpxError.deserializeBinaryFromReader);
       msg.setError(value);
@@ -4934,24 +4929,17 @@ proto.christiangeorgelucas.gpx_tools.GetTrackPointsOutput.serializeBinaryToWrite
       proto.christiangeorgelucas.gpx_tools.Point.serializeBinaryToWriter
     );
   }
-  f = message.getTruncated();
+  f = message.getOk();
   if (f) {
     writer.writeBool(
       2,
       f
     );
   }
-  f = message.getOk();
-  if (f) {
-    writer.writeBool(
-      3,
-      f
-    );
-  }
   f = message.getError();
   if (f != null) {
     writer.writeMessage(
-      4,
+      3,
       f,
       proto.christiangeorgelucas.gpx_tools.GpxError.serializeBinaryToWriter
     );
@@ -4998,10 +4986,10 @@ proto.christiangeorgelucas.gpx_tools.GetTrackPointsOutput.prototype.clearPointsL
 
 
 /**
- * optional bool truncated = 2;
+ * optional bool ok = 2;
  * @return {boolean}
  */
-proto.christiangeorgelucas.gpx_tools.GetTrackPointsOutput.prototype.getTruncated = function() {
+proto.christiangeorgelucas.gpx_tools.GetTrackPointsOutput.prototype.getOk = function() {
   return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 2, false));
 };
 
@@ -5010,36 +4998,18 @@ proto.christiangeorgelucas.gpx_tools.GetTrackPointsOutput.prototype.getTruncated
  * @param {boolean} value
  * @return {!proto.christiangeorgelucas.gpx_tools.GetTrackPointsOutput} returns this
  */
-proto.christiangeorgelucas.gpx_tools.GetTrackPointsOutput.prototype.setTruncated = function(value) {
+proto.christiangeorgelucas.gpx_tools.GetTrackPointsOutput.prototype.setOk = function(value) {
   return jspb.Message.setProto3BooleanField(this, 2, value);
 };
 
 
 /**
- * optional bool ok = 3;
- * @return {boolean}
- */
-proto.christiangeorgelucas.gpx_tools.GetTrackPointsOutput.prototype.getOk = function() {
-  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 3, false));
-};
-
-
-/**
- * @param {boolean} value
- * @return {!proto.christiangeorgelucas.gpx_tools.GetTrackPointsOutput} returns this
- */
-proto.christiangeorgelucas.gpx_tools.GetTrackPointsOutput.prototype.setOk = function(value) {
-  return jspb.Message.setProto3BooleanField(this, 3, value);
-};
-
-
-/**
- * optional GpxError error = 4;
+ * optional GpxError error = 3;
  * @return {?proto.christiangeorgelucas.gpx_tools.GpxError}
  */
 proto.christiangeorgelucas.gpx_tools.GetTrackPointsOutput.prototype.getError = function() {
   return /** @type{?proto.christiangeorgelucas.gpx_tools.GpxError} */ (
-    jspb.Message.getWrapperField(this, proto.christiangeorgelucas.gpx_tools.GpxError, 4));
+    jspb.Message.getWrapperField(this, proto.christiangeorgelucas.gpx_tools.GpxError, 3));
 };
 
 
@@ -5048,7 +5018,7 @@ proto.christiangeorgelucas.gpx_tools.GetTrackPointsOutput.prototype.getError = f
  * @return {!proto.christiangeorgelucas.gpx_tools.GetTrackPointsOutput} returns this
 */
 proto.christiangeorgelucas.gpx_tools.GetTrackPointsOutput.prototype.setError = function(value) {
-  return jspb.Message.setWrapperField(this, 4, value);
+  return jspb.Message.setWrapperField(this, 3, value);
 };
 
 
@@ -5066,7 +5036,7 @@ proto.christiangeorgelucas.gpx_tools.GetTrackPointsOutput.prototype.clearError =
  * @return {boolean}
  */
 proto.christiangeorgelucas.gpx_tools.GetTrackPointsOutput.prototype.hasError = function() {
-  return jspb.Message.getField(this, 4) != null;
+  return jspb.Message.getField(this, 3) != null;
 };
 
 
@@ -7332,8 +7302,7 @@ proto.christiangeorgelucas.gpx_tools.GetElevationProfileOutput.toObject = functi
   var f, obj = {
 pointsList: jspb.Message.toObjectList(msg.getPointsList(),
     proto.christiangeorgelucas.gpx_tools.ElevationPoint.toObject, includeInstance),
-truncated: jspb.Message.getBooleanFieldWithDefault(msg, 2, false),
-ok: jspb.Message.getBooleanFieldWithDefault(msg, 3, false),
+ok: jspb.Message.getBooleanFieldWithDefault(msg, 2, false),
 error: (f = msg.getError()) && proto.christiangeorgelucas.gpx_tools.GpxError.toObject(includeInstance, f)
   };
 
@@ -7378,13 +7347,9 @@ proto.christiangeorgelucas.gpx_tools.GetElevationProfileOutput.deserializeBinary
       break;
     case 2:
       var value = /** @type {boolean} */ (reader.readBool());
-      msg.setTruncated(value);
-      break;
-    case 3:
-      var value = /** @type {boolean} */ (reader.readBool());
       msg.setOk(value);
       break;
-    case 4:
+    case 3:
       var value = new proto.christiangeorgelucas.gpx_tools.GpxError;
       reader.readMessage(value,proto.christiangeorgelucas.gpx_tools.GpxError.deserializeBinaryFromReader);
       msg.setError(value);
@@ -7426,24 +7391,17 @@ proto.christiangeorgelucas.gpx_tools.GetElevationProfileOutput.serializeBinaryTo
       proto.christiangeorgelucas.gpx_tools.ElevationPoint.serializeBinaryToWriter
     );
   }
-  f = message.getTruncated();
+  f = message.getOk();
   if (f) {
     writer.writeBool(
       2,
       f
     );
   }
-  f = message.getOk();
-  if (f) {
-    writer.writeBool(
-      3,
-      f
-    );
-  }
   f = message.getError();
   if (f != null) {
     writer.writeMessage(
-      4,
+      3,
       f,
       proto.christiangeorgelucas.gpx_tools.GpxError.serializeBinaryToWriter
     );
@@ -7490,10 +7448,10 @@ proto.christiangeorgelucas.gpx_tools.GetElevationProfileOutput.prototype.clearPo
 
 
 /**
- * optional bool truncated = 2;
+ * optional bool ok = 2;
  * @return {boolean}
  */
-proto.christiangeorgelucas.gpx_tools.GetElevationProfileOutput.prototype.getTruncated = function() {
+proto.christiangeorgelucas.gpx_tools.GetElevationProfileOutput.prototype.getOk = function() {
   return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 2, false));
 };
 
@@ -7502,36 +7460,18 @@ proto.christiangeorgelucas.gpx_tools.GetElevationProfileOutput.prototype.getTrun
  * @param {boolean} value
  * @return {!proto.christiangeorgelucas.gpx_tools.GetElevationProfileOutput} returns this
  */
-proto.christiangeorgelucas.gpx_tools.GetElevationProfileOutput.prototype.setTruncated = function(value) {
+proto.christiangeorgelucas.gpx_tools.GetElevationProfileOutput.prototype.setOk = function(value) {
   return jspb.Message.setProto3BooleanField(this, 2, value);
 };
 
 
 /**
- * optional bool ok = 3;
- * @return {boolean}
- */
-proto.christiangeorgelucas.gpx_tools.GetElevationProfileOutput.prototype.getOk = function() {
-  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 3, false));
-};
-
-
-/**
- * @param {boolean} value
- * @return {!proto.christiangeorgelucas.gpx_tools.GetElevationProfileOutput} returns this
- */
-proto.christiangeorgelucas.gpx_tools.GetElevationProfileOutput.prototype.setOk = function(value) {
-  return jspb.Message.setProto3BooleanField(this, 3, value);
-};
-
-
-/**
- * optional GpxError error = 4;
+ * optional GpxError error = 3;
  * @return {?proto.christiangeorgelucas.gpx_tools.GpxError}
  */
 proto.christiangeorgelucas.gpx_tools.GetElevationProfileOutput.prototype.getError = function() {
   return /** @type{?proto.christiangeorgelucas.gpx_tools.GpxError} */ (
-    jspb.Message.getWrapperField(this, proto.christiangeorgelucas.gpx_tools.GpxError, 4));
+    jspb.Message.getWrapperField(this, proto.christiangeorgelucas.gpx_tools.GpxError, 3));
 };
 
 
@@ -7540,7 +7480,7 @@ proto.christiangeorgelucas.gpx_tools.GetElevationProfileOutput.prototype.getErro
  * @return {!proto.christiangeorgelucas.gpx_tools.GetElevationProfileOutput} returns this
 */
 proto.christiangeorgelucas.gpx_tools.GetElevationProfileOutput.prototype.setError = function(value) {
-  return jspb.Message.setWrapperField(this, 4, value);
+  return jspb.Message.setWrapperField(this, 3, value);
 };
 
 
@@ -7558,7 +7498,7 @@ proto.christiangeorgelucas.gpx_tools.GetElevationProfileOutput.prototype.clearEr
  * @return {boolean}
  */
 proto.christiangeorgelucas.gpx_tools.GetElevationProfileOutput.prototype.hasError = function() {
-  return jspb.Message.getField(this, 4) != null;
+  return jspb.Message.getField(this, 3) != null;
 };
 
 
@@ -10342,8 +10282,7 @@ proto.christiangeorgelucas.gpx_tools.GetKmlGeometriesOutput.toObject = function(
   var f, obj = {
 geometriesList: jspb.Message.toObjectList(msg.getGeometriesList(),
     proto.christiangeorgelucas.gpx_tools.KmlGeometry.toObject, includeInstance),
-truncated: jspb.Message.getBooleanFieldWithDefault(msg, 2, false),
-ok: jspb.Message.getBooleanFieldWithDefault(msg, 3, false),
+ok: jspb.Message.getBooleanFieldWithDefault(msg, 2, false),
 error: (f = msg.getError()) && proto.christiangeorgelucas.gpx_tools.GpxError.toObject(includeInstance, f)
   };
 
@@ -10388,13 +10327,9 @@ proto.christiangeorgelucas.gpx_tools.GetKmlGeometriesOutput.deserializeBinaryFro
       break;
     case 2:
       var value = /** @type {boolean} */ (reader.readBool());
-      msg.setTruncated(value);
-      break;
-    case 3:
-      var value = /** @type {boolean} */ (reader.readBool());
       msg.setOk(value);
       break;
-    case 4:
+    case 3:
       var value = new proto.christiangeorgelucas.gpx_tools.GpxError;
       reader.readMessage(value,proto.christiangeorgelucas.gpx_tools.GpxError.deserializeBinaryFromReader);
       msg.setError(value);
@@ -10436,24 +10371,17 @@ proto.christiangeorgelucas.gpx_tools.GetKmlGeometriesOutput.serializeBinaryToWri
       proto.christiangeorgelucas.gpx_tools.KmlGeometry.serializeBinaryToWriter
     );
   }
-  f = message.getTruncated();
+  f = message.getOk();
   if (f) {
     writer.writeBool(
       2,
       f
     );
   }
-  f = message.getOk();
-  if (f) {
-    writer.writeBool(
-      3,
-      f
-    );
-  }
   f = message.getError();
   if (f != null) {
     writer.writeMessage(
-      4,
+      3,
       f,
       proto.christiangeorgelucas.gpx_tools.GpxError.serializeBinaryToWriter
     );
@@ -10500,10 +10428,10 @@ proto.christiangeorgelucas.gpx_tools.GetKmlGeometriesOutput.prototype.clearGeome
 
 
 /**
- * optional bool truncated = 2;
+ * optional bool ok = 2;
  * @return {boolean}
  */
-proto.christiangeorgelucas.gpx_tools.GetKmlGeometriesOutput.prototype.getTruncated = function() {
+proto.christiangeorgelucas.gpx_tools.GetKmlGeometriesOutput.prototype.getOk = function() {
   return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 2, false));
 };
 
@@ -10512,36 +10440,18 @@ proto.christiangeorgelucas.gpx_tools.GetKmlGeometriesOutput.prototype.getTruncat
  * @param {boolean} value
  * @return {!proto.christiangeorgelucas.gpx_tools.GetKmlGeometriesOutput} returns this
  */
-proto.christiangeorgelucas.gpx_tools.GetKmlGeometriesOutput.prototype.setTruncated = function(value) {
+proto.christiangeorgelucas.gpx_tools.GetKmlGeometriesOutput.prototype.setOk = function(value) {
   return jspb.Message.setProto3BooleanField(this, 2, value);
 };
 
 
 /**
- * optional bool ok = 3;
- * @return {boolean}
- */
-proto.christiangeorgelucas.gpx_tools.GetKmlGeometriesOutput.prototype.getOk = function() {
-  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 3, false));
-};
-
-
-/**
- * @param {boolean} value
- * @return {!proto.christiangeorgelucas.gpx_tools.GetKmlGeometriesOutput} returns this
- */
-proto.christiangeorgelucas.gpx_tools.GetKmlGeometriesOutput.prototype.setOk = function(value) {
-  return jspb.Message.setProto3BooleanField(this, 3, value);
-};
-
-
-/**
- * optional GpxError error = 4;
+ * optional GpxError error = 3;
  * @return {?proto.christiangeorgelucas.gpx_tools.GpxError}
  */
 proto.christiangeorgelucas.gpx_tools.GetKmlGeometriesOutput.prototype.getError = function() {
   return /** @type{?proto.christiangeorgelucas.gpx_tools.GpxError} */ (
-    jspb.Message.getWrapperField(this, proto.christiangeorgelucas.gpx_tools.GpxError, 4));
+    jspb.Message.getWrapperField(this, proto.christiangeorgelucas.gpx_tools.GpxError, 3));
 };
 
 
@@ -10550,7 +10460,7 @@ proto.christiangeorgelucas.gpx_tools.GetKmlGeometriesOutput.prototype.getError =
  * @return {!proto.christiangeorgelucas.gpx_tools.GetKmlGeometriesOutput} returns this
 */
 proto.christiangeorgelucas.gpx_tools.GetKmlGeometriesOutput.prototype.setError = function(value) {
-  return jspb.Message.setWrapperField(this, 4, value);
+  return jspb.Message.setWrapperField(this, 3, value);
 };
 
 
@@ -10568,7 +10478,7 @@ proto.christiangeorgelucas.gpx_tools.GetKmlGeometriesOutput.prototype.clearError
  * @return {boolean}
  */
 proto.christiangeorgelucas.gpx_tools.GetKmlGeometriesOutput.prototype.hasError = function() {
-  return jspb.Message.getField(this, 4) != null;
+  return jspb.Message.getField(this, 3) != null;
 };
 
 
@@ -11256,9 +11166,8 @@ proto.christiangeorgelucas.gpx_tools.ExtractAllCoordinatesOutput.toObject = func
   var f, obj = {
 coordinatesList: jspb.Message.toObjectList(msg.getCoordinatesList(),
     proto.christiangeorgelucas.gpx_tools.LatLon.toObject, includeInstance),
-truncated: jspb.Message.getBooleanFieldWithDefault(msg, 2, false),
-format: jspb.Message.getFieldWithDefault(msg, 3, ""),
-ok: jspb.Message.getBooleanFieldWithDefault(msg, 4, false),
+format: jspb.Message.getFieldWithDefault(msg, 2, ""),
+ok: jspb.Message.getBooleanFieldWithDefault(msg, 3, false),
 error: (f = msg.getError()) && proto.christiangeorgelucas.gpx_tools.GpxError.toObject(includeInstance, f)
   };
 
@@ -11302,18 +11211,14 @@ proto.christiangeorgelucas.gpx_tools.ExtractAllCoordinatesOutput.deserializeBina
       msg.addCoordinates(value);
       break;
     case 2:
-      var value = /** @type {boolean} */ (reader.readBool());
-      msg.setTruncated(value);
-      break;
-    case 3:
       var value = /** @type {string} */ (reader.readString());
       msg.setFormat(value);
       break;
-    case 4:
+    case 3:
       var value = /** @type {boolean} */ (reader.readBool());
       msg.setOk(value);
       break;
-    case 5:
+    case 4:
       var value = new proto.christiangeorgelucas.gpx_tools.GpxError;
       reader.readMessage(value,proto.christiangeorgelucas.gpx_tools.GpxError.deserializeBinaryFromReader);
       msg.setError(value);
@@ -11355,31 +11260,24 @@ proto.christiangeorgelucas.gpx_tools.ExtractAllCoordinatesOutput.serializeBinary
       proto.christiangeorgelucas.gpx_tools.LatLon.serializeBinaryToWriter
     );
   }
-  f = message.getTruncated();
-  if (f) {
-    writer.writeBool(
-      2,
-      f
-    );
-  }
   f = message.getFormat();
   if (f.length > 0) {
     writer.writeString(
-      3,
+      2,
       f
     );
   }
   f = message.getOk();
   if (f) {
     writer.writeBool(
-      4,
+      3,
       f
     );
   }
   f = message.getError();
   if (f != null) {
     writer.writeMessage(
-      5,
+      4,
       f,
       proto.christiangeorgelucas.gpx_tools.GpxError.serializeBinaryToWriter
     );
@@ -11426,29 +11324,11 @@ proto.christiangeorgelucas.gpx_tools.ExtractAllCoordinatesOutput.prototype.clear
 
 
 /**
- * optional bool truncated = 2;
- * @return {boolean}
- */
-proto.christiangeorgelucas.gpx_tools.ExtractAllCoordinatesOutput.prototype.getTruncated = function() {
-  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 2, false));
-};
-
-
-/**
- * @param {boolean} value
- * @return {!proto.christiangeorgelucas.gpx_tools.ExtractAllCoordinatesOutput} returns this
- */
-proto.christiangeorgelucas.gpx_tools.ExtractAllCoordinatesOutput.prototype.setTruncated = function(value) {
-  return jspb.Message.setProto3BooleanField(this, 2, value);
-};
-
-
-/**
- * optional string format = 3;
+ * optional string format = 2;
  * @return {string}
  */
 proto.christiangeorgelucas.gpx_tools.ExtractAllCoordinatesOutput.prototype.getFormat = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
@@ -11457,16 +11337,16 @@ proto.christiangeorgelucas.gpx_tools.ExtractAllCoordinatesOutput.prototype.getFo
  * @return {!proto.christiangeorgelucas.gpx_tools.ExtractAllCoordinatesOutput} returns this
  */
 proto.christiangeorgelucas.gpx_tools.ExtractAllCoordinatesOutput.prototype.setFormat = function(value) {
-  return jspb.Message.setProto3StringField(this, 3, value);
+  return jspb.Message.setProto3StringField(this, 2, value);
 };
 
 
 /**
- * optional bool ok = 4;
+ * optional bool ok = 3;
  * @return {boolean}
  */
 proto.christiangeorgelucas.gpx_tools.ExtractAllCoordinatesOutput.prototype.getOk = function() {
-  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 4, false));
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 3, false));
 };
 
 
@@ -11475,17 +11355,17 @@ proto.christiangeorgelucas.gpx_tools.ExtractAllCoordinatesOutput.prototype.getOk
  * @return {!proto.christiangeorgelucas.gpx_tools.ExtractAllCoordinatesOutput} returns this
  */
 proto.christiangeorgelucas.gpx_tools.ExtractAllCoordinatesOutput.prototype.setOk = function(value) {
-  return jspb.Message.setProto3BooleanField(this, 4, value);
+  return jspb.Message.setProto3BooleanField(this, 3, value);
 };
 
 
 /**
- * optional GpxError error = 5;
+ * optional GpxError error = 4;
  * @return {?proto.christiangeorgelucas.gpx_tools.GpxError}
  */
 proto.christiangeorgelucas.gpx_tools.ExtractAllCoordinatesOutput.prototype.getError = function() {
   return /** @type{?proto.christiangeorgelucas.gpx_tools.GpxError} */ (
-    jspb.Message.getWrapperField(this, proto.christiangeorgelucas.gpx_tools.GpxError, 5));
+    jspb.Message.getWrapperField(this, proto.christiangeorgelucas.gpx_tools.GpxError, 4));
 };
 
 
@@ -11494,7 +11374,7 @@ proto.christiangeorgelucas.gpx_tools.ExtractAllCoordinatesOutput.prototype.getEr
  * @return {!proto.christiangeorgelucas.gpx_tools.ExtractAllCoordinatesOutput} returns this
 */
 proto.christiangeorgelucas.gpx_tools.ExtractAllCoordinatesOutput.prototype.setError = function(value) {
-  return jspb.Message.setWrapperField(this, 5, value);
+  return jspb.Message.setWrapperField(this, 4, value);
 };
 
 
@@ -11512,7 +11392,7 @@ proto.christiangeorgelucas.gpx_tools.ExtractAllCoordinatesOutput.prototype.clear
  * @return {boolean}
  */
 proto.christiangeorgelucas.gpx_tools.ExtractAllCoordinatesOutput.prototype.hasError = function() {
-  return jspb.Message.getField(this, 5) != null;
+  return jspb.Message.getField(this, 4) != null;
 };
 
 

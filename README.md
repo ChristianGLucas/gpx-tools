@@ -52,14 +52,11 @@ Built for the [Axiom](https://axiom.dev) marketplace, handle
 
 ## Safety
 
-- Input is capped at 3 MiB (headroom under Axiom's ~4 MiB transport limit),
-  and an approximate tag-nesting-depth scan rejects pathologically deep
-  documents before the real parser ever sees them.
-- Point/coordinate output is capped at 20,000 entries per response
-  (`truncated=true` past the cap).
 - Malformed input always returns a structured `{code, message}` error —
   never a crash.
 - Every node is a pure, stateless, single-input-to-single-output transform.
+  Size, memory, and resource limits are the Axiom platform's concern, not
+  this package's.
 
 ## License
 

@@ -22,16 +22,15 @@ package christiangeorgelucas.gpx_tools;
 // The canonical input envelope for every parsing node: the raw, caller-supplied
 // text of a GPX or KML document. Never fetched over a network and never read
 // from disk — the caller always supplies the full document text. XML is parsed
-// with external entities and DTDs rejected outright (no XXE); a document over
-// 3 MiB is rejected before any parsing work begins.
+// with external entities and DTDs rejected outright (no XXE).
 message Doc {
   string xml = 1;
 }
 
-// A structured error, returned instead of a crash for any malformed, oversized,
-// or unsafe input. code is a short machine-matchable token (EMPTY_INPUT,
-// INPUT_TOO_LARGE, PARSE_ERROR, XML_UNSAFE_ENTITY, WRONG_ROOT_ELEMENT,
-// UNSUPPORTED_FORMAT, TRACK_INDEX_OUT_OF_RANGE); message is human-readable.
+// A structured error, returned instead of a crash for any malformed or unsafe
+// input. code is a short machine-matchable token (EMPTY_INPUT, PARSE_ERROR,
+// XML_UNSAFE_ENTITY, WRONG_ROOT_ELEMENT, UNSUPPORTED_FORMAT,
+// TRACK_INDEX_OUT_OF_RANGE); message is human-readable.
 message GpxError {
   string code = 1;
   string message = 2;
@@ -174,9 +173,8 @@ message GetTrackPointsOutput {
   // Every point of the chosen track, segments flattened in document order;
   // each point's segment_index records which <trkseg> it came from.
   repeated Point points = 1;
-  bool truncated = 2;
-  bool ok = 3;
-  GpxError error = 4;
+  bool ok = 2;
+  GpxError error = 3;
 }
 
 // ---- ListWaypoints ----
@@ -257,9 +255,8 @@ message ElevationPoint {
 
 message GetElevationProfileOutput {
   repeated ElevationPoint points = 1;
-  bool truncated = 2;
-  bool ok = 3;
-  GpxError error = 4;
+  bool ok = 2;
+  GpxError error = 3;
 }
 
 // ---- GetTimeRange ----
@@ -363,9 +360,8 @@ message KmlGeometry {
 
 message GetKmlGeometriesOutput {
   repeated KmlGeometry geometries = 1;
-  bool truncated = 2;
-  bool ok = 3;
-  GpxError error = 4;
+  bool ok = 2;
+  GpxError error = 3;
 }
 
 // ---- GpxTrackToGeoJson ----
@@ -396,9 +392,8 @@ message LatLon {
 
 message ExtractAllCoordinatesOutput {
   repeated LatLon coordinates = 1;
-  bool truncated = 2;
   // "gpx" or "kml" — the format ExtractAllCoordinates auto-detected.
-  string format = 3;
-  bool ok = 4;
-  GpxError error = 5;
+  string format = 2;
+  bool ok = 3;
+  GpxError error = 4;
 }

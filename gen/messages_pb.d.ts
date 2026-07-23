@@ -535,9 +535,6 @@ export class GetTrackPointsOutput extends jspb.Message {
   setPointsList(value: Array<Point>): void;
   addPoints(value?: Point, index?: number): Point;
 
-  getTruncated(): boolean;
-  setTruncated(value: boolean): void;
-
   getOk(): boolean;
   setOk(value: boolean): void;
 
@@ -559,7 +556,6 @@ export class GetTrackPointsOutput extends jspb.Message {
 export namespace GetTrackPointsOutput {
   export type AsObject = {
     pointsList: Array<Point.AsObject>,
-    truncated: boolean,
     ok: boolean,
     error?: GpxError.AsObject,
   }
@@ -881,9 +877,6 @@ export class GetElevationProfileOutput extends jspb.Message {
   setPointsList(value: Array<ElevationPoint>): void;
   addPoints(value?: ElevationPoint, index?: number): ElevationPoint;
 
-  getTruncated(): boolean;
-  setTruncated(value: boolean): void;
-
   getOk(): boolean;
   setOk(value: boolean): void;
 
@@ -905,7 +898,6 @@ export class GetElevationProfileOutput extends jspb.Message {
 export namespace GetElevationProfileOutput {
   export type AsObject = {
     pointsList: Array<ElevationPoint.AsObject>,
-    truncated: boolean,
     ok: boolean,
     error?: GpxError.AsObject,
   }
@@ -1299,9 +1291,6 @@ export class GetKmlGeometriesOutput extends jspb.Message {
   setGeometriesList(value: Array<KmlGeometry>): void;
   addGeometries(value?: KmlGeometry, index?: number): KmlGeometry;
 
-  getTruncated(): boolean;
-  setTruncated(value: boolean): void;
-
   getOk(): boolean;
   setOk(value: boolean): void;
 
@@ -1323,7 +1312,6 @@ export class GetKmlGeometriesOutput extends jspb.Message {
 export namespace GetKmlGeometriesOutput {
   export type AsObject = {
     geometriesList: Array<KmlGeometry.AsObject>,
-    truncated: boolean,
     ok: boolean,
     error?: GpxError.AsObject,
   }
@@ -1429,9 +1417,6 @@ export class ExtractAllCoordinatesOutput extends jspb.Message {
   setCoordinatesList(value: Array<LatLon>): void;
   addCoordinates(value?: LatLon, index?: number): LatLon;
 
-  getTruncated(): boolean;
-  setTruncated(value: boolean): void;
-
   getFormat(): string;
   setFormat(value: string): void;
 
@@ -1456,7 +1441,6 @@ export class ExtractAllCoordinatesOutput extends jspb.Message {
 export namespace ExtractAllCoordinatesOutput {
   export type AsObject = {
     coordinatesList: Array<LatLon.AsObject>,
-    truncated: boolean,
     format: string,
     ok: boolean,
     error?: GpxError.AsObject,
