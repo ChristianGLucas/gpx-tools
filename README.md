@@ -11,7 +11,7 @@ This package **parses the file formats**; it does not reimplement
 coordinate math. For distance/bearing/area/etc., compose its GeoJSON output
 into [`geo-tools`](https://github.com/ChristianGLucas/geo-tools).
 
-Built for the [Axiom](https://axiom.dev) marketplace, handle
+Built for the [Axiom](https://axiomide.com) marketplace, handle
 `christiangeorgelucas`.
 
 ## What it wraps
